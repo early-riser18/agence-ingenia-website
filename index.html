@@ -26,12 +26,9 @@
 
 <body>
     <!-- Sticky Header -->
-    <header class="sticky top-5 z-50 px-4 ">
+    <header class="sticky top-0 md:top-5 z-50 md:px-4 ">
         <div
-            class="max-w-screen-xl mx-auto p-3 bg-[#ffffff8f] rounded-lg 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                shadow-[0_2px_5px_#0003]
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                backdrop-blur-xl">
+            class="max-w-screen-xl mx-auto p-3 bg-[#ffffff8f] md:rounded-lg border-b md:border-none border-gray-300 md:shadow-[0_2px_5px_#0003] backdrop-blur-xl">
             <div class="flex items-center justify-between ">
                 <!-- Logo -->
                 <div class="flex items-center">
@@ -42,11 +39,11 @@
                 </div>
 
                 <!-- Desktop Navigation -->
-                <div class="flex items-center space-x-8">
+                <div class="flex items-center md:space-x-8">
 
                     <nav class="hidden md:flex items-center space-x-2">
                         <a href="/" class=" clickable-text px-3 py-2 font-medium">Accueil</a>
-                        <a href="#Feature" class=" clickable-text px-3 py-2  font-medium">Nos
+                        <a href="#use-cases" class=" clickable-text px-3 py-2  font-medium">Nos
                             solutions</a>
                         <a href="#team" class=" clickable-text px-3 py-2  font-medium">Qui
                             sommes-nous</a>
@@ -55,7 +52,7 @@
                     <!-- CTA Button & Mobile Menu -->
                     <div class="flex items-center space-x-4">
                         <button onclick="scrollToAnchor('contact', 50)"
-                            class="btn-primary">
+                            class="btn-primary px-4 ">
                             Nous contacter
                         </button>
 
@@ -81,9 +78,9 @@
     <div id="mobile-menu" class="mobile-menu md:hidden">
         <div class="flex flex-col h-full">
             <!-- Mobile Header -->
-            <div class="flex items-center justify-between p-4 border-b border-gray-200">
+            <div class="flex items-center justify-between p-4 border-b border-gray-300">
                 <div class="flex items-center space-x-2">
-                    <img src="./assets/images/logo.png" alt="Logo" class="h-8 w-auto">
+                    <img src="./assets/ingenia_logo_base.png" alt="Logo" class="h-8 w-auto">
                     <span class="  tracking-wider font-semibold  font-dm-sans">INGENIA</span>
                 </div>
                 <button type="button" id="mobile-menu-close"
@@ -99,7 +96,7 @@
             <!-- Mobile Navigation -->
             <nav class="flex-1 flex flex-col justify-center space-y-8 px-8">
                 <a href="/" class="text-2xl font-medium text-gray-900 hover:text-primary transition-colors">Accueil</a>
-                <a href="#Feature" class="text-2xl font-medium text-gray-900 hover:text-primary transition-colors">Nos
+                <a href="#use-cases" class="text-2xl font-medium text-gray-900 hover:text-primary transition-colors">Nos
                     solutions</a>
                 <a href="#team" class="text-2xl font-medium text-gray-900 hover:text-primary transition-colors">Qui
                     sommes-nous</a>
@@ -108,7 +105,7 @@
             <!-- Mobile CTA -->
             <div class="p-8">
                 <a href="https://calendly.com/justin-warambourg/consultation-ingenia" target="_blank"
-                    class="btn-primary w-full text-center block">
+                    class="btn-primary w-full text-center block text-lg">
                     Nous contacter
                 </a>
             </div>
@@ -837,7 +834,7 @@
         </section>
 
         <!-- Team Section — matches the reference design (Tailwind v3) -->
-        <section class="py-20 max-w-screen-xl mx-auto  px-2 md:px-4">
+        <section id="team" class="py-20 max-w-screen-xl mx-auto  px-2 md:px-4 text-center md:text-left">
             <!-- Header -->
             <header class="mb-10 sm:mb-12">
                 <h2 class="">Notre équipe</h2>
@@ -922,8 +919,8 @@
         </section>
 
         <section id="contact" >
-            <div class="max-w-screen-xl mx-auto px-2 md:px-4 text-center md:text-left ">
-                <div class="grid grid-cols-1 lg:space-x-10 md:space-x-2 md:grid-cols-2  rounded-xl md:rounded-[20px] bg-cover bg-center bg-no-repeat lg:px-20 lg:py-24  md:px-5 px-2 py-10 relative" style="background-image: url('./assets/abstract_bg1.jpg');">
+            <div class="max-w-screen-xl mx-auto  md:px-4 text-center md:text-left ">
+                <div class="grid grid-cols-1 lg:space-x-10 md:space-x-2 md:grid-cols-2   md:rounded-[20px] bg-cover bg-center bg-no-repeat lg:px-20 lg:py-24  md:px-5 px-2 py-10 relative" style="background-image: url('./assets/abstract_bg1.jpg');">
                     <div class="absolute inset-0 bg-white/35 rounded-[20px]"></div>
                     <div class="relative z-10 flex flex-col h-[92%]">
                         <div class="mb-6 ">
