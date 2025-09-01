@@ -1,11 +1,1158 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome 6 Free (CDN) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="src/output.css">
+    <script src="src/typing-animation.js"></script>
+
+    <link rel="icon" type="image/png" href="./assets/favicon/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="./assets/favicon/favicon.svg" />
+<link rel="shortcut icon" href="./assets/favicon/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png" />
+<link rel="manifest" href="./assets/favicon/site.webmanifest" />
+    <title>Agence Ingenia</title>
 </head>
+
 <body>
-    <h1>Bienvenue sur Agence Ingenia.</h1>
+    <!-- Sticky Header -->
+    <header class="sticky top-5 z-50 px-4 ">
+        <div
+            class="max-w-screen-xl mx-auto p-3 bg-[#ffffff8f] rounded-lg 
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                shadow-[0_2px_5px_#0003]
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                backdrop-blur-xl">
+            <div class="flex items-center justify-between ">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <a href="/" class="flex items-center space-x-2" aria-label="home">
+                        <img src="./assets/ingenia_logo_base.png" alt="Logo" class="h-auto w-7">
+                        <span class="  tracking-wider font-semibold  font-dm-sans">INGENIA</span>
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="flex items-center space-x-8">
+
+                    <nav class="hidden md:flex items-center space-x-2">
+                        <a href="/" class=" clickable-text px-3 py-2 font-medium">Accueil</a>
+                        <a href="#Feature" class=" clickable-text px-3 py-2  font-medium">Nos
+                            solutions</a>
+                        <a href="#team" class=" clickable-text px-3 py-2  font-medium">Qui
+                            sommes-nous</a>
+                    </nav>
+
+                    <!-- CTA Button & Mobile Menu -->
+                    <div class="flex items-center space-x-4">
+                        <button onclick="scrollToAnchor('contact', 50)"
+                            class="btn-primary">
+                            Nous contacter
+                        </button>
+
+                        <!-- Mobile menu button -->
+                        <button type="button" id="mobile-menu-button"
+                            class="md:hidden inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-gray-900 hover:bg-gray-100"
+                            aria-expanded="false">
+                            <span class="sr-only">Open main menu</span>
+                            <div class="burger-icon flex flex-col space-y-1.5">
+                                <div class="burger-line"></div>
+                                <div class="burger-line"></div>
+                                <div class="burger-line"></div>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="mobile-menu md:hidden">
+        <div class="flex flex-col h-full">
+            <!-- Mobile Header -->
+            <div class="flex items-center justify-between p-4 border-b border-gray-200">
+                <div class="flex items-center space-x-2">
+                    <img src="./assets/images/logo.png" alt="Logo" class="h-8 w-auto">
+                    <span class="  tracking-wider font-semibold  font-dm-sans">INGENIA</span>
+                </div>
+                <button type="button" id="mobile-menu-close"
+                    class="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-gray-900 hover:bg-gray-100">
+                    <span class="sr-only">Close main menu</span>
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <nav class="flex-1 flex flex-col justify-center space-y-8 px-8">
+                <a href="/" class="text-2xl font-medium text-gray-900 hover:text-primary transition-colors">Accueil</a>
+                <a href="#Feature" class="text-2xl font-medium text-gray-900 hover:text-primary transition-colors">Nos
+                    solutions</a>
+                <a href="#team" class="text-2xl font-medium text-gray-900 hover:text-primary transition-colors">Qui
+                    sommes-nous</a>
+            </nav>
+
+            <!-- Mobile CTA -->
+            <div class="p-8">
+                <a href="https://calendly.com/justin-warambourg/consultation-ingenia" target="_blank"
+                    class="btn-primary w-full text-center block">
+                    Nous contacter
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <section>
+        <div class="max-w-screen-xl mx-auto px-4 my-24">
+            <div class="grid grid-cols-[1fr_1fr] grid-rows-auto gap-x-[60px] gap-y-[60px] auto-cols-fr items-center">
+
+                <!-- Content -->
+                <div>
+                    <h1 class="mb-6">L'IA n'est pas réservée qu'aux grandes entreprises</h1>
+                    <p class="text-lg mb-6">Nous aidons les PME à moderniser leur activité avec <span
+                            class="font-semibold">
+                            des solutions d'IA simples et abordables.
+                        </span></p>
+                    <div class="flex justify-start">
+                        <a href="https://calendly.com/justin-warambourg/consultation-ingenia" target="_blank"
+                            class="btn-primary text-lg">Réservez une consultation gratuite</a>
+                    </div>
+                </div>
+                <!-- AI Dashboard Visual -->
+                <div class="relative hidden md:block">
+                    <!-- Main Dashboard Container -->
+                    <div class="relative bg-white rounded-3xl shadow-xl p-8 aspect-[2/1] overflow-hidden">
+                        <!-- Background AI Spark Motifs -->
+                        <div class="absolute inset-0 opacity-30">
+                            <!-- Neural network dots and lines -->
+                            <svg class="w-full h-full" viewBox="0 0 400 200">
+                                <defs>
+                                    <linearGradient id="sparkGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#2563EB;stop-opacity:0.3" />
+                                        <stop offset="100%" style="stop-color:#9333EA;stop-opacity:0.3" />
+                                    </linearGradient>
+                                </defs>
+                                <!-- Connection lines -->
+                                <path d="M50,50 Q150,30 250,60 T350,80" stroke="url(#sparkGradient)" stroke-width="2"
+                                    fill="none" />
+                                <path d="M80,120 Q180,100 280,130" stroke="url(#sparkGradient)" stroke-width="1.5"
+                                    fill="none" />
+                                <path d="M30,150 Q130,140 230,160 T330,150" stroke="url(#sparkGradient)"
+                                    stroke-width="1" fill="none" />
+                                <!-- Neural dots -->
+                                <circle cx="50" cy="50" r="3" fill="#2563EB" opacity="0.4" />
+                                <circle cx="150" cy="35" r="2" fill="#9333EA" opacity="0.4" />
+                                <circle cx="250" cy="65" r="3" fill="#22C55E" opacity="0.4" />
+                                <circle cx="80" cy="120" r="2" fill="#F97316" opacity="0.4" />
+                                <circle cx="180" cy="105" r="3" fill="#2563EB" opacity="0.4" />
+                                <circle cx="280" cy="135" r="2" fill="#9333EA" opacity="0.4" />
+                            </svg>
+                        </div>
+
+                        <!-- Dashboard Content -->
+                        <div class="relative z-10 grid grid-cols-3 gap-4 h-full">
+                            <!-- Bar Chart -->
+                            <div class="bg-gray-50 rounded-2xl p-4 flex flex-col justify-end">
+                                <div class="text-xs text-gray-600 mb-2">Performance</div>
+                                <div class="flex items-end space-x-1 h-16">
+                                    <div class="bg-gradient-to-t from-blue-600 to-blue-400 rounded-sm flex-1 h-8"></div>
+                                    <div class="bg-gradient-to-t from-green-600 to-green-400 rounded-sm flex-1 h-12">
+                                    </div>
+                                    <div class="bg-gradient-to-t from-orange-600 to-orange-400 rounded-sm flex-1 h-6">
+                                    </div>
+                                    <div class="bg-gradient-to-t from-blue-600 to-blue-400 rounded-sm flex-1 h-14">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Pie Chart -->
+                            <div class="bg-gray-50 rounded-2xl p-4 flex flex-col items-center justify-center">
+                                <div class="text-xs text-gray-600 mb-2">Efficacité</div>
+                                <div class="relative w-12 h-12">
+                                    <svg class="w-full h-full transform -rotate-90" viewBox="0 0 42 42">
+                                        <circle cx="21" cy="21" r="15.5" fill="transparent" stroke="#E5E7EB"
+                                            stroke-width="3" />
+                                        <circle cx="21" cy="21" r="15.5" fill="transparent" stroke="#2563EB"
+                                            stroke-width="3" stroke-dasharray="60 40" stroke-linecap="round" />
+                                        <circle cx="21" cy="21" r="15.5" fill="transparent" stroke="#22C55E"
+                                            stroke-width="3" stroke-dasharray="25 75" stroke-dashoffset="-60"
+                                            stroke-linecap="round" />
+                                        <circle cx="21" cy="21" r="15.5" fill="transparent" stroke="#F97316"
+                                            stroke-width="3" stroke-dasharray="15 85" stroke-dashoffset="-85"
+                                            stroke-linecap="round" />
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <!-- Line Graph -->
+                            <div class="bg-gray-50 rounded-2xl p-4 flex flex-col justify-end">
+                                <div class="text-xs text-gray-600 mb-2">Croissance</div>
+                                <div class="h-16 relative">
+                                    <svg class="w-full h-full" viewBox="0 0 80 40">
+                                        <path d="M5,35 Q20,25 35,20 T65,10" stroke="#22C55E" stroke-width="2"
+                                            fill="none" />
+                                        <path d="M5,35 Q20,25 35,20 T65,10 L65,40 L5,40 Z" fill="url(#lineGradient)"
+                                            opacity="0.3" />
+                                        <defs>
+                                            <linearGradient id="lineGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                                                <stop offset="0%" style="stop-color:#22C55E;stop-opacity:0.4" />
+                                                <stop offset="100%" style="stop-color:#22C55E;stop-opacity:0" />
+                                            </linearGradient>
+                                        </defs>
+                                        <!-- Data points -->
+                                        <circle cx="5" cy="35" r="1.5" fill="#22C55E" />
+                                        <circle cx="25" cy="22" r="1.5" fill="#22C55E" />
+                                        <circle cx="45" cy="18" r="1.5" fill="#22C55E" />
+                                        <circle cx="65" cy="10" r="1.5" fill="#22C55E" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Floating Icons -->
+                        <!-- Email Icon -->
+                        <div
+                            class="absolute -top-4 left-8 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center border border-gray-100">
+                            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 8l7.89 7.89a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+
+                        <!-- Chat Bubble Icon -->
+                        <div
+                            class="absolute -top-4 right-8 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center border border-gray-100">
+                            <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                            </svg>
+                        </div>
+
+                        <!-- Clock Icon -->
+                        <div
+                            class="absolute -bottom-4 left-16 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center border border-gray-100">
+                            <svg class="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+
+                        <!-- Handshake Icon -->
+                        <div
+                            class="absolute -bottom-4 right-16 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center border border-gray-100">
+                            <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+    <main>
+        <section class="py-16  relative overflow-hidden bg-white">
+            <!-- Top-left slate gradient -->
+            <div class="absolute inset-0 bg-gradient-to-br from-slate-100/50 via-transparent to-transparent"></div>
+            <!-- Bottom-right slate gradient -->
+            <div class="absolute inset-0 bg-gradient-to-tl from-slate-100/50 via-transparent to-transparent"></div>
+
+            <div class="max-w-6xl mx-auto px-6 relative z-10">
+                <!-- Mission Block -->
+                <div class="text-center space-y-8">
+                    <!-- Eyebrow -->
+                    <div class="text-sm uppercase tracking-wider text-primary font-semibold">
+                        Notre mission
+                    </div>
+
+                    <!-- Mission Statement -->
+                    <div class=" mx-auto">
+                        <p class="text-xl lg:text-2xl text-gray-800 leading-relaxed font-light">
+                            Vous aider à mettre l'intelligence artificielle au service de votre entreprise et décupler
+                            votre
+                            activité<span class="whitespace-nowrap"></span>
+                        </p>
+                        <p class=" text-gray-600 mt-4 font-medium">Il y a 20 ans, beaucoup ont raté le virage
+                            d’Internet… Ne ratez pas celui de l’IA.</p>
+                    </div>
+
+                </div>
+        </section>
+
+        <!-- AI Flow Diagram Section -->
+        <section class="bg-gradient-to-br from-blue-50/30 via-white to-indigo-50/20 relative overflow-hidden py-16">
+            <!-- Enhanced background with subtle patterns -->
+            <div class="absolute inset-0 opacity-20">
+                <svg class="absolute inset-0 w-full h-full" aria-hidden="true">
+                    <defs>
+                        <!-- each cell = 40×40 px -->
+                        <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+                            <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#9da1cf" stroke-width="2"
+                                vector-effect="non-scaling-stroke" />
+                        </pattern>
+                    </defs>
+                    <rect x="0" y="0" width="100%" height="100%" fill="url(#grid)" />
+                </svg>
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-r from-white via-transparent to-white"></div>
+
+            <div class=" relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-5">
+                <!-- Section Header - Left Aligned -->
+                <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between space-y-8 lg:space-y-0">
+                    <div class="lg:w-2/3">
+                        <!-- Eyebrow -->
+                        <div class="mb-6">
+                            <div
+                                class="inline-flex items-center px-4 py-2 border border-blue-200/50 bg-gradient-to-r from-blue-100/40 to-indigo-100/40 rounded-full text-sm uppercase tracking-wider text-primary font-semibold ">
+                                <svg class="w-4 h-4 mr-2 text-primary" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z" />
+                                </svg>
+                                L'IA à votre service
+                            </div>
+                        </div>
+
+                        <!-- Main Title -->
+                        <div>
+                            <h3 class="mb-6 text-left">
+                                Comment l'IA générative peut aider votre entreprise
+                            </h3>
+                            <p class="text-lg lg:text-xl text-gray-600 leading-relaxed">
+                                tbd
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Neural Network Mesh -->
+                    <div class="lg:w-1/3 flex justify-center lg:justify-end">
+                        <div class="relative w-60 h-60 opacity-70">
+                            <!-- Neural Network SVG -->
+                            <img src="assets/neural_network.svg" alt="Neural Network Visualization"
+                                class="w-full h-full" />
+
+                            <!-- Subtle background glow -->
+                            <div
+                                class="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-indigo-500/10 rounded-full blur-3xl -z-10">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Visual Flowchart -->
+                <div class="relative">
+                    <!-- Horizontal Flow Layout -->
+                    <div
+                        class="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12 max-w-7xl mx-auto px-4">
+                        <!-- Main AI Node (Left) -->
+                        <div class="group relative flex-shrink-0">
+                            <!-- Background glow effect -->
+                            <div
+                                class="absolute -inset-4 bg-gradient-to-br from-blue-500/10 via-indigo-500/10 to-violet-500/10 rounded-3xl blur-xl opacity-40 group-hover:opacity-60 transition-opacity duration-300">
+                            </div>
+
+                            <div
+                                class="relative bg-gradient-to-br from-white via-blue-50/30 to-indigo-50/50 rounded-2xl px-6 py-8 shadow-xl border border-blue-200/30 backdrop-blur-sm ">
+                                <div
+                                    class="flex flex-col items-center text-center space-y-4 w-full max-w-xs lg:max-w-sm">
+                                    <!-- Enhanced AI Icon with Multiple Layers -->
+                                    <div class="relative">
+
+
+                                        <div
+                                            class="relative w-12 h-12 bg-gradient-to-br from-blue-600 via-indigo-600 to-violet-600 rounded-xl flex items-center justify-center  transition-transform duration-200 shadow-lg">
+                                            <!-- Animated sparkle effect -->
+                                            <div
+                                                class="absolute inset-0 rounded-xl bg-gradient-to-br from-white/10 to-transparent opacity-0 ">
+                                            </div>
+
+                                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor"
+                                                viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                                    d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z" />
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                                    d="M18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456z" />
+                                            </svg>
+                                        </div>
+                                    </div>
+
+                                    <div class="space-y-2">
+                                        <h4 class="font-semibold text-gray-900 leading-tight">
+                                            Confiez vos tâches à un agent IA spécialisé
+                                        </h4>
+                                        <p class=" text-gray-600 leading-relaxed">
+                                            L'IA générative sait accomplir des tâches spécifiques en pleine autonomie.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Horizontal Arrow -->
+                        <div class="flex-shrink-0 hidden lg:block">
+                            <svg class="w-16 h-8" viewBox="0 0 64 32" fill="none">
+                                <!-- Horizontal arrow -->
+                                <path d="M8 16 L48 16" stroke="url(#arrowGradient)" stroke-width="3"
+                                    stroke-linecap="round" />
+                                <path d="M42 10 L48 16 L42 22" stroke="url(#arrowGradient)" stroke-width="3"
+                                    stroke-linecap="round" fill="none" />
+
+                                <!-- Gradient definition -->
+                                <defs>
+                                    <linearGradient id="arrowGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#3B82F6;stop-opacity:0.8" />
+                                        <stop offset="50%" style="stop-color:#6366F1;stop-opacity:0.9" />
+                                        <stop offset="100%" style="stop-color:#8B5CF6;stop-opacity:0.8" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </div>
+
+                        <!-- Outcome Nodes (Right Side) -->
+                        <div class="flex flex-col gap-6 lg:gap-8 w-full lg:w-auto">
+
+                            <!-- Productivity Node -->
+                            <div class="group relative">
+                                <!-- Enhanced background glow -->
+                                <div
+                                    class="absolute -inset-2 bg-gradient-to-br from-emerald-200/20 via-green-200/20 to-teal-200/20 rounded-3xl blur-lg opacity-30  ">
+                                </div>
+
+                                <div
+                                    class="relative bg-gradient-to-br from-white via-emerald-50/30 to-green-50/50 rounded-2xl px-6 py-6 shadow-xl border border-emerald-200/30 backdrop-blur-sm ">
+                                    <div
+                                        class="flex flex-col lg:flex-row items-center text-center lg:text-left space-y-4 lg:space-y-0 lg:space-x-6 w-full max-w-md lg:max-w-2xl">
+                                        <!-- Enhanced Productivity Icon -->
+                                        <div class="relative flex-shrink-0">
+                                            <!-- Outer glow -->
+                                            <div
+                                                class="absolute -inset-4 bg-gradient-to-br from-emerald-400 to-green-500 rounded-full blur-xl opacity-10">
+                                            </div>
+
+                                            <!-- Icon container -->
+                                            <div
+                                                class="relative w-14 h-14 lg:w-16 lg:h-16 bg-gradient-to-br from-emerald-500 to-green-600 rounded-xl flex items-center justify-center transition-transform duration-200 shadow-md">
+                                                <div
+                                                    class="absolute inset-0 rounded-xl bg-gradient-to-br from-white/10 to-transparent opacity-0 ">
+                                                </div>
+
+                                                <svg class="w-6 h-6 lg:w-7 lg:h-7 text-white" fill="none"
+                                                    stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                                </svg>
+                                            </div>
+                                        </div>
+
+                                        <div class="space-y-2 flex-1">
+                                            <h4 class=" font-semibold text-gray-900 leading-tight">
+                                                Gagnez en productivité
+                                            </h4>
+                                            <p class=" text-gray-600 leading-relaxed">
+                                                Automatisez vos tâches répétitives et libérez du temps pour les
+                                                activités à
+                                                forte valeur ajoutée
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Client Relations Node -->
+                            <div class="group relative">
+                                <!-- Enhanced background glow -->
+                                <div
+                                    class="absolute -inset-2 bg-gradient-to-br from-blue-200/20 via-indigo-200/20 to-purple-200/20 rounded-3xl blur-lg opacity-30 ">
+                                </div>
+
+                                <div
+                                    class="relative bg-gradient-to-br from-white via-blue-50/30 to-indigo-50/50 rounded-2xl px-6 py-6 shadow-xl border border-blue-200/30 backdrop-blur-sm ">
+                                    <div
+                                        class="flex flex-col lg:flex-row items-center text-center lg:text-left space-y-4 lg:space-y-0 lg:space-x-6 w-full max-w-md lg:max-w-2xl">
+                                        <!-- Enhanced Client Relations Icon -->
+                                        <div class="relative flex-shrink-0">
+                                            <!-- Outer glow -->
+                                            <div
+                                                class="absolute -inset-4 bg-gradient-to-br from-blue-400 to-indigo-500 rounded-full blur-xl opacity-10 ">
+                                            </div>
+
+                                            <!-- Icon container -->
+                                            <div
+                                                class="relative w-14 h-14 lg:w-16 lg:h-16 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center  transition-transform duration-200 shadow-md">
+                                                <div
+                                                    class="absolute inset-0 rounded-xl bg-gradient-to-br from-white/10 to-transparent opacity-0 ">
+                                                </div>
+
+                                                <svg class="w-6 h-6 lg:w-7 lg:h-7 text-white" fill="none"
+                                                    stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2"
+                                                        d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                                                </svg>
+                                            </div>
+                                        </div>
+
+                                        <div class="space-y-2 flex-1">
+                                            <h4 class=" font-semibold text-gray-900 leading-tight">
+                                                Améliorez votre relation client
+                                            </h4>
+                                            <p class=" text-gray-600 leading-relaxed">
+                                                Offrez un service client personnalisé et disponible 24/7 grâce à
+                                                l'intelligence
+                                                artificielle
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Show Use Cases Button -->
+                    <div class="flex justify-center mt-12">
+                        <button onclick="scrollToAnchor('use-cases', 50)" class="group relative inline-flex items-center justify-center">
+                            <!-- Background glow -->
+                            <div
+                                class="absolute -inset-2 bg-gradient-to-r from-primary/20 via-emerald-500/20 to-green-500/20 rounded-2xl blur-lg opacity-70 group-hover:opacity-100 transition-opacity duration-500">
+                            </div>
+
+                            <!-- Button container -->
+                            <div
+                                class="relative btn-primary rounded-xl px-8 py-4 shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
+                                <!-- Shine effect -->
+                                <div
+                                    class="absolute inset-0 rounded-xl bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                </div>
+
+                                <div class="relative flex items-center space-x-3">
+                                    <span class="text-white font-semibold text-lg">Voir les cas d'usage</span>
+
+                                    <!-- Animated arrow -->
+                                    <svg class="w-5 h-5 text-white transform group-hover:translate-x-1 transition-transform duration-300"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Method Section - Separate Section -->
+        <section class="py-16 bg-gray-50">
+            <div class="max-w-screen-xl mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h3 class="text-2xl lg:text-3xl font-bold mb-4" style="font-family: 'Epilogue', sans-serif;">Notre
+                        méthode</h3>
+                    <p class="text-lg text-blackPrimary">Un processus en 3 étapes pour votre transformation digitale</p>
+                </div>
+
+                <!-- Method Steps - Horizontal Flow -->
+                <div class="flex flex-col lg:flex-row items-center justify-center space-y-8 lg:space-y-0 lg:space-x-8">
+                    <!-- Step 1 -->
+                    <div class="flex-1 max-w-sm">
+                        <div
+                            class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 group text-center">
+                            <div
+                                class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center font-bold text-xl mx-auto mb-6 group-hover:scale-110 transition-transform duration-200">
+                                1
+                            </div>
+                            <h4 class="font-bold text-blackPrimary text-xl mb-4">Diagnostic ciblé</h4>
+                            <p class="text-blackPrimary leading-relaxed">Analyse approfondie de vos enjeux et
+                                identification
+                                des opportunités d'amélioration</p>
+                        </div>
+                    </div>
+
+                    <!-- Arrow 1 -->
+                    <div class="flex-shrink-0 hidden lg:block">
+                        <svg class="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd"
+                                d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="flex-1 max-w-sm">
+                        <div
+                            class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 group text-center">
+                            <div
+                                class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center font-bold text-xl mx-auto mb-6 group-hover:scale-110 transition-transform duration-200">
+                                2
+                            </div>
+                            <h4 class="font-bold text-blackPrimary text-xl mb-4">Définition du cadre</h4>
+                            <p class="text-blackPrimary leading-relaxed">Définition du cadre du projet et fixation des
+                                objectifs de performance</p>
+                        </div>
+                    </div>
+
+                    <!-- Arrow 2 -->
+                    <div class="flex-shrink-0 hidden lg:block">
+                        <svg class="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd"
+                                d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="flex-1 max-w-sm">
+                        <div
+                            class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 group text-center">
+                            <div
+                                class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center font-bold text-xl mx-auto mb-6 group-hover:scale-110 transition-transform duration-200">
+                                3
+                            </div>
+                            <h4 class="font-bold text-blackPrimary text-xl mb-4">Implémentation</h4>
+                            <p class="text-blackPrimary leading-relaxed">Mise en œuvre de la solution adaptée à vos
+                                besoins
+                                spécifiques</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="use-cases" class="py-16  bg-white">
+            <div class="max-w-screen-xl mx-auto px-4">
+                <!-- Section Header -->
+                <div class="text-center mb-16">
+                    <h2 class="mb-4">Cas d'usage les plus fréquents</h2>
+
+                </div>
+
+                <!-- Use Case 1: Digital Assistant -->
+                <div class=" gap-12 items-center mb-20 flex">
+                    <!-- Left Panel: Messaging & Navigation -->
+                    <div class="space-y-8 flex-1">
+                        <span
+                            class="inline-flex items-center rounded-full border border-blue-200/50 bg-gradient-to-r from-blue-100/30 to-indigo-100/30 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-primary">
+                            Agent autonome
+                        </span>
+                        <!-- Header (H1) -->
+                        <h3>Votre bras droit numérique pour faire plus en moins de temps</h3>
+
+                        <!-- Subheader (H2) -->
+                        <p>Gérez votre entreprise depuis une interface de chat connectée à vos outils et
+                            logiciels métiers.</p>
+
+                        <!-- Feature Selection (Toggle) -->
+                        <div class="space-y-2">
+                            <!-- Feature 1 - Active by default -->
+                            <div id="feature-1" class="group relative feature-toggle active">
+                                <div
+                                    class="relative bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200/60 rounded-xl p-4 hover:shadow-md transition-all duration-200 cursor-pointer">
+                                    <div class="flex items-center space-x-3">
+                                        <div
+                                            class="flex-shrink-0 w-7 h-7 bg-gradient-to-br from-blue-600 to-indigo-600 text-white rounded-lg flex items-center justify-center font-medium text-xs">
+                                            1
+                                        </div>
+                                        <div class="flex-1">
+                                            <p class="text-base font-medium text-gray-900 leading-snug">
+                                                Recevez des réponses contextuelles en temps réel à vos questions
+                                                opérationnelles.
+                                            </p>
+                                        </div>
+                                        <div class="flex-shrink-0">
+                                            <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor"
+                                                viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M19 9l-7 7-7-7" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Feature 2 - Inactive by default -->
+                            <div id="feature-2" class="group relative feature-toggle">
+                                <div
+                                    class="relative bg-white border border-gray-200/60 rounded-xl p-4 hover:shadow-md hover:border-gray-300/60 transition-all duration-200 cursor-pointer">
+                                    <div class="flex items-center space-x-3">
+                                        <div
+                                            class="flex-shrink-0 w-7 h-7 bg-gradient-to-br from-gray-400 to-gray-500 text-white rounded-lg flex items-center justify-center font-medium text-xs">
+                                            2
+                                        </div>
+                                        <div class="flex-1">
+                                            <p
+                                                class="text-base font-medium text-gray-700 leading-snug group-hover:text-gray-900 transition-colors duration-200">
+                                                Déléguez l'exécution des tâches à un agent avec une simple prompt
+                                            </p>
+                                        </div>
+                                        <div class="flex-shrink-0">
+                                            <svg class="w-4 h-4 text-gray-400 transform rotate-90 group-hover:text-gray-600 transition-all duration-200"
+                                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M19 9l-7 7-7-7" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <!-- Right Panel: Chat Animation Area (Placeholder) -->
+                    <div
+                        class="bg-[#ffd0c2] flex-1 border-2 border-dashed border-gray-300 rounded-xl min-h-[500px] flex items-center justify-center">
+                        <div class="text-center space-y-4">
+                            <div class="w-16 h-16 bg-gray-200 rounded-full mx-auto flex items-center justify-center">
+                                <svg class="w-8 h-8 text-gray-400" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                                </svg>
+                            </div>
+                            <p class="text-gray-500 font-medium">Zone d'animation chat</p>
+                            <p class="text-sm text-gray-400">Placeholder pour la démonstration interactive</p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- Use Case — Convert More Visitors (Tailwind v3) -->
+                <section class="relative ">
+
+
+                    <div class="mx-auto max-w-7xl px-6 py-16 lg:px-8">
+                        <div class="grid items-center gap-10 md:gap-12 lg:grid-cols-12">
+                            <!-- Text column -->
+                            <div class="order-2  lg:col-span-6 z-10">
+                                <span
+                                    class="inline-flex items-center rounded-full border border-blue-200/50 bg-gradient-to-r from-blue-100/30 to-indigo-100/30 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-primary">
+                                    Conseiller Client 
+                                </span>
+
+                                <h3 class="mt-4 ">
+                                    Convertissez
+                                    <span
+                                        class="bg-gradient-to-r from-emerald-500 to-teal-500 bg-clip-text text-transparent">3×</span>
+                                    plus de visiteurs en clients
+                                </h3>
+
+                                <p class="mt-3 text-base leading-relaxed text-gray-600 dark:text-gray-300">
+                                    Offrez des réponses personnalisées et instantanées, 24/7, directement sur votre
+                                    site.
+                                </p>
+
+                                <ul class="mt-8 space-y-4">
+                                    <!-- Feature item -->
+                                    <li
+                                        class="group relative overflow-hidden rounded-2xl border border-gray-200/70 bg-white/80 p-4 backdrop-blur-sm transition-shadow  dark:border-gray-800/70 dark:bg-gray-900/60">
+                                        <div class="flex items-center gap-3 ">
+                                            <!-- icon -->
+                                            <span
+                                                class="inline-flex size-9 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-blue-500/90 to-indigo-500/90 text-white dark:from-blue-500 dark:to-indigo-500">
+                                                <i class="fa-solid fa-book-open text-sm"></i>
+                                            </span>
+                                            <p class=" leading-snug text-gray-800 dark:text-gray-100">
+                                                Un conseiller virtuel qui connaît parfaitement vos produits.
+                                            </p>
+                                        </div>
+                                    </li>
+
+                                    <li
+                                        class="group relative overflow-hidden rounded-2xl border border-gray-200/70 bg-white/80 p-4 backdrop-blur-sm transition-shadow  dark:border-gray-800/70 dark:bg-gray-900/60">
+                                        <div class="flex items-center gap-3">
+                                            <span
+                                                class="inline-flex size-9 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-emerald-500 to-teal-500 text-white dark:from-emerald-500 dark:to-teal-500">
+                                                <i class="fa-solid fa-bolt text-sm"></i>
+                                            </span>
+                                            <p class=" leading-snug text-gray-800 dark:text-gray-100">
+                                                Répond instantanément aux questions de vos clients, même à 2h du matin.
+                                            </p>
+                                        </div>
+                                    </li>
+
+                                    <li
+                                        class="group relative overflow-hidden rounded-2xl border border-gray-200/70 bg-white/80 p-4 backdrop-blur-sm transition-shadow  dark:border-gray-800/70 dark:bg-gray-900/60">
+                                        <div class="flex items-center gap-3">
+                                            <span
+                                                class="inline-flex size-9 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-fuchsia-500/90 to-pink-500/90 text-white dark:from-fuchsia-500 dark:to-pink-500">
+                                                <i class="fa-solid fa-star text-sm"></i>
+                                            </span>
+                                            <p class=" leading-snug text-gray-800 dark:text-gray-100">
+                                                S'adapte à votre ton de marque et guide vers l'achat.
+                                            </p>
+                                        </div>
+                                    </li>
+                                </ul>
+
+
+                            </div>
+
+                            <!-- Visual column -->
+                            <div class="order-1 lg:col-span-6 z-10">
+                                <div
+                                    class="bg-[#ffd0c2] flex-1 border-2 border-dashed border-gray-300 rounded-xl min-h-[500px] flex items-center justify-center">
+                                    <div class="text-center space-y-4">
+                                        <div
+                                            class="w-16 h-16 bg-gray-200 rounded-full mx-auto flex items-center justify-center">
+                                            <svg class="w-8 h-8 text-gray-400" fill="none" stroke="currentColor"
+                                                viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                                            </svg>
+                                        </div>
+                                        <p class="text-gray-500 font-medium">Zone d'animation chat</p>
+                                        <p class="text-sm text-gray-400">Placeholder pour la démonstration interactive
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+
+            </div>
+
+        </section>
+
+        <!-- Team Section — matches the reference design (Tailwind v3) -->
+        <section class="py-20 max-w-screen-xl mx-auto  px-2 md:px-4">
+            <!-- Header -->
+            <header class="mb-10 sm:mb-12">
+                <h2 class="">Notre équipe</h2>
+            </header>
+
+            <!-- Grid of members -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 auto-rows-auto justify-items-center md:justify-items-start">
+
+                <!-- Card: Justin -->
+                <article class="flex w-full h-full flex-col max-w-[450px] items-stretch rounded-[2rem] bg-[#f8f8f8] p-3 sm:p-4">
+                    <!-- Image -->
+                    <div class="">
+                        <div class="overflow-hidden rounded-[20px]   rounded-b-none">
+                            <img class="aspect-square w-full h-full object-cover" alt="Portrait de Justin" loading="lazy"
+                                sizes="(max-width: 2000px) 100vw, 2000px" srcset="
+                https://cdn.prod.website-files.com/688cd4e822ff5df34f6a7db3/68922a5f740745ee512403f1_professional_headshot_justin_31122024_small-p-500.png 500w,
+                https://cdn.prod.website-files.com/688cd4e822ff5df34f6a7db3/68922a5f740745ee512403f1_professional_headshot_justin_31122024_small-p-800.png 800w,
+                https://cdn.prod.website-files.com/688cd4e822ff5df34f6a7db3/68922a5f740745ee512403f1_professional_headshot_justin_31122024_small-p-1080.png 1080w,
+                https://cdn.prod.website-files.com/688cd4e822ff5df34f6a7db3/68922a5f740745ee512403f1_professional_headshot_justin_31122024_small-p-1600.png 1600w,
+                https://cdn.prod.website-files.com/688cd4e822ff5df34f6a7db3/68922a5f740745ee512403f1_professional_headshot_justin_31122024_small.png 2000w
+              " src="https://cdn.prod.website-files.com/688cd4e822ff5df34f6a7db3/68922a5f740745ee512403f1_professional_headshot_justin_31122024_small.png" />
+                        </div>
+                    </div>
+
+                    <!-- Body -->
+                    <div class="flex h-full w-full flex-col items-start justify-between rounded-[1.25rem] rounded-t-none bg-white p-3 sm:p-4 gap-3 sm:gap-4">
+                        <div class="mb-1 sm:mb-2">
+                            <h3 class="text-xl text-2xl font-medium ">Justin</h3>
+                            <p class="text-xl text-gray-600">IA et Développement</p>
+                        </div>
+
+                        <p class=" text-gray-700 leading-relaxed">
+                            Fort de son double parcours pro. technique et business, Justin est votre partenaire technique avec une vraie compréhension des enjeux de votre activité.
+                        </p>
+
+                        <!-- Socials -->
+                        <div class="mt-3 sm:mt-4">
+                            <a href="https://www.linkedin.com/in/justin-warambourg/" target="_blank" rel="noopener"
+                                class="inline-flex items-center bg-primary px-[7px] py-[2px] rounded-[4px]"
+                                aria-label="Justin sur LinkedIn">
+                                <i class="fa-brands text-white fa-linkedin-in text-sm sm:text-base"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card: Victor -->
+                <article class="flex w-full h-full flex-col max-w-[450px] items-stretch rounded-[2rem] bg-[#f8f8f8] p-3 sm:p-4">
+                    <!-- Image -->
+                    <div class="">
+                        <div class="overflow-hidden rounded-[20px]  rounded-b-none">
+                            <img class="aspect-square w-full h-full object-cover " alt="Portrait de Victor" loading="lazy"
+                                sizes="(max-width: 800px) 100vw, 800px" srcset="
+                https://cdn.prod.website-files.com/688cd4e822ff5df34f6a7db3/68922bfc484fa3507d4ad668_victor_bey_smith_headshot-p-500.jpeg 500w,
+                https://cdn.prod.website-files.com/688cd4e822ff5df34f6a7db3/68922bfc484fa3507d4ad668_victor_bey_smith_headshot.jpeg 800w
+              " src="https://cdn.prod.website-files.com/688cd4e822ff5df34f6a7db3/68922bfc484fa3507d4ad668_victor_bey_smith_headshot.jpeg" />
+                        </div>
+                    </div>
+
+                    <!-- Body -->
+                    <div class="flex h-full w-full flex-col items-start justify-between rounded-[1.25rem]  rounded-t-none bg-white p-3 sm:p-4 gap-3 sm:gap-4">
+                        <div class="mb-1 sm:mb-2">
+                            <h3 class="text-xl sm:text-2xl font-medium">Victor</h3>
+                            <p class="text-xl text-gray-600">Business</p>
+                        </div>
+
+                        <p class=" text-gray-700 leading-relaxed">
+                            Skilled in translating data into actionable insights for strategic online marketing campaigns.
+                        </p>
+
+                        <!-- Socials -->
+                        <div class="mt-3 sm:mt-4">
+                            <a href="https://www.linkedin.com/feed/" target="_blank" rel="noopener"
+                                class="inline-flex items-center bg-primary px-[7px] py-[2px] rounded-[4px]"
+                                aria-label="Victor sur LinkedIn">
+                                <i class="fa-brands text-white fa-linkedin-in text-sm sm:text-base"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="contact" >
+            <div class="max-w-screen-xl mx-auto px-2 md:px-4 text-center md:text-left ">
+                <div class="grid grid-cols-1 lg:space-x-10 md:space-x-2 md:grid-cols-2  rounded-xl md:rounded-[20px] bg-cover bg-center bg-no-repeat lg:px-20 lg:py-24  md:px-5 px-2 py-10 relative" style="background-image: url('./assets/abstract_bg1.jpg');">
+                    <div class="absolute inset-0 bg-white/35 rounded-[20px]"></div>
+                    <div class="relative z-10 flex flex-col h-[92%]">
+                        <div class="mb-6 ">
+                            <h2 class="">Optimisez votre activité avec l'IA.</h2>
+                        </div>
+                        <div class="mb-10 text-lg">
+                            <p>
+                                Réservez une consultation de 30 minutes pour en savoir plus sur comment les nouveaux
+                                outils
+                                d'IA&nbsp;peuvent aider votre activité.</p>
+                        </div>
+                        <div class="mt-auto">
+                            <a class="btn-primary text-lg py-4" 
+                            href="https://calendly.com/justin-warambourg/consultation-ingenia" target="_blank"
+                            >
+                                    Réserver une consultation gratuite
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class=" md:hidden flex flex-row items-center justify-center mt-16 mb-7 space-x-2 z-10 mx-1"  >
+                        <hr class="flex-1 border-gray-600">
+                        <p class="whitespace-nowrap text-gray-600">Ou remplissez le formulaire ci-dessous</p>
+                        <hr class="flex-1 border-gray-600">
+                    </div>
+                    <div class="h-[380px] overflow-hidden z-10 md:mt-[-30px]">
+                        <iframe id="JotFormIFrame-252401697918364" title="Appointment Request Form"
+                            onload="window.parent.scrollTo(0,0)" allowtransparency="true"
+                            allow="geolocation; microphone; camera; fullscreen; payment"
+                            src="https://form.jotform.com/252401697918364" frameborder="0"
+                            style="min-width:100%;max-width:100%;border:none;" scrolling="no"> </iframe>
+                        <script src='https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js'></script>
+                        <script>window.jotformEmbedHandler("iframe[id='JotFormIFrame-252401697918364']", "https://form.jotform.com/")</script>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="mt-10 border-t border-slate-200 bg-white">
+        <div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8 py-10">
+          <!-- Mobile: stacked with collapsible sections; Desktop: 3 columns -->
+          <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
+            <!-- Brand -->
+            <div>
+              <div class="flex items-center gap-3">
+                <img src="./assets/ingenia_logo_base.png" alt="Logo" class="w-7 h-auto">
+                <p class="text-lg font-semibold tracking-wide">INGENIA</p>
+              </div>
+              <p class="mt-3 text-slate-600">
+                Moderniser son activité avec l'IA est à la portée de tous.
+              </p>
+            </div>
+      
+            <!-- Menu (mobile: collapsible, desktop: static) -->
+            <div class="lg:ml-40">
+              <!-- mobile -->
+              <details class="group md:hidden border-t first:border-0 border-slate-200 pt-4 ">
+                <summary class="flex cursor-pointer items-center justify-between py-2 text-base font-semibold text-slate-900">
+                  Menu
+                  <svg class="h-5 w-5 transition-transform group-open:rotate-180" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.21 8.29a.75.75 0 01.02-1.08z" clip-rule="evenodd"/>
+                  </svg>
+                </summary>
+                <ul class="mt-2 space-y-3">
+                  <li><a href="/" aria-current="page" class="inline-block rounded-md text-slate-900 hover:opacity-75 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-400">Accueil</a></li>
+                  <li><a href="#" class="inline-block rounded-md text-slate-900 hover:opacity-75 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-400">Nos solutions</a></li>
+                  <li><a href="#Feature" class="inline-block rounded-md text-slate-900 hover:opacity-75 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-400">Qui sommes-nous</a></li>
+                </ul>
+              </details>
+              <!-- desktop -->
+              <nav aria-label="Pied de page – Menu" class="hidden md:block">
+                <p class="text-lg font-semibold">Menu</p>
+                <ul class="mt-4 space-y-3">
+                  <li><a href="/" aria-current="page" class="inline-block rounded-md text-slate-900 transition hover:opacity-75 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-400">Accueil</a></li>
+                  <li><a href="#" class="inline-block rounded-md text-slate-900 transition hover:opacity-75 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-400">Nos solutions</a></li>
+                  <li><a href="#Feature" class="inline-block rounded-md text-slate-900 transition hover:opacity-75 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-400">Qui sommes-nous</a></li>
+                </ul>
+              </nav>
+            </div>
+      
+            <!-- Contact (mobile: collapsible, desktop: static) -->
+            <div>
+              <!-- mobile -->
+              <details class="group md:hidden border-t border-slate-200 pt-4">
+                <summary class="flex cursor-pointer items-center justify-between py-2 text-base font-semibold text-slate-900">
+                  Contact
+                  <svg class="h-5 w-5 transition-transform group-open:rotate-180" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.21 8.29a.75.75 0 01.02-1.08z" clip-rule="evenodd"/>
+                  </svg>
+                </summary>
+                <ul class="mt-2 space-y-3">
+                  <li><a href="tel:+33686442172" class="inline-block rounded-md text-slate-900 hover:opacity-75 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-400">+33 6 86 44 21 72</a></li>
+                  <li><a href="mailto:justin.warambourg@gmail.com" class="inline-block break-all rounded-md text-slate-900 hover:opacity-75 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-400">justin.warambourg@gmail.com</a></li>
+                </ul>
+                <address class="mt-3 not-italic leading-relaxed text-slate-600">
+                  73, rue du bois<br>59940 Estaires
+                </address>
+              </details>
+              <!-- desktop -->
+              <div class="hidden md:block">
+                <p class="text-lg font-semibold">Contact</p>
+                <ul class="mt-4 space-y-3">
+                  <li><a href="tel:+33686442172" class="inline-block rounded-md text-slate-900 transition hover:opacity-75 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-400">+33 6 86 44 21 72</a></li>
+                  <li><a href="mailto:justin.warambourg@gmail.com" class="inline-block break-all rounded-md text-slate-900 transition hover:opacity-75 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-400">justin.warambourg@gmail.com</a></li>
+                </ul>
+                <address class="mt-4 not-italic leading-relaxed text-slate-600">
+                  73, rue du bois<br>59940 Estaires
+                </address>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+    <script>
+        // Mobile Menu Toggle Functionality
+        document.addEventListener('DOMContentLoaded', function () {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileMenuClose = document.getElementById('mobile-menu-close');
+            const burgerIcon = mobileMenuButton.querySelector('.burger-icon');
+
+            // Function to open mobile menu
+            function openMobileMenu() {
+                mobileMenu.classList.add('open');
+                burgerIcon.classList.add('open');
+                mobileMenuButton.setAttribute('aria-expanded', 'true');
+                document.body.style.overflow = 'hidden'; // Prevent background scrolling
+            }
+
+            // Function to close mobile menu
+            function closeMobileMenu() {
+                mobileMenu.classList.remove('open');
+                burgerIcon.classList.remove('open');
+                mobileMenuButton.setAttribute('aria-expanded', 'false');
+                document.body.style.overflow = ''; // Restore scrolling
+            }
+
+            // Event listeners
+            mobileMenuButton.addEventListener('click', function () {
+                if (mobileMenu.classList.contains('open')) {
+                    closeMobileMenu();
+                } else {
+                    openMobileMenu();
+                }
+            });
+
+            mobileMenuClose.addEventListener('click', closeMobileMenu);
+
+            // Close menu when clicking on navigation links
+            const mobileNavLinks = mobileMenu.querySelectorAll('nav a');
+            mobileNavLinks.forEach(link => {
+                link.addEventListener('click', closeMobileMenu);
+            });
+
+            // Close menu when pressing Escape key
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape' && mobileMenu.classList.contains('open')) {
+                    closeMobileMenu();
+                }
+            });
+        });
+
+
+        document.addEventListener('DOMContentLoaded', () => {
+            new TypingAnimation({
+                textElementId: 'taskText',
+                cursorElementId: 'taskCursor',
+                iconElementId: 'taskIcon',
+                prompts: [
+                    {
+                        text: "Passe une commande de matériaux A au fournisseur habituel.",
+                        icon: "M12 6v6m0 0v6m0-6h6m-6 0H6"
+                    },
+                    {
+                        text: "Relance les clients dont les factures sont en retard de plus de 15 jours.",
+                        icon: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                    },
+                    {
+                        text: "Prépare un résumé du dossier de M. Dupont pour la réunion de demain.",
+                        icon: "M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                    }
+                ],
+                cursorColor: 'bg-emerald-500',
+                activeDotColor: 'bg-emerald-500',
+                typeSpeed: 30,
+                deleteSpeed: 20,
+                holdDuration: 3000,
+                pauseDuration: 500
+            });
+        });
+
+
+        document.addEventListener('DOMContentLoaded', () => {
+            new TypingAnimation({
+                textElementId: 'promptText',
+                cursorElementId: 'cursor',
+                dotSelector: '[data-dot]',
+                prompts: [
+                    { text: "Un client indique un retard sur son remboursement, quel est son statut ?" },
+                    { text: "Est-ce que le service achats a déjà soumis les commandes aux fournisseurs pour la semaine prochaine ?" },
+                    { text: "Liste les incidents de chaîne de production des trois derniers mois et précise la cause de chacun." }
+                ],
+                cursorColor: 'bg-primary',
+                activeDotColor: 'bg-primary',
+                typeSpeed: 28,
+                deleteSpeed: 18,
+                holdDuration: 3000,
+                pauseDuration: 500
+            });
+        });
+
+
+
+
+        function scrollToAnchor(id, offset = 0) {
+    const el = document.getElementById(id);
+    if (!el) return;
+
+    const y = el.getBoundingClientRect().top + window.scrollY - offset;
+    window.scrollTo({ top: y, behavior: 'smooth' });
+  }
+
+
+
+    </script>
+
 </body>
+
+
 </html>

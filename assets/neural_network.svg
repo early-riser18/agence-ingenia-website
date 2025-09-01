@@ -1,0 +1,163 @@
+<svg class="w-full h-full" viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Connections/Lines -->
+    <g class="neural-connections">
+        <!-- Layer 1 to Layer 2 connections -->
+        <line x1="60" y1="80" x2="120" y2="60" stroke="url(#neuralGradient)" stroke-width="1"
+            opacity="0.4">
+            <animate attributeName="opacity" values="0.2;0.6;0.2" dur="3s"
+                repeatCount="indefinite" begin="0s" />
+        </line>
+        <line x1="60" y1="80" x2="120" y2="120" stroke="url(#neuralGradient)" stroke-width="1"
+            opacity="0.3" />
+        <line x1="60" y1="160" x2="120" y2="60" stroke="url(#neuralGradient)" stroke-width="1"
+            opacity="0.3" />
+        <line x1="60" y1="160" x2="120" y2="120" stroke="url(#neuralGradient)" stroke-width="1"
+            opacity="0.4">
+            <animate attributeName="opacity" values="0.2;0.5;0.2" dur="4s"
+                repeatCount="indefinite" begin="1s" />
+        </line>
+        <line x1="60" y1="160" x2="120" y2="180" stroke="url(#neuralGradient)" stroke-width="1"
+            opacity="0.3" />
+        <line x1="60" y1="240" x2="120" y2="180" stroke="url(#neuralGradient)" stroke-width="1"
+            opacity="0.3" />
+        <line x1="60" y1="240" x2="120" y2="240" stroke="url(#neuralGradient)" stroke-width="1"
+            opacity="0.4" />
+
+        <!-- Layer 2 to Layer 3 connections -->
+        <line x1="120" y1="60" x2="200" y2="80" stroke="url(#neuralGradient)" stroke-width="1"
+            opacity="0.3" />
+        <line x1="120" y1="60" x2="200" y2="140" stroke="url(#neuralGradient)" stroke-width="1"
+            opacity="0.3" />
+        <line x1="120" y1="120" x2="200" y2="80" stroke="url(#neuralGradient)" stroke-width="1"
+            opacity="0.4">
+            <animate attributeName="opacity" values="0.2;0.6;0.2" dur="3.5s"
+                repeatCount="indefinite" begin="0.5s" />
+        </line>
+        <line x1="120" y1="120" x2="200" y2="140" stroke="url(#neuralGradient)" stroke-width="1"
+            opacity="0.3" />
+        <line x1="120" y1="120" x2="200" y2="200" stroke="url(#neuralGradient)" stroke-width="1"
+            opacity="0.3" />
+        <line x1="120" y1="180" x2="200" y2="140" stroke="url(#neuralGradient)" stroke-width="1"
+            opacity="0.3" />
+        <line x1="120" y1="180" x2="200" y2="200" stroke="url(#neuralGradient)" stroke-width="1"
+            opacity="0.4" />
+        <line x1="120" y1="240" x2="200" y2="200" stroke="url(#neuralGradient)" stroke-width="1"
+            opacity="0.3" />
+        <line x1="120" y1="240" x2="200" y2="260" stroke="url(#neuralGradient)" stroke-width="1"
+            opacity="0.4">
+            <animate attributeName="opacity" values="0.2;0.5;0.2" dur="4.5s"
+                repeatCount="indefinite" begin="2s" />
+        </line>
+
+        <!-- Layer 3 to Output connections -->
+        <line x1="200" y1="80" x2="260" y2="120" stroke="url(#neuralGradient)" stroke-width="1"
+            opacity="0.4" />
+        <line x1="200" y1="140" x2="260" y2="120" stroke="url(#neuralGradient)" stroke-width="1"
+            opacity="0.3" />
+        <line x1="200" y1="140" x2="260" y2="180" stroke="url(#neuralGradient)" stroke-width="1"
+            opacity="0.4">
+            <animate attributeName="opacity" values="0.3;0.7;0.3" dur="3s"
+                repeatCount="indefinite" begin="1.5s" />
+        </line>
+        <line x1="200" y1="200" x2="260" y2="180" stroke="url(#neuralGradient)" stroke-width="1"
+            opacity="0.3" />
+        <line x1="200" y1="260" x2="260" y2="180" stroke="url(#neuralGradient)" stroke-width="1"
+            opacity="0.3" />
+
+        <!-- Additional cross-layer connections for complexity -->
+        <line x1="60" y1="80" x2="200" y2="140" stroke="url(#neuralGradient)" stroke-width="0.5"
+            opacity="0.2" />
+        <line x1="120" y1="60" x2="260" y2="120" stroke="url(#neuralGradient)"
+            stroke-width="0.5" opacity="0.2" />
+    </g>
+
+    <!-- Nodes/Neurons -->
+    <g class="neural-nodes">
+        <!-- Input Layer -->
+        <circle cx="60" cy="80" r="6" fill="url(#inputNodeGradient)" opacity="0.9">
+            <animate attributeName="r" values="5;8;5" dur="4s" repeatCount="indefinite"
+                begin="0s" />
+            <animate attributeName="opacity" values="0.7;1;0.7" dur="4s"
+                repeatCount="indefinite" begin="0s" />
+        </circle>
+        <circle cx="60" cy="160" r="6" fill="url(#inputNodeGradient)" opacity="0.8" />
+        <circle cx="60" cy="240" r="6" fill="url(#inputNodeGradient)" opacity="0.9">
+            <animate attributeName="r" values="5;8;5" dur="5s" repeatCount="indefinite"
+                begin="2s" />
+            <animate attributeName="opacity" values="0.7;1;0.7" dur="5s"
+                repeatCount="indefinite" begin="2s" />
+        </circle>
+
+        <!-- Hidden Layer 1 -->
+        <circle cx="120" cy="60" r="6" fill="url(#hiddenNodeGradient)" opacity="0.8" />
+        <circle cx="120" cy="120" r="6" fill="url(#hiddenNodeGradient)" opacity="0.9">
+            <animate attributeName="r" values="5;8;5" dur="3.5s" repeatCount="indefinite"
+                begin="1s" />
+            <animate attributeName="opacity" values="0.7;1;0.7" dur="3.5s"
+                repeatCount="indefinite" begin="1s" />
+        </circle>
+        <circle cx="120" cy="180" r="6" fill="url(#hiddenNodeGradient)" opacity="0.8" />
+        <circle cx="120" cy="240" r="6" fill="url(#hiddenNodeGradient)" opacity="0.9" />
+
+        <!-- Hidden Layer 2 -->
+        <circle cx="200" cy="80" r="6" fill="url(#hiddenNodeGradient2)" opacity="0.8" />
+        <circle cx="200" cy="140" r="6" fill="url(#hiddenNodeGradient2)" opacity="0.9">
+            <animate attributeName="r" values="5;8;5" dur="4.5s" repeatCount="indefinite"
+                begin="1.5s" />
+            <animate attributeName="opacity" values="0.7;1;0.7" dur="4.5s"
+                repeatCount="indefinite" begin="1.5s" />
+        </circle>
+        <circle cx="200" cy="200" r="6" fill="url(#hiddenNodeGradient2)" opacity="0.8" />
+        <circle cx="200" cy="260" r="6" fill="url(#hiddenNodeGradient2)" opacity="0.9" />
+
+        <!-- Output Layer -->
+        <circle cx="260" cy="120" r="7" fill="url(#outputGradient)" opacity="1">
+            <animate attributeName="r" values="6;9;6" dur="3s" repeatCount="indefinite"
+                begin="0.5s" />
+            <animate attributeName="opacity" values="0.8;1;0.8" dur="3s"
+                repeatCount="indefinite" begin="0.5s" />
+        </circle>
+        <circle cx="260" cy="180" r="7" fill="url(#outputGradient)" opacity="1">
+            <animate attributeName="r" values="6;9;6" dur="3s" repeatCount="indefinite"
+                begin="2.5s" />
+            <animate attributeName="opacity" values="0.8;1;0.8" dur="3s"
+                repeatCount="indefinite" begin="2.5s" />
+        </circle>
+    </g>
+
+    <!-- Gradient Definitions -->
+    <defs>
+        <linearGradient id="neuralGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#3B82F6;stop-opacity:0.6" />
+            <stop offset="100%" style="stop-color:#6366F1;stop-opacity:0.2" />
+        </linearGradient>
+        <!-- Input Node Gradient (Vivid Green) -->
+        <radialGradient id="inputNodeGradient" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:1" />
+            <stop offset="20%" style="stop-color:#00FF88;stop-opacity:1" />
+            <stop offset="60%" style="stop-color:#00E676;stop-opacity:0.9" />
+            <stop offset="100%" style="stop-color:#00C853;stop-opacity:0.8" />
+        </radialGradient>
+        <!-- Hidden Layer 1 Gradient (Vivid Purple) -->
+        <radialGradient id="hiddenNodeGradient" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:1" />
+            <stop offset="20%" style="stop-color:#BB86FC;stop-opacity:1" />
+            <stop offset="60%" style="stop-color:#9C27B0;stop-opacity:0.9" />
+            <stop offset="100%" style="stop-color:#7B1FA2;stop-opacity:0.8" />
+        </radialGradient>
+        <!-- Hidden Layer 2 Gradient (Vivid Pink) -->
+        <radialGradient id="hiddenNodeGradient2" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:1" />
+            <stop offset="20%" style="stop-color:#FF4081;stop-opacity:1" />
+            <stop offset="60%" style="stop-color:#E91E63;stop-opacity:0.9" />
+            <stop offset="100%" style="stop-color:#C2185B;stop-opacity:0.8" />
+        </radialGradient>
+        <!-- Output Gradient (Vivid Blue) -->
+        <radialGradient id="outputGradient" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:1" />
+            <stop offset="20%" style="stop-color:#00B4FF;stop-opacity:1" />
+            <stop offset="60%" style="stop-color:#2196F3;stop-opacity:0.95" />
+            <stop offset="100%" style="stop-color:#1976D2;stop-opacity:0.9" />
+        </radialGradient>
+    </defs>
+</svg>
