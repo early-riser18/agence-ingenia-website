@@ -17,16 +17,134 @@
     <script src="src/typing-animation.js"></script>
 
     <link rel="icon" type="image/png" href="./assets/favicon/favicon-96x96.png" sizes="96x96" />
-<link rel="icon" type="image/svg+xml" href="./assets/favicon/favicon.svg" />
-<link rel="shortcut icon" href="./assets/favicon/favicon.ico" />
-<link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png" />
-<link rel="manifest" href="./assets/favicon/site.webmanifest" />
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="./assets/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="./assets/favicon/site.webmanifest" />
     <title>Agence Ingenia</title>
+
+    <style>
+        /* Slideshow Styles */
+        .slideshow-slide {
+            position: relative;
+            display: block;
+        }
+
+        .slideshow-slide.active {
+            position: relative;
+            opacity: 1;
+            z-index: 1;
+        }
+
+        .slideshow-slide:not(.active) {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            opacity: 0;
+            z-index: 0;
+        }
+
+        /* Dropdown Animation Styles */
+        .dropdown-container {
+            max-height: 0;
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .dropdown-container.open {
+            max-height: 500px;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .dropdown-content {
+            transform: scale(0.95);
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .dropdown-container.open .dropdown-content {
+            transform: scale(1);
+        }
+
+        /* Staggered animation for question items */
+        .question-item {
+            opacity: 0;
+            transform: translateY(-5px);
+            transition: all 0.1s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .dropdown-container.open .question-item {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .dropdown-container.open .question-item:nth-child(1) {
+            transition-delay: 0.1s;
+        }
+
+        .dropdown-container.open .question-item:nth-child(2) {
+            transition-delay: 0.15s;
+        }
+
+        .dropdown-container.open .question-item:nth-child(3) {
+            transition-delay: 0.2s;
+        }
+
+        /* Simple Dynamic States Only */
+        .feature-toggle[data-state="active"] {
+            border-color: rgba(74, 182, 133, 0.3);
+            background-color: rgba(74, 182, 133, 0.05);
+        }
+
+        /* .feature-toggle[data-state="active"] .feature-number {
+            background-color: #4ab685;
+        } */
+
+        .feature-toggle[data-state="active"] .feature-icon {
+            color: #4ab685;
+            transform: rotate(0deg);
+        }
+
+        /* .feature-toggle[data-state="inactive"] .feature-number {
+            background-color: rgb(107, 114, 128);
+        } */
+
+        .feature-toggle[data-state="inactive"] .feature-icon {
+            color: rgb(156, 163, 175);
+            transform: rotate(90deg);
+        }
+
+        .feature-toggle[data-state="inactive"]:hover {
+            border-color: rgba(74, 182, 133, 0.2);
+        }
+
+        /* .feature-toggle[data-state="inactive"]:hover .feature-number {
+            background-color: #4ab685;
+        } */
+
+        .feature-toggle[data-state="inactive"]:hover .feature-icon {
+            color: #4ab685;
+            transform: rotate(0deg);
+        }
+
+        .question-item[data-state="active"] {
+            border-color: rgba(74, 182, 133, 0.4);
+            background-color: rgba(74, 182, 133, 0.1);
+            font-weight: 600;
+        }
+
+        .question-item[data-state="inactive"]:hover {
+            border-color: rgba(74, 182, 133, 0.3);
+            background-color: rgba(74, 182, 133, 0.06);
+        }
+    </style>
 </head>
 
 <body>
     <!-- Sticky Header -->
-    <header class="sticky top-0 md:top-5 z-50 md:px-4 ">
+    <header class="sticky top-0 md:top-2 z-50 md:px-4 ">
         <div
             class="max-w-screen-xl mx-auto p-3 bg-[#ffffff8f] md:rounded-lg border-b md:border-none border-gray-300 md:shadow-[0_2px_5px_#0003] backdrop-blur-xl">
             <div class="flex items-center justify-between ">
@@ -42,8 +160,10 @@
                 <div class="flex items-center md:space-x-8">
 
                     <nav class="hidden md:flex items-center space-x-2">
-                        <button onclick="scrollToAnchor('home', 150)" class=" clickable-text px-3 py-2 font-medium">Accueil</button>
-                        <button onclick="scrollToAnchor('use-cases', 60)" class=" clickable-text px-3 py-2  font-medium">Nos
+                        <button onclick="scrollToAnchor('home', 150)"
+                            class=" clickable-text px-3 py-2 font-medium">Accueil</button>
+                        <button onclick="scrollToAnchor('use-cases', 60)"
+                            class=" clickable-text px-3 py-2  font-medium">Nos
                             solutions</button>
                         <button onclick="scrollToAnchor('team', 50)" class=" clickable-text px-3 py-2  font-medium">Qui
                             sommes-nous</button>
@@ -51,8 +171,7 @@
 
                     <!-- CTA Button & Mobile Menu -->
                     <div class="flex items-center space-x-4">
-                        <button onclick="scrollToAnchor('contact', 50)"
-                            class="btn-primary px-4 ">
+                        <button onclick="scrollToAnchor('contact', 50)" class="btn-primary px-4 ">
                             Nous contacter
                         </button>
 
@@ -285,7 +404,7 @@
                             activité<span class="whitespace-nowrap"></span>
                         </p>
                         <p class=" text-gray-600 mt-4 font-medium">Il y a 20 ans, beaucoup ont raté le virage
-                            d’Internet… Ne ratez pas celui de l’IA.</p>
+                            d'Internet… Ne ratez pas celui de l'IA.</p>
                     </div>
 
                 </div>
@@ -523,7 +642,8 @@
 
                     <!-- Show Use Cases Button -->
                     <div class="flex justify-center mt-12">
-                        <button onclick="scrollToAnchor('use-cases', 50)" class="group relative inline-flex items-center justify-center">
+                        <button onclick="scrollToAnchor('use-cases', 50)"
+                            class="group relative inline-flex items-center justify-center">
                             <!-- Background glow -->
                             <div
                                 class="absolute -inset-2 bg-gradient-to-r from-primary/20 via-emerald-500/20 to-green-500/20 rounded-2xl blur-lg opacity-70 group-hover:opacity-100 transition-opacity duration-500">
@@ -633,104 +753,183 @@
         </section>
 
 
-        <section id="use-cases" class="py-16 max-w-screen-xl mx-auto px-4 bg-white">
-            <div class="">
+        <section id="use-cases" class="py-16 max-w-screen-xl mx-auto px-2 md:px-4 bg-white">
+            <div class=" space-y-20">
                 <!-- Section Header -->
                 <div class="text-center mb-16">
                     <h2 class="mb-4">Cas d'usage les plus fréquents</h2>
 
                 </div>
-            <div class="flex  flex-col gap-20">
 
+                    <!-- Use Case 1: Digital Assistant -->
+                    <div class="grid gap-2 md:gap-6 lg:gap-12 md:grid-cols-12 ">
+                        <!-- Left Panel: Messaging & Navigation -->
+                        <div class=" md:col-span-6 md:min-h-[650px]">
+                            <span
+                                class="inline-flex items-center rounded-full border border-blue-200/50 bg-gradient-to-r from-blue-100/30 to-indigo-100/30 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-primary">
+                                Agent autonome
+                            </span>
+                            <!-- Header (H1) -->
+                            <h3 class="mt-4">Votre bras droit numérique pour faire plus en moins de temps</h3>
 
-                <!-- Use Case 1: Digital Assistant -->
-                <div class="grid  gap-10 md:gap-6 lg:gap-12 md:grid-cols-12">
-                    <!-- Left Panel: Messaging & Navigation -->
-                    <div class="space-y-8 md:col-span-6">
-                        <span
-                            class="inline-flex items-center rounded-full border border-blue-200/50 bg-gradient-to-r from-blue-100/30 to-indigo-100/30 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-primary">
-                            Agent autonome
-                        </span>
-                        <!-- Header (H1) -->
-                        <h3>Votre bras droit numérique pour faire plus en moins de temps</h3>
+                            <!-- Subheader (H2) -->
+                            <p class="mt-3">Gérez votre entreprise depuis une interface de chat connectée à vos outils et
+                                logiciels métiers.</p>
 
-                        <!-- Subheader (H2) -->
-                        <p>Gérez votre entreprise depuis une interface de chat connectée à vos outils et
-                            logiciels métiers.</p>
-
-                        <!-- Feature Selection (Toggle) -->
-                        <div class="space-y-2">
-                            <!-- Feature 1 - Active by default -->
-                            <div id="feature-1" class="group relative feature-toggle active">
-                                <div
-                                    class="relative bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200/60 rounded-xl p-4 hover:shadow-md transition-all duration-200 cursor-pointer">
+                            <!-- Feature Selection (Toggle) -->
+                            <div class="mt-8 space-y-2">
+                                <!-- Feature 1 - Contextual Responses -->
+                                <div id="feature-1"
+                                    class="feature-toggle bg-white border-2 border-gray-200  rounded-lg md:rounded-xl p-4 transition-all duration-200 cursor-pointer"
+                                    data-state="active">
                                     <div class="flex items-center space-x-3">
                                         <div
-                                            class="flex-shrink-0 w-7 h-7 bg-gradient-to-br from-blue-600 to-indigo-600 text-white rounded-lg flex items-center justify-center font-medium text-xs">
-                                            1
+                                            class="feature-number w-8 h-8 text-white bg-gradient-to-r from-red-400 to-orange-500 rounded-lg flex items-center justify-center font-medium text-sm transition-colors duration-200">
+                                            <i class="fa-solid fa-message"></i>
                                         </div>
                                         <div class="flex-1">
-                                            <p class="text-base font-medium text-gray-900 leading-snug">
+                                            <p class=" font-medium leading-snug">
                                                 Recevez des réponses contextuelles en temps réel à vos questions
                                                 opérationnelles.
                                             </p>
                                         </div>
                                         <div class="flex-shrink-0">
-                                            <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor"
-                                                viewBox="0 0 24 24">
+                                            <svg class="feature-icon w-5 h-5 transition-all duration-200" fill="none"
+                                                stroke="currentColor" viewBox="0 0 24 24">
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                                     d="M19 9l-7 7-7-7" />
                                             </svg>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            <!-- Feature 2 - Inactive by default -->
-                            <div id="feature-2" class="group relative feature-toggle">
-                                <div
-                                    class="relative bg-white border border-gray-200/60 rounded-xl p-4 hover:shadow-md hover:border-gray-300/60 transition-all duration-200 cursor-pointer">
-                                    <div class="flex items-center space-x-3">
-                                        <div
-                                            class="flex-shrink-0 w-7 h-7 bg-gradient-to-br from-gray-400 to-gray-500 text-white rounded-lg flex items-center justify-center font-medium text-xs">
-                                            2
+                                <!-- Dropdown Questions for Feature 1 -->
+                                <div id="question-list-1" class="dropdown-container mt-1 md:mt-3">
+                                    <div
+                                        class="dropdown-content bg-white rounded-lg border border-gray-200 shadow-sm mb-4">
+                                        <div class="p-3 border-b border-gray-100">
+                                            <h4 class="text-sm font-medium text-gray-700">Exemples de questions</h4>
                                         </div>
-                                        <div class="flex-1">
-                                            <p
-                                                class="text-base font-medium text-gray-700 leading-snug group-hover:text-gray-900 transition-colors duration-200">
-                                                Déléguez l'exécution des tâches à un agent avec une simple prompt
-                                            </p>
-                                        </div>
-                                        <div class="flex-shrink-0">
-                                            <svg class="w-4 h-4 text-gray-400 transform rotate-90 group-hover:text-gray-600 transition-all duration-200"
-                                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                    d="M19 9l-7 7-7-7" />
-                                            </svg>
+                                        <div class="md:p-3 md:space-y-2 overflow-hidden">
+                                            <button
+                                                class="question-item w-full text-left p-3 md:rounded-md md:border border-t border-gray-200  transition-all duration-100 text-sm text-gray-700"
+                                                data-slide="0" data-list="1" data-state="active">
+                                                "Quels sont les indicateurs clés de performance de ce trimestre ?"
+                                            </button>
+                                            <button
+                                            class="question-item w-full text-left p-3 md:rounded-md md:border border-t border-gray-200  transition-all duration-100 text-sm text-gray-700"
+                                            data-slide="1" data-list="1" data-state="inactive">
+                                                "Analyse les données de vente du mois dernier"
+                                            </button>
+                                            <button
+                                            class="question-item w-full text-left p-3 md:rounded-md md:border border-t border-gray-200  transition-all duration-100 text-sm text-gray-700"
+                                            data-slide="2" data-list="1" data-state="inactive">
+                                                "Génère un rapport sur la satisfaction client"
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
 
-
-                    </div>
-
-                    <!-- Right Panel: Chat Animation Area (Placeholder) -->
-                    <div class="bg-[#ffd0c2] md:col-span-6 border-2 border-dashed border-gray-300 rounded-xl min-h-[500px] flex items-center justify-center">
-                        <div class="text-center space-y-4">
-                            <div class="w-16 h-16 bg-gray-200 rounded-full mx-auto flex items-center justify-center">
-                                <svg class="w-8 h-8 text-gray-400" fill="none" stroke="currentColor"
-                                    viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-                                </svg>
+                            <!-- Feature 2 - Task Delegation -->
+                            <div id="feature-2"
+                                class="feature-toggle bg-white border-2 border-gray-200 rounded-lg md:rounded-xl p-4  shadow-sm  transition-all duration-200 cursor-pointer"
+                                data-state="inactive">
+                                <div class="flex items-center space-x-3">
+                                    <div
+                                        class="feature-number w-8 h-8 text-white bg-gradient-to-br from-blue-800/70 to-indigo-700/80 rounded-lg flex items-center justify-center font-medium text-sm transition-colors duration-200">
+                                        <i class="fa-solid fa-tasks"></i>
+                                    </div>
+                                    <div class="flex-1">
+                                        <p class=" font-medium leading-snug">
+                                            Déléguez l'exécution des tâches à un agent avec une simple prompt
+                                        </p>
+                                    </div>
+                                    <div class="flex-shrink-0">
+                                        <svg class="feature-icon w-5 h-5 transition-all duration-200" fill="none"
+                                            stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M19 9l-7 7-7-7" />
+                                        </svg>
+                                    </div>
+                                </div>
                             </div>
-                            <p class="text-gray-500 font-medium">Zone d'animation chat</p>
-                            <p class="text-sm text-gray-400">Placeholder pour la démonstration interactive</p>
+
+                            <!-- Dropdown Questions for Feature 2 -->
+                            <div id="question-list-2" class="dropdown-container mt-1 md:mt-3">
+                                <div class="dropdown-content bg-white rounded-lg border border-gray-200 shadow-sm">
+                                    <div class="p-3 border-b border-gray-100">
+                                        <h4 class="text-sm font-medium text-gray-700">Exemples de tâches</h4>
+                                    </div>
+                                    <div class="md:p-3 md:space-y-2 overflow-hidden">
+                                        <button
+                                        class="question-item w-full text-left p-3 md:rounded-md md:border border-t border-gray-200  transition-all duration-100 text-sm text-gray-700"
+                                        data-slide="0" data-list="2" data-state="active">
+                                            "Créez une campagne email pour les nouveaux prospects"
+                                        </button>
+                                        <button
+                                        class="question-item w-full text-left p-3 md:rounded-md md:border border-t border-gray-200  transition-all duration-100 text-sm text-gray-700"
+                                        data-slide="1" data-list="2" data-state="inactive">
+                                            "Planifiez le suivi client automatique pour cette semaine"
+                                        </button>
+                                        <button
+                                        class="question-item w-full text-left p-3 md:rounded-md md:border border-t border-gray-200  transition-all duration-100 text-sm text-gray-700"
+                                        data-slide="2" data-list="2" data-state="inactive">
+                                            "Organisez les données client dans le CRM"
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Right Panel: Slideshow Display -->
+                        <div class="w-full space-y-6 md:col-span-6 my-auto">
+                            <!-- Section 1 Slideshow Container -->
+                            <div id="slideshow-container-1" class="group relative w-full  overflow-hidden rounded-2xl  shadow-md">
+
+                                    <!-- Section 1 Slides -->
+                                    <div
+                                        class="slideshow-slide-1 active opacity-100 transition-opacity duration-1000 ease-in-out">
+                                        <img src="assets/ai_assistant_feature/capture-test.png"
+                                            alt="Section 1 - Slide 1" class="w-full h-auto">
+                                    </div>
+                                    <div
+                                        class="slideshow-slide-1 opacity-0 absolute top-0 left-0 w-full transition-opacity duration-1000 ease-in-out">
+                                        <img src="assets/ai_assistant_feature/capture-test1.png"
+                                            alt="Section 1 - Slide 2" class="w-full h-auto">
+                                    </div>
+                                    <div
+                                        class="slideshow-slide-1 opacity-0 absolute top-0 left-0 w-full transition-opacity duration-1000 ease-in-out">
+                                        <img src="assets/ai_assistant_feature/capture-test.png"
+                                            alt="Section 1 - Slide 3" class="w-full h-auto">
+                                    </div>
+
+                            </div>
+
+                            <!-- Section 2 Slideshow Container -->
+                            <div id="slideshow-container-2"
+                                class="group relative w-full rounded-2xl overflow-hidden shadow-md hidden">
+                                <div class="relative rounded-xl overflow-hidden bg-transparent">
+                                    <!-- Section 2 Slides -->
+                                    <div
+                                        class="slideshow-slide-2 active opacity-100 transition-opacity duration-1000 ease-in-out">
+                                        <img src="assets/ai_assistant_feature/screen1.png" alt="Section 2 - Slide 1"
+                                            class="w-full h-auto">
+                                    </div>
+                                    <div
+                                        class="slideshow-slide-2 opacity-0 absolute top-0 left-0 w-full transition-opacity duration-1000 ease-in-out">
+                                        <img src="assets/ai_assistant_feature/screen2.png" alt="Section 2 - Slide 2"
+                                            class="w-full h-auto">
+                                    </div>
+                                    <div
+                                        class="slideshow-slide-2 opacity-0 absolute top-0 left-0 w-full transition-opacity duration-1000 ease-in-out">
+                                        <img src="assets/ai_assistant_feature/screen3.png" alt="Section 2 - Slide 3"
+                                            class="w-full h-auto">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
+
 
                 <!-- Use Case — Convert More Visitors (Tailwind v3) -->
                 <div class="grid gap-10 md:gap-6 lg:gap-12 md:grid-cols-12">
@@ -738,7 +937,7 @@
                     <div class="md:order-2  order-1 md:col-span-6 ">
                         <span
                             class="inline-flex items-center rounded-full border border-blue-200/50 bg-gradient-to-r from-blue-100/30 to-indigo-100/30 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-primary">
-                            Conseiller Client 
+                            Conseiller Client
                         </span>
 
                         <h3 class="mt-4 ">
@@ -836,15 +1035,17 @@
             </header>
 
             <!-- Grid of members -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 auto-rows-auto justify-items-center md:justify-items-start">
+            <div
+                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 auto-rows-auto justify-items-center md:justify-items-start">
 
                 <!-- Card: Justin -->
-                <article class="flex w-full h-full flex-col max-w-[450px] items-stretch rounded-[2rem] bg-[#f8f8f8] p-3 sm:p-4">
+                <article
+                    class="flex w-full h-full flex-col max-w-[450px] items-stretch rounded-[2rem] bg-[#f8f8f8] p-3 sm:p-4">
                     <!-- Image -->
                     <div class="">
                         <div class="overflow-hidden rounded-[20px]   rounded-b-none">
-                            <img class="aspect-square w-full h-full object-cover" alt="Portrait de Justin" loading="lazy"
-                                sizes="(max-width: 2000px) 100vw, 2000px" srcset="
+                            <img class="aspect-square w-full h-full object-cover" alt="Portrait de Justin"
+                                loading="lazy" sizes="(max-width: 2000px) 100vw, 2000px" srcset="
                 https://cdn.prod.website-files.com/688cd4e822ff5df34f6a7db3/68922a5f740745ee512403f1_professional_headshot_justin_31122024_small-p-500.png 500w,
                 https://cdn.prod.website-files.com/688cd4e822ff5df34f6a7db3/68922a5f740745ee512403f1_professional_headshot_justin_31122024_small-p-800.png 800w,
                 https://cdn.prod.website-files.com/688cd4e822ff5df34f6a7db3/68922a5f740745ee512403f1_professional_headshot_justin_31122024_small-p-1080.png 1080w,
@@ -855,14 +1056,16 @@
                     </div>
 
                     <!-- Body -->
-                    <div class="flex h-full w-full flex-col items-start justify-between rounded-[1.25rem] rounded-t-none bg-white p-3 sm:p-4 gap-3 sm:gap-4">
+                    <div
+                        class="flex h-full w-full flex-col items-start justify-between rounded-[1.25rem] rounded-t-none bg-white p-3 sm:p-4 gap-3 sm:gap-4">
                         <div class="mb-1 sm:mb-2 w-full">
                             <h3 class="text-xl font-medium ">Justin</h3>
                             <p class="text-xl text-gray-600">IA et Développement</p>
                         </div>
 
                         <p class=" text-gray-700 leading-relaxed">
-                            Fort de son double parcours pro. technique et business, Justin est votre partenaire technique avec une vraie compréhension des enjeux de votre activité.
+                            Fort de son double parcours pro. technique et business, Justin est votre partenaire
+                            technique avec une vraie compréhension des enjeux de votre activité.
                         </p>
 
                         <!-- Socials -->
@@ -877,12 +1080,13 @@
                 </article>
 
                 <!-- Card: Victor -->
-                <article class="flex w-full h-full flex-col max-w-[450px] items-stretch rounded-[2rem] bg-[#f8f8f8] p-3 sm:p-4">
+                <article
+                    class="flex w-full h-full flex-col max-w-[450px] items-stretch rounded-[2rem] bg-[#f8f8f8] p-3 sm:p-4">
                     <!-- Image -->
                     <div class="">
                         <div class="overflow-hidden rounded-[20px]  rounded-b-none">
-                            <img class="aspect-square w-full h-full object-cover " alt="Portrait de Victor" loading="lazy"
-                                sizes="(max-width: 800px) 100vw, 800px" srcset="
+                            <img class="aspect-square w-full h-full object-cover " alt="Portrait de Victor"
+                                loading="lazy" sizes="(max-width: 800px) 100vw, 800px" srcset="
                 https://cdn.prod.website-files.com/688cd4e822ff5df34f6a7db3/68922bfc484fa3507d4ad668_victor_bey_smith_headshot-p-500.jpeg 500w,
                 https://cdn.prod.website-files.com/688cd4e822ff5df34f6a7db3/68922bfc484fa3507d4ad668_victor_bey_smith_headshot.jpeg 800w
               " src="https://cdn.prod.website-files.com/688cd4e822ff5df34f6a7db3/68922bfc484fa3507d4ad668_victor_bey_smith_headshot.jpeg" />
@@ -890,14 +1094,16 @@
                     </div>
 
                     <!-- Body -->
-                    <div class="flex h-full w-full flex-col items-start justify-between rounded-[1.25rem]  rounded-t-none bg-white p-3 sm:p-4 gap-3 sm:gap-4">
+                    <div
+                        class="flex h-full w-full flex-col items-start justify-between rounded-[1.25rem]  rounded-t-none bg-white p-3 sm:p-4 gap-3 sm:gap-4">
                         <div class="mb-1 sm:mb-2 w-full">
                             <h3 class="text-xl sm:text-2xl font-medium">Victor</h3>
                             <p class="text-xl text-gray-600">Business</p>
                         </div>
 
                         <p class=" text-gray-700 leading-relaxed">
-                            Skilled in translating data into actionable insights for strategic online marketing campaigns.
+                            Skilled in translating data into actionable insights for strategic online marketing
+                            campaigns.
                         </p>
 
                         <!-- Socials -->
@@ -913,9 +1119,10 @@
             </div>
         </section>
 
-        <section id="contact" >
+        <section id="contact">
             <div class="max-w-screen-xl mx-auto  md:px-4 text-center md:text-left ">
-                <div class="grid grid-cols-1 lg:space-x-10 md:space-x-2 md:grid-cols-2   md:rounded-[20px] bg-cover bg-center bg-no-repeat lg:px-20 lg:py-24  md:px-5 px-2 py-10 relative" style="background-image: url('./assets/abstract_bg1.jpg');">
+                <div class="grid grid-cols-1 lg:space-x-10 md:space-x-2 md:grid-cols-2   md:rounded-[20px] bg-cover bg-center bg-no-repeat lg:px-20 lg:py-24  md:px-5 px-2 py-10 relative"
+                    style="background-image: url('./assets/abstract_bg1.jpg');">
                     <div class="absolute inset-0 bg-white/35 rounded-[20px]"></div>
                     <div class="relative z-10 flex flex-col h-[92%]">
                         <div class="mb-6 ">
@@ -928,15 +1135,14 @@
                                 d'IA&nbsp;peuvent aider votre activité.</p>
                         </div>
                         <div class="mt-auto">
-                            <a class="btn-primary text-lg py-4" 
-                            href="https://calendly.com/justin-warambourg/consultation-ingenia" target="_blank"
-                            >
-                                    Réserver une consultation gratuite
+                            <a class="btn-primary text-lg py-4"
+                                href="https://calendly.com/justin-warambourg/consultation-ingenia" target="_blank">
+                                Réserver une consultation gratuite
                             </a>
                         </div>
                     </div>
 
-                    <div class=" md:hidden flex flex-row items-center justify-center mt-16 mb-7 space-x-2 z-10 mx-1"  >
+                    <div class=" md:hidden flex flex-row items-center justify-center mt-16 mb-7 space-x-2 z-10 mx-1">
                         <hr class="flex-1 border-gray-600">
                         <p class="whitespace-nowrap text-gray-600">Ou remplissez le formulaire ci-dessous</p>
                         <hr class="flex-1 border-gray-600">
@@ -957,79 +1163,107 @@
 
     <footer class="mt-10 border-t border-slate-200 bg-white">
         <div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8 py-10">
-          <!-- Mobile: stacked with collapsible sections; Desktop: 3 columns -->
-          <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
-            <!-- Brand -->
-            <div>
-              <div class="flex items-center gap-3">
-                <img src="./assets/ingenia_logo_base.png" alt="Logo" class="w-7 h-auto">
-                <p class="text-lg font-semibold tracking-wide">INGENIA</p>
-              </div>
-              <p class="mt-3 text-slate-600">
-                Moderniser son activité avec l'IA est à la portée de tous.
-              </p>
+            <!-- Mobile: stacked with collapsible sections; Desktop: 3 columns -->
+            <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
+                <!-- Brand -->
+                <div>
+                    <div class="flex items-center gap-3">
+                        <img src="./assets/ingenia_logo_base.png" alt="Logo" class="w-7 h-auto">
+                        <p class="text-lg font-semibold tracking-wide">INGENIA</p>
+                    </div>
+                    <p class="mt-3 text-slate-600">
+                        Moderniser son activité avec l'IA est à la portée de tous.
+                    </p>
+                </div>
+
+                <!-- Menu (mobile: collapsible, desktop: static) -->
+                <div class="lg:ml-40">
+                    <!-- mobile -->
+                    <details class="group md:hidden border-t first:border-0 border-slate-200 pt-4 ">
+                        <summary
+                            class="flex cursor-pointer items-center justify-between py-2 text-base font-semibold text-slate-900">
+                            Menu
+                            <svg class="h-5 w-5 transition-transform group-open:rotate-180" viewBox="0 0 20 20"
+                                fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.21 8.29a.75.75 0 01.02-1.08z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </summary>
+                        <ul class="mt-2 space-y-3">
+                            <li><a href="/" aria-current="page"
+                                    class="inline-block rounded-md text-slate-900 hover:opacity-75 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-400">Accueil</a>
+                            </li>
+                            <li><a href="#"
+                                    class="inline-block rounded-md text-slate-900 hover:opacity-75 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-400">Nos
+                                    solutions</a></li>
+                            <li><a href="#Feature"
+                                    class="inline-block rounded-md text-slate-900 hover:opacity-75 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-400">Qui
+                                    sommes-nous</a></li>
+                        </ul>
+                    </details>
+                    <!-- desktop -->
+                    <nav aria-label="Pied de page – Menu" class="hidden md:block">
+                        <p class="text-lg font-semibold">Menu</p>
+                        <ul class="mt-4 space-y-3">
+                            <li><a href="/" aria-current="page"
+                                    class="inline-block rounded-md text-slate-900 transition hover:opacity-75 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-400">Accueil</a>
+                            </li>
+                            <li><a href="#"
+                                    class="inline-block rounded-md text-slate-900 transition hover:opacity-75 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-400">Nos
+                                    solutions</a></li>
+                            <li><a href="#Feature"
+                                    class="inline-block rounded-md text-slate-900 transition hover:opacity-75 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-400">Qui
+                                    sommes-nous</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <!-- Contact (mobile: collapsible, desktop: static) -->
+                <div>
+                    <!-- mobile -->
+                    <details class="group md:hidden border-t border-slate-200 pt-4">
+                        <summary
+                            class="flex cursor-pointer items-center justify-between py-2 text-base font-semibold text-slate-900">
+                            Contact
+                            <svg class="h-5 w-5 transition-transform group-open:rotate-180" viewBox="0 0 20 20"
+                                fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.21 8.29a.75.75 0 01.02-1.08z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </summary>
+                        <ul class="mt-2 space-y-3">
+                            <li><a href="tel:+33686442172"
+                                    class="inline-block rounded-md text-slate-900 hover:opacity-75 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-400">+33
+                                    6 86 44 21 72</a></li>
+                            <li><a href="mailto:justin.warambourg@gmail.com"
+                                    class="inline-block break-all rounded-md text-slate-900 hover:opacity-75 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-400">justin.warambourg@gmail.com</a>
+                            </li>
+                        </ul>
+                        <address class="mt-3 not-italic leading-relaxed text-slate-600">
+                            73, rue du bois<br>59940 Estaires
+                        </address>
+                    </details>
+                    <!-- desktop -->
+                    <div class="hidden md:block">
+                        <p class="text-lg font-semibold">Contact</p>
+                        <ul class="mt-4 space-y-3">
+                            <li><a href="tel:+33686442172"
+                                    class="inline-block rounded-md text-slate-900 transition hover:opacity-75 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-400">+33
+                                    6 86 44 21 72</a></li>
+                            <li><a href="mailto:justin.warambourg@gmail.com"
+                                    class="inline-block break-all rounded-md text-slate-900 transition hover:opacity-75 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-400">justin.warambourg@gmail.com</a>
+                            </li>
+                        </ul>
+                        <address class="mt-4 not-italic leading-relaxed text-slate-600">
+                            73, rue du bois<br>59940 Estaires
+                        </address>
+                    </div>
+                </div>
             </div>
-      
-            <!-- Menu (mobile: collapsible, desktop: static) -->
-            <div class="lg:ml-40">
-              <!-- mobile -->
-              <details class="group md:hidden border-t first:border-0 border-slate-200 pt-4 ">
-                <summary class="flex cursor-pointer items-center justify-between py-2 text-base font-semibold text-slate-900">
-                  Menu
-                  <svg class="h-5 w-5 transition-transform group-open:rotate-180" viewBox="0 0 20 20" fill="currentColor">
-                    <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.21 8.29a.75.75 0 01.02-1.08z" clip-rule="evenodd"/>
-                  </svg>
-                </summary>
-                <ul class="mt-2 space-y-3">
-                  <li><a href="/" aria-current="page" class="inline-block rounded-md text-slate-900 hover:opacity-75 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-400">Accueil</a></li>
-                  <li><a href="#" class="inline-block rounded-md text-slate-900 hover:opacity-75 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-400">Nos solutions</a></li>
-                  <li><a href="#Feature" class="inline-block rounded-md text-slate-900 hover:opacity-75 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-400">Qui sommes-nous</a></li>
-                </ul>
-              </details>
-              <!-- desktop -->
-              <nav aria-label="Pied de page – Menu" class="hidden md:block">
-                <p class="text-lg font-semibold">Menu</p>
-                <ul class="mt-4 space-y-3">
-                  <li><a href="/" aria-current="page" class="inline-block rounded-md text-slate-900 transition hover:opacity-75 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-400">Accueil</a></li>
-                  <li><a href="#" class="inline-block rounded-md text-slate-900 transition hover:opacity-75 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-400">Nos solutions</a></li>
-                  <li><a href="#Feature" class="inline-block rounded-md text-slate-900 transition hover:opacity-75 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-400">Qui sommes-nous</a></li>
-                </ul>
-              </nav>
-            </div>
-      
-            <!-- Contact (mobile: collapsible, desktop: static) -->
-            <div>
-              <!-- mobile -->
-              <details class="group md:hidden border-t border-slate-200 pt-4">
-                <summary class="flex cursor-pointer items-center justify-between py-2 text-base font-semibold text-slate-900">
-                  Contact
-                  <svg class="h-5 w-5 transition-transform group-open:rotate-180" viewBox="0 0 20 20" fill="currentColor">
-                    <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.21 8.29a.75.75 0 01.02-1.08z" clip-rule="evenodd"/>
-                  </svg>
-                </summary>
-                <ul class="mt-2 space-y-3">
-                  <li><a href="tel:+33686442172" class="inline-block rounded-md text-slate-900 hover:opacity-75 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-400">+33 6 86 44 21 72</a></li>
-                  <li><a href="mailto:justin.warambourg@gmail.com" class="inline-block break-all rounded-md text-slate-900 hover:opacity-75 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-400">justin.warambourg@gmail.com</a></li>
-                </ul>
-                <address class="mt-3 not-italic leading-relaxed text-slate-600">
-                  73, rue du bois<br>59940 Estaires
-                </address>
-              </details>
-              <!-- desktop -->
-              <div class="hidden md:block">
-                <p class="text-lg font-semibold">Contact</p>
-                <ul class="mt-4 space-y-3">
-                  <li><a href="tel:+33686442172" class="inline-block rounded-md text-slate-900 transition hover:opacity-75 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-400">+33 6 86 44 21 72</a></li>
-                  <li><a href="mailto:justin.warambourg@gmail.com" class="inline-block break-all rounded-md text-slate-900 transition hover:opacity-75 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-400">justin.warambourg@gmail.com</a></li>
-                </ul>
-                <address class="mt-4 not-italic leading-relaxed text-slate-600">
-                  73, rue du bois<br>59940 Estaires
-                </address>
-              </div>
-            </div>
-          </div>
         </div>
-      </footer>
+    </footer>
 
     <script>
         // Mobile Menu Toggle Functionality
@@ -1133,13 +1367,277 @@
 
 
         function scrollToAnchor(id, offset = 0) {
-    const el = document.getElementById(id);
-    if (!el) return;
+            const el = document.getElementById(id);
+            if (!el) return;
 
-    const y = el.getBoundingClientRect().top + window.scrollY - offset;
-    window.scrollTo({ top: y, behavior: 'smooth' });
-  }
+            const y = el.getBoundingClientRect().top + window.scrollY - offset;
+            window.scrollTo({ top: y, behavior: 'smooth' });
+        }
 
+        // Interactive Question Slideshow System with Separate Slide Lists
+        let currentSlide1 = 0;  // Current slide for section 1
+        let currentSlide2 = 0;  // Current slide for section 2
+        let currentActiveList = 1; // Start with list 1 active
+        let slideInterval;
+
+        // Separate slide collections for each section
+        const slides1 = document.querySelectorAll('.slideshow-slide-1');
+        const slides2 = document.querySelectorAll('.slideshow-slide-2');
+        const totalSlides1 = slides1.length;
+        const totalSlides2 = slides2.length;
+
+        // Slideshow containers
+        const container1 = document.getElementById('slideshow-container-1');
+        const container2 = document.getElementById('slideshow-container-2');
+
+        function showSlide(slideIndex, sectionNumber) {
+            console.log(`showSlide called: slideIndex=${slideIndex}, sectionNumber=${sectionNumber}`);
+            console.log(`totalSlides1=${totalSlides1}, totalSlides2=${totalSlides2}`);
+
+            if (sectionNumber === 1) {
+                // Handle Section 1 slides
+                if (slideIndex >= 0 && slideIndex < totalSlides1) {
+                    console.log(`Showing section 1 slide ${slideIndex}`);
+
+                    // Remove active class and set opacity to 0 for all slides
+                    slides1.forEach(slide => {
+                        slide.classList.remove('active');
+                        slide.classList.remove('opacity-100');
+                        slide.classList.add('opacity-0');
+                    });
+
+                    // Set the target slide as active and visible
+                    slides1[slideIndex].classList.add('active');
+                    slides1[slideIndex].classList.remove('opacity-0');
+                    slides1[slideIndex].classList.add('opacity-100');
+
+                    currentSlide1 = slideIndex;
+
+                    // Show section 1 container, hide section 2
+                    container1.classList.remove('hidden');
+                    container2.classList.add('hidden');
+                }
+
+            } else if (sectionNumber === 2) {
+                // Handle Section 2 slides
+                if (slideIndex >= 0 && slideIndex < totalSlides2) {
+                    console.log(`Showing section 2 slide ${slideIndex}`);
+
+                    // Remove active class and set opacity to 0 for all slides
+                    slides2.forEach(slide => {
+                        slide.classList.remove('active');
+                        slide.classList.remove('opacity-100');
+                        slide.classList.add('opacity-0');
+                    });
+
+                    // Set the target slide as active and visible
+                    slides2[slideIndex].classList.add('active');
+                    slides2[slideIndex].classList.remove('opacity-0');
+                    slides2[slideIndex].classList.add('opacity-100');
+
+                    currentSlide2 = slideIndex;
+
+                    // Show section 2 container, hide section 1
+                    container2.classList.remove('hidden');
+                    container1.classList.add('hidden');
+                }
+            }
+
+            // Update highlighted question in the active list
+            updateQuestionHighlight(slideIndex, sectionNumber);
+        }
+
+        function updateQuestionHighlight(slideIndex, listNumber) {
+            const questionList = document.getElementById(`question-list-${listNumber}`);
+            if (!questionList) return;
+
+            const questions = questionList.querySelectorAll('.question-item');
+            questions.forEach((question, index) => {
+                if (index === slideIndex) {
+                    question.setAttribute('data-state', 'active');
+                } else {
+                    question.setAttribute('data-state', 'inactive');
+                }
+            });
+        }
+
+        function nextSlide() {
+            if (currentActiveList === 1) {
+                const nextIndex = (currentSlide1 + 1) % totalSlides1;
+                currentSlide1 = nextIndex;
+                showSlide(nextIndex, 1);
+                updateQuestionStates(1, nextIndex); // Update visual feedback
+            } else if (currentActiveList === 2) {
+                const nextIndex = (currentSlide2 + 1) % totalSlides2;
+                currentSlide2 = nextIndex;
+                showSlide(nextIndex, 2);
+                updateQuestionStates(2, nextIndex); // Update visual feedback
+            }
+        }
+
+        function startSlideshow() {
+            slideInterval = setInterval(nextSlide, 5000); // 5 seconds
+        }
+
+        function stopSlideshow() {
+            if (slideInterval) {
+                clearInterval(slideInterval);
+            }
+        }
+
+        function toggleFeatureList(featureNumber) {
+            const list1 = document.getElementById('question-list-1');
+            const list2 = document.getElementById('question-list-2');
+            const feature1 = document.getElementById('feature-1');
+            const feature2 = document.getElementById('feature-2');
+
+            if (featureNumber === 1) {
+                // Toggle list 1 visibility
+                const isCurrentlyVisible = list1.classList.contains('open');
+
+                if (isCurrentlyVisible) {
+                    // Close list 1
+                    list1.classList.remove('open');
+                    updateFeatureInactiveState(feature1);
+                    stopSlideshow();
+                    currentActiveList = null;
+                } else {
+                    // Open list 1, close list 2
+                    list1.classList.add('open');
+                    list2.classList.remove('open');
+
+                    // Update feature styling
+                    updateFeatureActiveState(feature1);
+                    updateFeatureInactiveState(feature2);
+
+                    currentActiveList = 1;
+                    currentSlide1 = 0; // Reset to first slide when switching
+                    showSlide(0, 1); // Start from slide 0
+                    updateQuestionStates(1, 0); // Update visual feedback
+                    stopSlideshow();
+                    startSlideshow(); // Reset timer
+                }
+            } else {
+                // Toggle list 2 visibility
+                const isCurrentlyVisible = list2.classList.contains('open');
+
+                if (isCurrentlyVisible) {
+                    // Close list 2
+                    list2.classList.remove('open');
+                    updateFeatureInactiveState(feature2);
+                    stopSlideshow();
+                    currentActiveList = null;
+                } else {
+                    // Open list 2, close list 1
+                    list2.classList.add('open');
+                    list1.classList.remove('open');
+
+                    // Update feature styling
+                    updateFeatureActiveState(feature2);
+                    updateFeatureInactiveState(feature1);
+
+                    currentActiveList = 2;
+                    currentSlide2 = 0; // Reset to first slide when switching
+                    showSlide(0, 2); // Start from slide 0
+                    updateQuestionStates(2, 0); // Update visual feedback
+                    stopSlideshow();
+                    startSlideshow(); // Reset timer
+                }
+            }
+        }
+
+        function updateFeatureActiveState(feature) {
+            // Simply set the data-state attribute - CSS handles the styling
+            feature.setAttribute('data-state', 'active');
+        }
+
+        function updateFeatureInactiveState(feature) {
+            // Simply set the data-state attribute - CSS handles the styling
+            feature.setAttribute('data-state', 'inactive');
+        }
+
+        function updateQuestionStates(listNumber, activeSlideIndex) {
+            // Update visual feedback for question items based on active slide
+            const questions = document.querySelectorAll(`[data-list="${listNumber}"]`);
+            questions.forEach((question) => {
+                const slideIndex = parseInt(question.getAttribute('data-slide'));
+
+                if (slideIndex === activeSlideIndex) {
+                    question.setAttribute('data-state', 'active');
+                } else {
+                    question.setAttribute('data-state', 'inactive');
+                }
+            });
+        }
+
+        // Initialize system when DOM is loaded
+        document.addEventListener('DOMContentLoaded', function () {
+            // Add click event listeners to feature toggles
+            const feature1 = document.getElementById('feature-1');
+            const feature2 = document.getElementById('feature-2');
+
+            // Add click event listeners to the entire feature toggle divs
+            feature1.addEventListener('click', () => toggleFeatureList(1));
+            feature2.addEventListener('click', () => toggleFeatureList(2));
+
+            // Prevent dropdown containers from closing when clicked
+            const questionList1 = document.getElementById('question-list-1');
+            const questionList2 = document.getElementById('question-list-2');
+
+            questionList1.addEventListener('click', (event) => {
+                event.stopPropagation();
+            });
+
+            questionList2.addEventListener('click', (event) => {
+                event.stopPropagation();
+            });
+
+            // Add click event listeners to questions
+            const allQuestions = document.querySelectorAll('.question-item');
+            allQuestions.forEach((question, index) => {
+                question.addEventListener('click', (event) => {
+                    event.stopPropagation(); // Prevent event bubbling to prevent dropdown from closing
+
+                    const slideIndex = parseInt(question.getAttribute('data-slide'));
+                    const listNumber = parseInt(question.getAttribute('data-list'));
+
+                    console.log(`Clicked question: slideIndex=${slideIndex}, listNumber=${listNumber}, currentActiveList=${currentActiveList}`);
+
+                    // Only proceed if this list is currently active
+                    if (currentActiveList === listNumber) {
+                        stopSlideshow(); // Stop current slideshow
+
+                        // Update the current slide index for the active section
+                        if (listNumber === 1) {
+                            currentSlide1 = slideIndex;
+                        } else if (listNumber === 2) {
+                            currentSlide2 = slideIndex;
+                        }
+
+                        showSlide(slideIndex, listNumber);
+                        updateQuestionStates(listNumber, slideIndex); // Update visual feedback
+                        startSlideshow(); // Restart auto-slideshow with reset timer
+                    }
+                });
+            });
+
+            // Initialize with feature 1 active (contextual responses) - it's already styled as active in HTML
+            currentActiveList = 1;
+            questionList1.classList.add('open'); // Start with first list open
+            showSlide(0, 1); // Start from first slide
+            updateQuestionStates(1, 0); // Set initial visual feedback
+            startSlideshow();
+
+            // Pause slideshow on hover, resume on mouse leave for both containers
+            if (container1) {
+                container1.addEventListener('mouseenter', stopSlideshow);
+                container1.addEventListener('mouseleave', startSlideshow);
+            }
+            if (container2) {
+                container2.addEventListener('mouseenter', stopSlideshow);
+                container2.addEventListener('mouseleave', startSlideshow);
+            }
+        });
 
 
     </script>
