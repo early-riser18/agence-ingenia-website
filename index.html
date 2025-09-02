@@ -814,17 +814,17 @@
                                             <button
                                                 class="question-item w-full text-left p-3 md:rounded-md md:border border-t border-gray-200  transition-all duration-100 text-sm text-gray-700"
                                                 data-slide="0" data-list="1" data-state="active">
-                                                "Quels sont les indicateurs clés de performance de ce trimestre ?"
+                                                "Un client indique un retard sur son remboursement, quel est son statut ?"
                                             </button>
                                             <button
                                             class="question-item w-full text-left p-3 md:rounded-md md:border border-t border-gray-200  transition-all duration-100 text-sm text-gray-700"
                                             data-slide="1" data-list="1" data-state="inactive">
-                                                "Analyse les données de vente du mois dernier"
+                                                "Est-ce que le service achats a déjà soumis les commandes aux fournisseurs pour la semaine prochaine ?"
                                             </button>
                                             <button
                                             class="question-item w-full text-left p-3 md:rounded-md md:border border-t border-gray-200  transition-all duration-100 text-sm text-gray-700"
                                             data-slide="2" data-list="1" data-state="inactive">
-                                                "Génère un rapport sur la satisfaction client"
+                                                "Liste les incidents de chaîne de production des trois derniers mois et précise la cause de chacun."
                                             </button>
                                         </div>
                                     </div>
@@ -865,17 +865,18 @@
                                         <button
                                         class="question-item w-full text-left p-3 md:rounded-md md:border border-t border-gray-200  transition-all duration-100 text-sm text-gray-700"
                                         data-slide="0" data-list="2" data-state="active">
-                                            "Créez une campagne email pour les nouveaux prospects"
+                                            "Analyse les retours clients du mois dernier et extrait cinq points principaux."
                                         </button>
+                                      
                                         <button
                                         class="question-item w-full text-left p-3 md:rounded-md md:border border-t border-gray-200  transition-all duration-100 text-sm text-gray-700"
                                         data-slide="1" data-list="2" data-state="inactive">
-                                            "Planifiez le suivi client automatique pour cette semaine"
+                                            "Prépare un résumé du dossier de M. Dupont pour la réunion de demain."
                                         </button>
                                         <button
                                         class="question-item w-full text-left p-3 md:rounded-md md:border border-t border-gray-200  transition-all duration-100 text-sm text-gray-700"
                                         data-slide="2" data-list="2" data-state="inactive">
-                                            "Organisez les données client dans le CRM"
+                                            "Relance le fournisseur ABC au sujet de la commande en attente."
                                         </button>
                                     </div>
                                 </div>
@@ -883,49 +884,83 @@
                         </div>
                         <!-- Right Panel: Slideshow Display -->
                         <div class="w-full space-y-6 md:col-span-6 my-auto">
-                            <!-- Section 1 Slideshow Container -->
-                            <div id="slideshow-container-1" class="group relative w-full  overflow-hidden rounded-2xl  shadow-md">
-
-                                    <!-- Section 1 Slides -->
-                                    <div
-                                        class="slideshow-slide-1 active opacity-100 transition-opacity duration-1000 ease-in-out">
-                                        <img src="assets/ai_assistant_feature/capture-test.png"
-                                            alt="Section 1 - Slide 1" class="w-full h-auto">
-                                    </div>
-                                    <div
-                                        class="slideshow-slide-1 opacity-0 absolute top-0 left-0 w-full transition-opacity duration-1000 ease-in-out">
-                                        <img src="assets/ai_assistant_feature/capture-test1.png"
-                                            alt="Section 1 - Slide 2" class="w-full h-auto">
-                                    </div>
-                                    <div
-                                        class="slideshow-slide-1 opacity-0 absolute top-0 left-0 w-full transition-opacity duration-1000 ease-in-out">
-                                        <img src="assets/ai_assistant_feature/capture-test.png"
-                                            alt="Section 1 - Slide 3" class="w-full h-auto">
-                                    </div>
-
-                            </div>
+                                                         <!-- Section 1 Slideshow Container -->
+                             <div id="slideshow-container-1" class="group relative w-full overflow-hidden rounded-2xl shadow-md">
+                                     <!-- Section 1 Video Slides -->
+                                     <div class="slideshow-slide-1 active opacity-100 transition-opacity duration-1000 ease-in-out">
+                                         <video 
+                                             class="w-full h-auto rounded-lg" 
+                                             muted 
+                                             loop 
+                                             playsinline
+                                             <source src="assets/ai_assistant_feature/ingenia_agent_example1.mov" type="video/mp4">
+                                             <source src="assets/ai_assistant_feature/ingenia_agent_example1.mov" type="video/quicktime">
+                                             Your browser does not support the video tag.
+                                         </video>
+                                     </div>
+                                     <div class="slideshow-slide-1 opacity-0 absolute top-0 left-0 w-full transition-opacity duration-1000 ease-in-out">
+                                         <video 
+                                             class="w-full h-auto rounded-lg" 
+                                             muted 
+                                             loop 
+                                             playsinline
+                                             <source src="assets/ai_assistant_feature/ingenia_agent_example2.mov" type="video/mp4">
+                                             <source src="assets/ai_assistant_feature/ingenia_agent_example2.mov" type="video/quicktime">
+                                             Your browser does not support the video tag.
+                                         </video>
+                                     </div>
+                                     <div class="slideshow-slide-1 opacity-0 absolute top-0 left-0 w-full transition-opacity duration-1000 ease-in-out">
+                                         <video 
+                                             class="w-full h-auto rounded-lg" 
+                                             muted 
+                                             loop 
+                                             playsinline
+                                             <source src="assets/ai_assistant_feature/ingenia_agent_example3.mov" type="video/mp4">
+                                             <source src="assets/ai_assistant_feature/ingenia_agent_example3.mov" type="video/quicktime">
+                                             Your browser does not support the video tag.
+                                         </video>
+                                     </div>
+                             </div>
 
                             <!-- Section 2 Slideshow Container -->
-                            <div id="slideshow-container-2"
-                                class="group relative w-full rounded-2xl overflow-hidden shadow-md hidden">
-                                <div class="relative rounded-xl overflow-hidden bg-transparent">
-                                    <!-- Section 2 Slides -->
-                                    <div
-                                        class="slideshow-slide-2 active opacity-100 transition-opacity duration-1000 ease-in-out">
-                                        <img src="assets/ai_assistant_feature/screen1.png" alt="Section 2 - Slide 1"
-                                            class="w-full h-auto">
+                            <div id="slideshow-container-2" class="group relative w-full rounded-2xl overflow-hidden shadow-md hidden">
+                                    <!-- Section 2 Video Slides -->
+                                    <div class="slideshow-slide-2 active opacity-100 transition-opacity duration-1000 ease-in-out">
+                                        <video 
+                                            class="w-full h-auto rounded-lg" 
+                                            autoplay 
+                                            muted 
+                                            loop 
+                                            playsinline>
+                                            <source src="assets/ai_assistant_feature/ingenia_agent_example1.mov" type="video/mp4">
+                                            <source src="assets/ai_assistant_feature/ingenia_agent_example1.mov" type="video/quicktime">
+                                            Your browser does not support the video tag.
+                                        </video>
                                     </div>
-                                    <div
-                                        class="slideshow-slide-2 opacity-0 absolute top-0 left-0 w-full transition-opacity duration-1000 ease-in-out">
-                                        <img src="assets/ai_assistant_feature/screen2.png" alt="Section 2 - Slide 2"
-                                            class="w-full h-auto">
+                                    <div class="slideshow-slide-2 opacity-0 absolute top-0 left-0 w-full transition-opacity duration-1000 ease-in-out">
+                                        <video 
+                                            class="w-full h-auto rounded-lg" 
+                                            autoplay 
+                                            muted 
+                                            loop 
+                                            playsinline>
+                                            <source src="assets/ai_assistant_feature/ingenia_agent_example2.mov" type="video/mp4">
+                                            <source src="assets/ai_assistant_feature/ingenia_agent_example2.mov" type="video/quicktime">
+                                            Your browser does not support the video tag.
+                                        </video>
                                     </div>
-                                    <div
-                                        class="slideshow-slide-2 opacity-0 absolute top-0 left-0 w-full transition-opacity duration-1000 ease-in-out">
-                                        <img src="assets/ai_assistant_feature/screen3.png" alt="Section 2 - Slide 3"
-                                            class="w-full h-auto">
+                                    <div class="slideshow-slide-2 opacity-0 absolute top-0 left-0 w-full transition-opacity duration-1000 ease-in-out">
+                                        <video 
+                                            class="w-full h-auto rounded-lg" 
+                                            autoplay 
+                                            muted 
+                                            loop 
+                                            playsinline>
+                                            <source src="assets/ai_assistant_feature/ingenia_agent_example3.mov" type="video/mp4">
+                                            <source src="assets/ai_assistant_feature/ingenia_agent_example3.mov" type="video/quicktime">
+                                            Your browser does not support the video tag.
+                                        </video>
                                     </div>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -1315,56 +1350,6 @@
         });
 
 
-        document.addEventListener('DOMContentLoaded', () => {
-            new TypingAnimation({
-                textElementId: 'taskText',
-                cursorElementId: 'taskCursor',
-                iconElementId: 'taskIcon',
-                prompts: [
-                    {
-                        text: "Passe une commande de matériaux A au fournisseur habituel.",
-                        icon: "M12 6v6m0 0v6m0-6h6m-6 0H6"
-                    },
-                    {
-                        text: "Relance les clients dont les factures sont en retard de plus de 15 jours.",
-                        icon: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                    },
-                    {
-                        text: "Prépare un résumé du dossier de M. Dupont pour la réunion de demain.",
-                        icon: "M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-                    }
-                ],
-                cursorColor: 'bg-emerald-500',
-                activeDotColor: 'bg-emerald-500',
-                typeSpeed: 30,
-                deleteSpeed: 20,
-                holdDuration: 3000,
-                pauseDuration: 500
-            });
-        });
-
-
-        document.addEventListener('DOMContentLoaded', () => {
-            new TypingAnimation({
-                textElementId: 'promptText',
-                cursorElementId: 'cursor',
-                dotSelector: '[data-dot]',
-                prompts: [
-                    { text: "Un client indique un retard sur son remboursement, quel est son statut ?" },
-                    { text: "Est-ce que le service achats a déjà soumis les commandes aux fournisseurs pour la semaine prochaine ?" },
-                    { text: "Liste les incidents de chaîne de production des trois derniers mois et précise la cause de chacun." }
-                ],
-                cursorColor: 'bg-primary',
-                activeDotColor: 'bg-primary',
-                typeSpeed: 28,
-                deleteSpeed: 18,
-                holdDuration: 3000,
-                pauseDuration: 500
-            });
-        });
-
-
-
 
         function scrollToAnchor(id, offset = 0) {
             const el = document.getElementById(id);
@@ -1391,25 +1376,36 @@
         const container2 = document.getElementById('slideshow-container-2');
 
         function showSlide(slideIndex, sectionNumber) {
-            console.log(`showSlide called: slideIndex=${slideIndex}, sectionNumber=${sectionNumber}`);
-            console.log(`totalSlides1=${totalSlides1}, totalSlides2=${totalSlides2}`);
+
 
             if (sectionNumber === 1) {
                 // Handle Section 1 slides
                 if (slideIndex >= 0 && slideIndex < totalSlides1) {
-                    console.log(`Showing section 1 slide ${slideIndex}`);
 
-                    // Remove active class and set opacity to 0 for all slides
+
+                    // Remove active class and set opacity to 0 for all slides, pause videos
                     slides1.forEach(slide => {
                         slide.classList.remove('active');
                         slide.classList.remove('opacity-100');
                         slide.classList.add('opacity-0');
+                        // Pause all videos in this slide
+                        const video = slide.querySelector('video');
+                        if (video) {
+                            video.pause();
+                        }
                     });
 
                     // Set the target slide as active and visible
                     slides1[slideIndex].classList.add('active');
                     slides1[slideIndex].classList.remove('opacity-0');
                     slides1[slideIndex].classList.add('opacity-100');
+                    
+                    // Start the video in the active slide from the beginning
+                    const activeVideo = slides1[slideIndex].querySelector('video');
+                    if (activeVideo) {
+                        activeVideo.currentTime = 0; // Reset to beginning
+                        activeVideo.play().catch(e => console.log('Video play failed:', e));
+                    }
 
                     currentSlide1 = slideIndex;
 
@@ -1423,17 +1419,29 @@
                 if (slideIndex >= 0 && slideIndex < totalSlides2) {
                     console.log(`Showing section 2 slide ${slideIndex}`);
 
-                    // Remove active class and set opacity to 0 for all slides
+                    // Remove active class and set opacity to 0 for all slides, pause videos
                     slides2.forEach(slide => {
                         slide.classList.remove('active');
                         slide.classList.remove('opacity-100');
                         slide.classList.add('opacity-0');
+                        // Pause all videos in this slide
+                        const video = slide.querySelector('video');
+                        if (video) {
+                            video.pause();
+                        }
                     });
 
                     // Set the target slide as active and visible
                     slides2[slideIndex].classList.add('active');
                     slides2[slideIndex].classList.remove('opacity-0');
                     slides2[slideIndex].classList.add('opacity-100');
+                    
+                    // Start the video in the active slide from the beginning
+                    const activeVideo = slides2[slideIndex].querySelector('video');
+                    if (activeVideo) {
+                        activeVideo.currentTime = 0; // Reset to beginning
+                        activeVideo.play().catch(e => console.log('Video play failed:', e));
+                    }
 
                     currentSlide2 = slideIndex;
 
@@ -1476,7 +1484,7 @@
         }
 
         function startSlideshow() {
-            slideInterval = setInterval(nextSlide, 5000); // 5 seconds
+            slideInterval = setInterval(nextSlide, 15000); // 5 seconds
         }
 
         function stopSlideshow() {
