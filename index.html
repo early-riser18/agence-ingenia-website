@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
-
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -142,56 +141,62 @@
     </style>
 </head>
 
-<body>
-    <!-- Sticky Header -->
-    <header class="sticky top-0 md:top-2 z-50 md:px-4 ">
-        <div
-            class="max-w-screen-xl mx-auto p-3 bg-[#ffffff8f] md:rounded-lg border-b md:border-none border-gray-300 md:shadow-[0_2px_5px_#0003] backdrop-blur-xl">
-            <div class="flex items-center justify-between ">
-                <!-- Logo -->
-                <div class="flex items-center">
-                    <a href="/" class="flex items-center space-x-2" aria-label="home">
-                        <img src="./assets/ingenia_logo_base.png" alt="Logo" class="h-auto w-7">
-                        <span class="  tracking-wider font-semibold  font-dm-sans">INGENIA</span>
-                    </a>
-                </div>
+  <body>
+    <!-- header -->
+        <!-- Sticky Header -->
 
-                <!-- Desktop Navigation -->
-                <div class="flex items-center md:space-x-8">
-
-                    <nav class="hidden md:flex items-center space-x-2">
-                        <button onclick="scrollToAnchor('home', 150)"
-                            class=" clickable-text px-3 py-2 font-medium">Accueil</button>
-                        <button onclick="scrollToAnchor('use-cases', 60)"
-                            class=" clickable-text px-3 py-2  font-medium">Nos
-                            solutions</button>
-                        <button onclick="scrollToAnchor('team', 50)" class=" clickable-text px-3 py-2  font-medium">Qui
-                            sommes-nous</button>
-                    </nav>
-
-                    <!-- CTA Button & Mobile Menu -->
-                    <div class="flex items-center space-x-4">
-                        <button onclick="scrollToAnchor('contact', 50)" class="btn-primary px-4 ">
-                            Nous contacter
-                        </button>
-
-                        <!-- Mobile menu button -->
-                        <button type="button" id="mobile-menu-button"
-                            class="md:hidden inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-gray-900 hover:bg-gray-100"
-                            aria-expanded="false">
-                            <span class="sr-only">Open main menu</span>
-                            <div class="burger-icon flex flex-col space-y-1.5">
-                                <div class="burger-line"></div>
-                                <div class="burger-line"></div>
-                                <div class="burger-line"></div>
-                            </div>
-                        </button>
-                    </div>
-                </div>
-
+<header class="sticky top-0 md:top-2 z-50 md:px-4 ">
+    <div
+        class="max-w-screen-xl mx-auto p-3 bg-[#ffffff8f] md:rounded-lg border-b md:border-none border-gray-300 md:shadow-[0_2px_5px_#0003] backdrop-blur-xl">
+        <div class="flex items-center justify-between ">
+            <!-- Logo -->
+            <div class="flex items-center">
+                <a href="/" class="flex items-center space-x-2" aria-label="home">
+                    <img src="./assets/ingenia_logo_base.png" alt="Logo" class="h-auto w-7">
+                    <span class="  tracking-wider font-semibold  font-dm-sans">INGENIA</span>
+                </a>
             </div>
+
+            <!-- Desktop Navigation -->
+            <div class="flex items-center md:space-x-8">
+
+                <nav class="hidden md:flex items-center space-x-2">
+                    <button onclick="scrollToAnchor('home', 150)"
+                        class=" clickable-text px-3 py-2 font-medium">Accueil</button>
+                    <button onclick="scrollToAnchor('use-cases', 60)"
+                        class=" clickable-text px-3 py-2  font-medium">Nos
+                        solutions</button>
+                    <button onclick="scrollToAnchor('team', 50)" class=" clickable-text px-3 py-2  font-medium">Qui
+                        sommes-nous</button>
+                </nav>
+
+                <!-- CTA Button & Mobile Menu -->
+                <div class="flex items-center space-x-4">
+                    <button onclick="scrollToAnchor('contact', 50)" class="btn-primary px-4 ">
+                        Nous contacter
+                    </button>
+
+                    <!-- Mobile menu button -->
+                    <button type="button" id="mobile-menu-button"
+                        class="md:hidden inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-gray-900 hover:bg-gray-100"
+                        aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <div class="burger-icon flex flex-col space-y-1.5">
+                            <div class="burger-line"></div>
+                            <div class="burger-line"></div>
+                            <div class="burger-line"></div>
+                        </div>
+                    </button>
+                </div>
+            </div>
+
         </div>
-    </header>
+    </div>
+</header>
+
+
+
+   
 
     <!-- Mobile Menu Overlay -->
     <div id="mobile-menu" class="mobile-menu md:hidden">
@@ -231,1056 +236,9 @@
         </div>
     </div>
 
-    <section id="home" class="relative overflow-hidden">
-        <!-- Gradient Blobs Background -->
-        <div class="absolute inset-0 z-0">
-            <!-- Rose blob -->
-            <div
-                class="absolute top-20 right-44 w-72 h-72 bg-rose-400 rounded-full opacity-25 blur-[100px] mix-blend-multiply">
-            </div>
-            <!-- Orange blob -->
-            <div
-                class="absolute bottom-30 right-10 w-80 h-80 bg-orange-400 rounded-full opacity-20 blur-[100px] mix-blend-multiply">
-            </div>
-            <!-- Pink blob -->
-            <div
-                class="absolute top-1/3 right-1/4 w-72 h-72 bg-pink-400 rounded-full opacity-30 blur-[100px] mix-blend-multiply">
-            </div>
-        </div>
-
-
-        <!-- Abstract Geometric Patterns -->
-        <div class="  absolute h-full w-full z-0 opacity-100 top-0 left-[20%]">
-            <svg class="absolute inset-0 w-full h-full" viewBox="0 0 1200 800" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                    <pattern id="hexPattern" x="0" y="0" width="60" height="52" patternUnits="userSpaceOnUse">
-                        <path d="M30,4 L52,17 L52,35 L30,48 L8,35 L8,17 Z" stroke="#F3F4F6" stroke-width="2" fill="none"
-                            opacity="0.7" />
-                    </pattern>
-                </defs>
-                <rect x="0" y="0" width="100%" height="100%" fill="url(#hexPattern)" />
-                <rect x="0" y="0" width="100%" height="100%" fill="url(#dotsPattern)" />
-                <rect x="20" y="20" width="100%" height="100%" fill="url(#diagonalPattern)" />
-            </svg>
-            <div
-                class=" hidden md:block absolute inset-0 w-full h-full bg-gradient-to-r      from-white via-transparent to-transparent">
-            </div>
-            <div
-                class=" hidden md:block absolute inset-0 w-full h-full bg-gradient-to-b      from-transparent via-transparent to-white/60">
-            </div>
-
-        </div>
-
-
-        <div
-            class=" relative z-10 max-w-screen-xl mx-auto px-4 my-24 grid md:grid-cols-[1.5fr_1fr] grid-cols-1 grid-rows-auto lg:gap-x-[60px] gap-x-[30px] items-center">
-
-            <!-- Content -->
-            <div class="text-center md:text-left backdrop-blur-lg bg-white/20 rounded-full md:bg-transparent md:backdrop-blur-none p-8 md:p-0">
-                <h1 class="mb-6">L'IA n'est pas réservée qu'aux grandes entreprises</h1>
-                <p class="text-lg mb-6">Nous aidons les PME à moderniser leur activité avec <span class="font-semibold">
-                        des solutions d'IA <span class="whitespace-nowrap">simples et abordables.</span></span>
-                    </span></p>
-                <div class="flex justify-center md:justify-start">
-                    <a href="https://calendly.com/justin-warambourg/consultation-ingenia" target="_blank"
-                        class="btn-primary text-lg">Réservez une consultation gratuite</a>
-                </div>
-            </div>
-
-            <!-- Professional Customer Network -->
-            <div
-                class=" hidden md:block  mx-auto  w-80  bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg border border-gray-100/50 lg:scale-125">
-                <!-- Professional grid layout -->
-                <div class="p-6  flex flex-col justify-between ">
-                    <!-- Header -->
-                    <div class="text-center mb-4">
-                        <h3 class="text-sm font-semibold text-gray-700 uppercase tracking-wide">Des solutions adaptées
-                            <br> à chaque métier</h3>
-                        <!-- <p class="text-xs text-gray-500 mt-1">Powered by AI</p> -->
-                    </div>
-
-
-                    <!-- Customer grid -->
-                    <div class="grid grid-cols-2 gap-4 flex-1  ">
-                        <!-- Customer Support -->
-                        <div class="flex flex-col items-center group">
-                            <div class="relative mb-2">
-                                <img src="./assets/customers_pictures/landing_customer_support.png"
-                                    alt="Customer Support"
-                                    class="w-16 h-16 rounded-lg object-cover shadow-sm group-hover:shadow-md transition-shadow duration-200">
-                                <!-- Professional indicator -->
-                                <div
-                                    class="absolute -top-1 -right-1 w-4 h-4 bg-blue-500 rounded-full flex items-center justify-center">
-                                    <div class="w-2 h-2 bg-white rounded-full"></div>
-                                </div>
-                            </div>
-                            <span class="text-xs font-medium text-gray-600 text-center">Support Client</span>
-                        </div>
-
-                        <!-- Field Workers -->
-                        <div class="flex flex-col items-center group">
-                            <div class="relative mb-2">
-                                <img src="./assets/customers_pictures/landing_field_workers.png" alt="Field Workers"
-                                    class="w-16 h-16 rounded-lg object-cover shadow-sm group-hover:shadow-md transition-shadow duration-200">
-                                <div
-                                    class="absolute -top-1 -right-1 w-4 h-4 bg-orange-500 rounded-full flex items-center justify-center">
-                                    <div class="w-2 h-2 bg-white rounded-full"></div>
-                                </div>
-                            </div>
-                            <span class="text-xs font-medium text-gray-600 text-center">Terrain</span>
-                        </div>
-
-                        <!-- Office Professional -->
-                        <div class="flex flex-col items-center group">
-                            <div class="relative mb-2">
-                                <img src="./assets/customers_pictures/landing_office_lady.png" alt="Office Professional"
-                                    class="w-16 h-16 rounded-lg object-cover shadow-sm group-hover:shadow-md transition-shadow duration-200">
-                                <div
-                                    class="absolute -top-1 -right-1 w-4 h-4 bg-indigo-500 rounded-full flex items-center justify-center">
-                                    <div class="w-2 h-2 bg-white rounded-full"></div>
-                                </div>
-                            </div>
-                            <span class="text-xs font-medium text-gray-600 text-center">Bureau</span>
-                        </div>
-
-
-                        <!-- Production Workers -->
-                        <div class="flex flex-col items-center group">
-                            <div class="relative mb-2">
-                                <img src="./assets/customers_pictures/landing_production_workers.png"
-                                    alt="Production Workers"
-                                    class="w-16 h-16 rounded-lg object-cover shadow-sm group-hover:shadow-md transition-shadow duration-200">
-                                <div
-                                    class="absolute -top-1 -right-1 w-4 h-4 bg-emerald-500 rounded-full flex items-center justify-center">
-                                    <div class="w-2 h-2 bg-white rounded-full"></div>
-                                </div>
-                            </div>
-                            <span class="text-xs font-medium text-gray-600 text-center">Production</span>
-                        </div>
-                    </div>
-
-
-                </div>
-
-                <!-- Subtle connection lines -->
-                <svg class="absolute inset-0 w-full h-full pointer-events-none opacity-20" viewBox="0 0 320 288"
-                    fill="none">
-                    <!-- Minimal connecting lines -->
-                    <path d="M80 80 L240 80 M80 160 L240 160 M80 240 L240 240" stroke="#3B82F6" stroke-width="1"
-                        stroke-dasharray="2,4" />
-                    <path d="M160 40 L160 248" stroke="#3B82F6" stroke-width="1" stroke-dasharray="2,4" />
-                </svg>
-            </div>
-
-        </div>
-
-    </section>
-    <main>
-        <section class="py-16  relative overflow-hidden bg-white">
-            <!-- Top-left slate gradient -->
-            <div class="absolute inset-0 bg-gradient-to-br from-slate-100/50 via-transparent to-transparent"></div>
-            <!-- Bottom-right slate gradient -->
-            <div class="absolute inset-0 bg-gradient-to-tl from-slate-100/50 via-transparent to-transparent"></div>
-
-            <div class="max-w-6xl mx-auto px-6 relative z-10">
-                <!-- Mission Block -->
-                <div class="text-center space-y-8">
-                    <!-- Eyebrow -->
-                    <div class="text-sm uppercase tracking-wider text-primary font-semibold">
-                        Notre mission
-                    </div>
-
-                    <!-- Mission Statement -->
-                    <div class=" mx-auto">
-                        <p class="text-xl lg:text-2xl text-gray-800 leading-relaxed font-light">
-                            Vous aider à mettre l'intelligence artificielle au service de votre entreprise et décupler
-                            votre
-                            activité<span class="whitespace-nowrap"></span>
-                        </p>
-                        <p class=" text-gray-600 mt-4 font-medium">Il y a 20 ans, beaucoup ont raté le virage
-                            d'Internet… Ne ratez pas celui de l'IA.</p>
-                    </div>
-
-                </div>
-        </section>
-
-        <!-- AI Flow Diagram Section -->
-        <section class="bg-gradient-to-br from-blue-50/30 via-white to-indigo-50/20 relative overflow-hidden py-16">
-            <!-- Enhanced background with subtle patterns -->
-            <div class="absolute inset-0 opacity-20">
-                <svg class="absolute inset-0 w-full h-full" aria-hidden="true">
-                    <defs>
-                        <!-- each cell = 40×40 px -->
-                        <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
-                            <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#9da1cf" stroke-width="2"
-                                vector-effect="non-scaling-stroke" />
-                        </pattern>
-                    </defs>
-                    <rect x="0" y="0" width="100%" height="100%" fill="url(#grid)" />
-                </svg>
-            </div>
-            <div class="absolute inset-0 bg-gradient-to-r from-white via-transparent to-white"></div>
-
-            <div class=" relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-5">
-                <!-- Section Header - Left Aligned -->
-                <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between space-y-8 lg:space-y-0">
-                    <div class="">
-                        <!-- Eyebrow -->
-                        <div class="mb-6">
-                            <div
-                                class="inline-flex items-center px-4 py-2 border border-blue-200/50 bg-gradient-to-r from-blue-100/40 to-indigo-100/40 rounded-full text-sm uppercase tracking-wider text-primary font-semibold ">
-                                <svg class="w-4 h-4 mr-2 text-primary" fill="none" stroke="currentColor"
-                                    viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z" />
-                                </svg>
-                                L'IA à votre service
-                            </div>
-                        </div>
-
-                        <!-- Main Title -->
-                        <div>
-                            <h3 class="mb-6 text-left">
-                                Comment l'IA générative peut aider votre entreprise
-                            </h3>
-                            <p class="text-lg lg:text-xl text-gray-600 leading-relaxed">
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- asset -->
-                   
-                </div>
-
-                <!-- Visual Flowchart -->
-                <div class="relative">
-                    <!-- Horizontal Flow Layout -->
-                    <div
-                        class="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12 max-w-7xl mx-auto px-4">
-                        <!-- Main AI Node (Left) -->
-                        <div class="group relative flex-shrink-0">
-                            <!-- Background glow effect -->
-                            <div
-                                class="absolute -inset-4 bg-gradient-to-br from-blue-500/10 via-indigo-500/10 to-violet-500/10 rounded-3xl blur-xl opacity-40 group-hover:opacity-60 transition-opacity duration-300">
-                            </div>
-
-                            <div
-                                class="relative bg-gradient-to-br from-white via-blue-50/30 to-indigo-50/50 rounded-2xl px-6 py-8 shadow-lg border border-blue-200/30 backdrop-blur-sm ">
-                                <div
-                                    class="flex flex-col items-center text-center space-y-4 w-full max-w-xs lg:max-w-sm">
-                                    <!-- Enhanced AI Icon with Multiple Layers -->
-                                    <div class="relative">
-
-
-                                        <div
-                                            class="relative w-12 h-12 bg-gradient-to-br from-blue-600 via-indigo-600 to-violet-600 rounded-xl flex items-center justify-center  transition-transform duration-200 shadow-lg">
-                                            <!-- Animated sparkle effect -->
-                                            <div
-                                                class="absolute inset-0 rounded-xl bg-gradient-to-br from-white/10 to-transparent opacity-0 ">
-                                            </div>
-
-                                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor"
-                                                viewBox="0 0 24 24">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                                    d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z" />
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                                    d="M18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456z" />
-                                            </svg>
-                                        </div>
-                                    </div>
-
-                                    <div class="space-y-2">
-                                        <h4 class="font-semibold text-gray-900 leading-tight">
-                                            Confiez des tâches à un agent IA spécialisé
-                                        </h4>
-                                        <p class=" text-gray-600 leading-relaxed">
-                                            L'IA générative sait accomplir des tâches spécifiques en pleine autonomie.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Horizontal Arrow -->
-                        <div class="flex-shrink-0 hidden lg:block">
-                            <svg class="w-16 h-8" viewBox="0 0 64 32" fill="none">
-                                <!-- Horizontal arrow -->
-                                <path d="M8 16 L48 16" stroke="url(#arrowGradient)" stroke-width="3"
-                                    stroke-linecap="round" />
-                                <path d="M42 10 L48 16 L42 22" stroke="url(#arrowGradient)" stroke-width="3"
-                                    stroke-linecap="round" fill="none" />
-
-                                <!-- Gradient definition -->
-                                <defs>
-                                    <linearGradient id="arrowGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                        <stop offset="0%" style="stop-color:#3B82F6;stop-opacity:0.8" />
-                                        <stop offset="50%" style="stop-color:#6366F1;stop-opacity:0.9" />
-                                        <stop offset="100%" style="stop-color:#8B5CF6;stop-opacity:0.8" />
-                                    </linearGradient>
-                                </defs>
-                            </svg>
-                        </div>
-
-                        <!-- Outcome Nodes (Right Side) -->
-                        <div class="flex flex-col gap-6 lg:gap-8 w-full lg:w-auto">
-
-                            <!-- Productivity Node -->
-                            <div class="group relative">
-                                <!-- Enhanced background glow -->
-                                <div
-                                    class="absolute -inset-2 bg-gradient-to-br from-emerald-200/20 via-green-200/20 to-teal-200/20 rounded-3xl blur-lg opacity-30  ">
-                                </div>
-
-                                <div
-                                    class="relative bg-gradient-to-br from-white via-emerald-50/30 to-green-50/50 rounded-2xl px-6 py-6 shadow-lg border border-emerald-200/30 backdrop-blur-sm ">
-                                    <div
-                                        class="flex flex-col lg:flex-row items-center text-center lg:text-left space-y-4 lg:space-y-0 lg:space-x-6 w-full max-w-md lg:max-w-2xl">
-                                        <!-- Enhanced Productivity Icon -->
-                                        <div class="relative flex-shrink-0">
-                                            <!-- Outer glow -->
-                                            <div
-                                                class="absolute -inset-4 bg-gradient-to-br from-emerald-400 to-green-500 rounded-full blur-xl opacity-10">
-                                            </div>
-
-                                            <!-- Icon container -->
-                                            <div
-                                                class="relative w-14 h-14 lg:w-16 lg:h-16 bg-gradient-to-br from-emerald-500 to-green-600 rounded-xl flex items-center justify-center transition-transform duration-200 shadow-md">
-                                                <div
-                                                    class="absolute inset-0 rounded-xl bg-gradient-to-br from-white/10 to-transparent opacity-0 ">
-                                                </div>
-
-                                                <svg class="w-6 h-6 lg:w-7 lg:h-7 text-white" fill="none"
-                                                    stroke="currentColor" viewBox="0 0 24 24">
-                                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                                        stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                                                </svg>
-                                            </div>
-                                        </div>
-
-                                        <div class="space-y-2 flex-1">
-                                            <h4 class=" font-semibold text-gray-900 leading-tight">
-                                                Gagnez en productivité
-                                            </h4>
-                                            <p class=" text-gray-600 leading-relaxed">
-                                                Automatisez vos tâches répétitives et libérez du temps pour les
-                                                activités à
-                                                forte valeur ajoutée
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Client Relations Node -->
-                            <div class="group relative">
-                                <!-- Enhanced background glow -->
-                                <div
-                                    class="absolute -inset-2 bg-gradient-to-br from-blue-200/20 via-indigo-200/20 to-purple-200/20 rounded-3xl blur-lg opacity-30 ">
-                                </div>
-
-                                <div
-                                    class="relative bg-gradient-to-br from-white via-blue-50/30 to-indigo-50/50 rounded-2xl px-6 py-6 shadow-lg border border-blue-200/30 backdrop-blur-sm ">
-                                    <div
-                                        class="flex flex-col lg:flex-row items-center text-center lg:text-left space-y-4 lg:space-y-0 lg:space-x-6 w-full max-w-md lg:max-w-2xl">
-                                        <!-- Enhanced Client Relations Icon -->
-                                        <div class="relative flex-shrink-0">
-                                            <!-- Outer glow -->
-                                            <div
-                                                class="absolute -inset-4 bg-gradient-to-br from-blue-400 to-indigo-500 rounded-full blur-xl opacity-10 ">
-                                            </div>
-
-                                            <!-- Icon container -->
-                                            <div
-                                                class="relative w-14 h-14 lg:w-16 lg:h-16 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center  transition-transform duration-200 shadow-md">
-                                                <div
-                                                    class="absolute inset-0 rounded-xl bg-gradient-to-br from-white/10 to-transparent opacity-0 ">
-                                                </div>
-
-                                                <svg class="w-6 h-6 lg:w-7 lg:h-7 text-white" fill="currentColor"
-                                                    viewBox="0 0 24 24">
-                                                    <!-- Face outline -->
-                                                    <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor"
-                                                        stroke-width="2" />
-                                                    <!-- Smile -->
-                                                    <path d="M8 14s1.5 2 4 2 4-2 4-2" fill="none" stroke="currentColor"
-                                                        stroke-width="2" stroke-linecap="round"
-                                                        stroke-linejoin="round" />
-                                                </svg>
-                                            </div>
-                                        </div>
-
-                                        <div class="space-y-2 flex-1">
-                                            <h4 class=" font-semibold text-gray-900 leading-tight">
-                                                Améliorez votre relation client
-                                            </h4>
-                                            <p class=" text-gray-600 leading-relaxed">
-                                                Offrez un service client personnalisé et disponible 24/7 grâce à
-                                                l'intelligence
-                                                artificielle
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <!-- Show Use Cases Button -->
-                    <div class="flex justify-center mt-12">
-                        <button onclick="scrollToAnchor('use-cases', 50)"
-                            class="group relative inline-flex items-center justify-center">
-                            <!-- Background glow -->
-                            <div
-                                class="absolute -inset-2 bg-gradient-to-r from-primary/20 via-emerald-500/20 to-green-500/20 rounded-2xl blur-lg opacity-70 group-hover:opacity-100 transition-opacity duration-500">
-                            </div>
-
-                            <!-- Button container -->
-                            <div
-                                class="relative btn-primary rounded-xl px-8 py-4 shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
-                                <!-- Shine effect -->
-                                <div
-                                    class="absolute inset-0 rounded-xl bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                </div>
-
-                                <div class="relative flex items-center space-x-3">
-                                    <span class="text-white font-semibold text-lg">Voir les cas d'usage</span>
-
-                                    <!-- Animated arrow -->
-                                    <svg class="w-5 h-5 text-white transform group-hover:translate-x-1 transition-transform duration-300"
-                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                                    </svg>
-                                </div>
-                            </div>
-                        </button>
-                    </div>
-
-                </div>
-            </div>
-
-        </section>
-
-        <!-- Method Section - Separate Section -->
-        <section class="py-16 bg-gray-50">
-            <div class="max-w-screen-xl mx-auto px-4">
-                <div class="text-center mb-16">
-                    <h3 class="text-2xl lg:text-3xl font-semibold mb-4" style="font-family: 'Epilogue', sans-serif;">
-                        Notre approche</h3>
-                    <p class="text-lg text-blackPrimary">Un processus en 3 étapes pour des résultats concrets</p>
-                </div>
-
-                <!-- Method Steps - Horizontal Flow -->
-                <div class="flex flex-col lg:flex-row items-center justify-center space-y-8 lg:space-y-0 lg:space-x-8">
-                    <!-- Step 1 -->
-                    <div class="flex-1 max-w-sm">
-                        <div
-                            class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 group text-center">
-                            <div
-                                class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center font-bold text-xl mx-auto mb-6 group-hover:scale-110 transition-transform duration-200">
-                                1
-                            </div>
-                            <h4 class="font-bold text-blackPrimary text-xl mb-4">Diagnostic ciblé</h4>
-                            <p class="text-blackPrimary leading-relaxed">Analyse approfondie de vos enjeux et
-                                identification
-                                des opportunités d'amélioration</p>
-                        </div>
-                    </div>
-
-                    <!-- Arrow 1 -->
-                    <div class="flex-shrink-0 hidden lg:block">
-                        <svg class="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd"
-                                d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
-                                clip-rule="evenodd"></path>
-                        </svg>
-                    </div>
-
-                    <!-- Step 2 -->
-                    <div class="flex-1 max-w-sm">
-                        <div
-                            class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 group text-center">
-                            <div
-                                class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center font-bold text-xl mx-auto mb-6 group-hover:scale-110 transition-transform duration-200">
-                                2
-                            </div>
-                            <h4 class="font-bold text-blackPrimary text-xl mb-4">Définition du cadre</h4>
-                            <p class="text-blackPrimary leading-relaxed">Définition du cadre du projet et fixation des
-                                objectifs de performance</p>
-                        </div>
-                    </div>
-
-                    <!-- Arrow 2 -->
-                    <div class="flex-shrink-0 hidden lg:block">
-                        <svg class="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd"
-                                d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
-                                clip-rule="evenodd"></path>
-                        </svg>
-                    </div>
-
-                    <!-- Step 3 -->
-                    <div class="flex-1 max-w-sm">
-                        <div
-                            class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 group text-center">
-                            <div
-                                class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center font-bold text-xl mx-auto mb-6 group-hover:scale-110 transition-transform duration-200">
-                                3
-                            </div>
-                            <h4 class="font-bold text-blackPrimary text-xl mb-4">Implémentation</h4>
-                            <p class="text-blackPrimary leading-relaxed">Mise en œuvre de la solution adaptée à vos
-                                besoins
-                                spécifiques</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-        <section id="use-cases" class="py-16 max-w-screen-xl mx-auto px-2 md:px-4 bg-white">
-            <div class=" space-y-20">
-                <!-- Section Header -->
-                <div class="text-center mb-16">
-                    <h2 class="mb-4">Cas d'usage les plus fréquents</h2>
-
-                </div>
-
-                <!-- Use Case 1: Digital Assistant -->
-                <div class="grid gap-2 md:gap-6 lg:gap-12 md:grid-cols-12 ">
-                    <!-- Left Panel: Messaging & Navigation -->
-                    <div class=" md:col-span-6 md:min-h-[650px]">
-                        <span
-                            class="inline-flex items-center rounded-full border border-blue-200/50 bg-gradient-to-r from-blue-100/30 to-indigo-100/30 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-primary">
-                            Agent autonome
-                        </span>
-                        <!-- Header (H1) -->
-                        <h3 class="mt-4">Votre bras droit numérique pour faire plus en moins de temps</h3>
-
-                        <!-- Subheader (H2) -->
-                        <p class="mt-3">Gérez votre entreprise depuis une interface de chat connectée à vos outils et
-                            logiciels métiers.</p>
-
-                        <!-- Feature Selection (Toggle) -->
-                        <div class="mt-8 space-y-2">
-                            <!-- Feature 1 - Contextual Responses -->
-                            <div id="feature-1"
-                                class="feature-toggle bg-white border border-gray-200  rounded-lg md:rounded-xl p-4 transition-all duration-200 cursor-pointer"
-                                data-state="active">
-                                <div class="flex items-center space-x-3">
-                                    <div
-                                        class="feature-number w-8 h-8 text-white bg-gradient-to-r from-red-400 to-orange-500 rounded-lg flex items-center justify-center font-medium text-sm transition-colors duration-200">
-                                        <i class="fa-solid fa-message"></i>
-                                    </div>
-                                    <div class="flex-1">
-                                        <p class=" font-medium leading-snug">
-                                            Recevez des réponses contextuelles en temps réel à vos questions
-                                            opérationnelles.
-                                        </p>
-                                    </div>
-                                    <div class="flex-shrink-0">
-                                        <svg class="feature-icon w-5 h-5 transition-all duration-200" fill="none"
-                                            stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M19 9l-7 7-7-7" />
-                                        </svg>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Dropdown Questions for Feature 1 -->
-                            <div id="question-list-1" class="dropdown-container mt-1 md:mt-3">
-                                <div class="dropdown-content bg-white rounded-lg border border-gray-200 shadow-sm mb-4">
-                                    <div class="p-3 border-b border-gray-100">
-                                        <h4 class="text-sm font-medium text-gray-700">Exemples de questions</h4>
-                                    </div>
-                                    <div class="md:p-3 md:space-y-2 overflow-hidden">
-                                        <button
-                                            class="question-item w-full text-left p-3 md:rounded-md md:border border-t border-gray-200  transition-all duration-100 text-sm text-gray-700"
-                                            data-slide="0" data-list="1" data-state="active">
-                                            "Un client indique un retard sur son remboursement, quel est son statut ?"
-                                        </button>
-                                        <button
-                                            class="question-item w-full text-left p-3 md:rounded-md md:border border-t border-gray-200  transition-all duration-100 text-sm text-gray-700"
-                                            data-slide="1" data-list="1" data-state="inactive">
-                                            "Est-ce que le service achats a déjà soumis les commandes aux fournisseurs
-                                            pour la semaine prochaine ?"
-                                        </button>
-                                        <button
-                                            class="question-item w-full text-left p-3 md:rounded-md md:border border-t border-gray-200  transition-all duration-100 text-sm text-gray-700"
-                                            data-slide="2" data-list="1" data-state="inactive">
-                                            "Liste les incidents de chaîne de production des trois derniers mois et
-                                            précise la cause de chacun."
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Feature 2 - Task Delegation -->
-                        <div id="feature-2"
-                            class="feature-toggle bg-white border border-gray-200 rounded-lg md:rounded-xl p-4  shadow-sm  transition-all duration-200 cursor-pointer"
-                            data-state="inactive">
-                            <div class="flex items-center space-x-3">
-                                <div
-                                    class="feature-number w-8 h-8 text-white bg-gradient-to-br from-blue-800/70 to-indigo-700/80 rounded-lg flex items-center justify-center font-medium text-sm transition-colors duration-200">
-                                    <i class="fa-solid fa-tasks"></i>
-                                </div>
-                                <div class="flex-1">
-                                    <p class=" font-medium leading-snug">
-                                        Déléguez l'exécution des tâches à un agent avec une simple prompt
-                                    </p>
-                                </div>
-                                <div class="flex-shrink-0">
-                                    <svg class="feature-icon w-5 h-5 transition-all duration-200" fill="none"
-                                        stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M19 9l-7 7-7-7" />
-                                    </svg>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Dropdown Questions for Feature 2 -->
-                        <div id="question-list-2" class="dropdown-container mt-1 md:mt-3">
-                            <div class="dropdown-content bg-white rounded-lg border border-gray-200 shadow-sm">
-                                <div class="p-3 border-b border-gray-100">
-                                    <h4 class="text-sm font-medium text-gray-700">Exemples de tâches</h4>
-                                </div>
-                                <div class="md:p-3 md:space-y-2 overflow-hidden">
-                                    <button
-                                        class="question-item w-full text-left p-3 md:rounded-md md:border border-t border-gray-200  transition-all duration-100 text-sm text-gray-700"
-                                        data-slide="0" data-list="2" data-state="active">
-                                        "Analyse les retours clients du mois dernier et extrait cinq points principaux."
-                                    </button>
-
-                                    <button
-                                        class="question-item w-full text-left p-3 md:rounded-md md:border border-t border-gray-200  transition-all duration-100 text-sm text-gray-700"
-                                        data-slide="1" data-list="2" data-state="inactive">
-                                        "Prépare un résumé du dossier de M. Dupont pour la réunion de demain."
-                                    </button>
-                                    <button
-                                        class="question-item w-full text-left p-3 md:rounded-md md:border border-t border-gray-200  transition-all duration-100 text-sm text-gray-700"
-                                        data-slide="2" data-list="2" data-state="inactive">
-                                        "Relance le fournisseur ABC au sujet de la commande en attente."
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Right Panel: Slideshow Display -->
-                    <div class="w-full space-y-6 md:col-span-6 my-auto">
-                        <!-- Section 1 Slideshow Container -->
-                        <div id="slideshow-container-1"
-                            class="group relative w-full overflow-hidden rounded-2xl shadow-md">
-                            <!-- Section 1 Video Slides -->
-                            <div
-                                class="slideshow-slide-1 active opacity-100 transition-opacity duration-1000 ease-in-out">
-                                <video class="w-full h-auto rounded-lg" muted loop playsinline <source
-                                    src="assets/ai_assistant_feature/ingenia_agent_example1.mov" type="video/mp4">
-                                    <source src="assets/ai_assistant_feature/ingenia_agent_example1.mov"
-                                        type="video/quicktime">
-                                    Your browser does not support the video tag.
-                                </video>
-                            </div>
-                            <div
-                                class="slideshow-slide-1 opacity-0 absolute top-0 left-0 w-full transition-opacity duration-1000 ease-in-out">
-                                <video class="w-full h-auto rounded-lg" muted loop playsinline <source
-                                    src="assets/ai_assistant_feature/ingenia_agent_example2.mov" type="video/mp4">
-                                    <source src="assets/ai_assistant_feature/ingenia_agent_example2.mov"
-                                        type="video/quicktime">
-                                    Your browser does not support the video tag.
-                                </video>
-                            </div>
-                            <div
-                                class="slideshow-slide-1 opacity-0 absolute top-0 left-0 w-full transition-opacity duration-1000 ease-in-out">
-                                <video class="w-full h-auto rounded-lg" muted loop playsinline <source
-                                    src="assets/ai_assistant_feature/ingenia_agent_example3.mov" type="video/mp4">
-                                    <source src="assets/ai_assistant_feature/ingenia_agent_example3.mov"
-                                        type="video/quicktime">
-                                    Your browser does not support the video tag.
-                                </video>
-                            </div>
-                        </div>
-
-                        <!-- Section 2 Slideshow Container -->
-                        <div id="slideshow-container-2"
-                            class="group relative w-full rounded-2xl overflow-hidden shadow-md hidden">
-                            <!-- Section 2 Video Slides -->
-                            <div
-                                class="slideshow-slide-2 active opacity-100 transition-opacity duration-1000 ease-in-out">
-                                <video class="w-full h-auto rounded-lg" autoplay muted loop playsinline>
-                                    <source src="assets/ai_assistant_feature/ingenia_agent_example1.mov"
-                                        type="video/mp4">
-                                    <source src="assets/ai_assistant_feature/ingenia_agent_example1.mov"
-                                        type="video/quicktime">
-                                    Your browser does not support the video tag.
-                                </video>
-                            </div>
-                            <div
-                                class="slideshow-slide-2 opacity-0 absolute top-0 left-0 w-full transition-opacity duration-1000 ease-in-out">
-                                <video class="w-full h-auto rounded-lg" autoplay muted loop playsinline>
-                                    <source src="assets/ai_assistant_feature/ingenia_agent_example2.mov"
-                                        type="video/mp4">
-                                    <source src="assets/ai_assistant_feature/ingenia_agent_example2.mov"
-                                        type="video/quicktime">
-                                    Your browser does not support the video tag.
-                                </video>
-                            </div>
-                            <div
-                                class="slideshow-slide-2 opacity-0 absolute top-0 left-0 w-full transition-opacity duration-1000 ease-in-out">
-                                <video class="w-full h-auto rounded-lg" autoplay muted loop playsinline>
-                                    <source src="assets/ai_assistant_feature/ingenia_agent_example3.mov"
-                                        type="video/mp4">
-                                    <source src="assets/ai_assistant_feature/ingenia_agent_example3.mov"
-                                        type="video/quicktime">
-                                    Your browser does not support the video tag.
-                                </video>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <!-- Use Case — Convert More Visitors (Tailwind v3) -->
-                <div class="grid gap-10 md:gap-6 lg:gap-12 md:grid-cols-12">
-                    <!-- Text column -->
-                    <div class="md:order-2  order-1 md:col-span-6 ">
-                        <span
-                            class="inline-flex items-center rounded-full border border-blue-200/50 bg-gradient-to-r from-blue-100/30 to-indigo-100/30 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-primary">
-                            Conseiller Client
-                        </span>
-
-                        <h3 class="mt-4 ">
-                            Convertissez
-                            <span
-                                class="bg-gradient-to-r from-emerald-500 to-teal-500 bg-clip-text text-transparent">3×</span>
-                            plus de visiteurs en clients
-                        </h3>
-
-                        <p class="mt-3 text-base leading-relaxed text-gray-600 dark:text-gray-300">
-                            Offrez des réponses personnalisées et instantanées, 24/7, directement sur votre
-                            site.
-                        </p>
-
-                        <ul class="mt-8 space-y-4">
-                            <!-- Feature item -->
-                            <li
-                                class="group relative overflow-hidden rounded-2xl border border-gray-200/70 bg-white/80 p-4 backdrop-blur-sm transition-shadow  dark:border-gray-800/70 dark:bg-gray-900/60">
-                                <div class="flex items-center gap-3 ">
-                                    <!-- icon -->
-                                    <span
-                                        class="inline-flex size-9 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-blue-500/90 to-indigo-500/90 text-white dark:from-blue-500 dark:to-indigo-500">
-                                        <i class="fa-solid fa-book-open text-sm"></i>
-                                    </span>
-                                    <p class=" leading-snug text-gray-800 dark:text-gray-100">
-                                        Un conseiller virtuel qui connaît parfaitement vos produits.
-                                    </p>
-                                </div>
-                            </li>
-
-                            <li
-                                class="group relative overflow-hidden rounded-2xl border border-gray-200/70 bg-white/80 p-4 backdrop-blur-sm transition-shadow  dark:border-gray-800/70 dark:bg-gray-900/60">
-                                <div class="flex items-center gap-3">
-                                    <span
-                                        class="inline-flex size-9 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-emerald-500 to-teal-500 text-white dark:from-emerald-500 dark:to-teal-500">
-                                        <i class="fa-solid fa-bolt text-sm"></i>
-                                    </span>
-                                    <p class=" leading-snug text-gray-800 dark:text-gray-100">
-                                        Répond instantanément aux questions de vos clients, même à 2h du matin.
-                                    </p>
-                                </div>
-                            </li>
-
-                            <li
-                                class="group relative overflow-hidden rounded-2xl border border-gray-200/70 bg-white/80 p-4 backdrop-blur-sm transition-shadow  dark:border-gray-800/70 dark:bg-gray-900/60">
-                                <div class="flex items-center gap-3">
-                                    <span
-                                        class="inline-flex size-9 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-fuchsia-500/90 to-pink-500/90 text-white dark:from-fuchsia-500 dark:to-pink-500">
-                                        <i class="fa-solid fa-star text-sm"></i>
-                                    </span>
-                                    <p class=" leading-snug text-gray-800 dark:text-gray-100">
-                                        S'adapte à votre ton de marque et guide vers l'achat.
-                                    </p>
-                                </div>
-                            </li>
-                        </ul>
-
-
-                    </div>
-
-                    <!-- Visual column -->
-                    <div class="md:order-1 order-2 md:col-span-6">
-                        <div
-                            class="bg-[#ffd0c2] md:col-span-6 border-2 border-dashed border-gray-300 rounded-xl min-h-[500px] flex items-center justify-center">
-                            <div class="text-center space-y-4">
-                                <div
-                                    class="w-16 h-16 bg-gray-200 rounded-full mx-auto flex items-center justify-center">
-                                    <svg class="w-8 h-8 text-gray-400" fill="none" stroke="currentColor"
-                                        viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-                                    </svg>
-                                </div>
-                                <p class="text-gray-500 font-medium">Zone d'animation chat</p>
-                                <p class="text-sm text-gray-400">Placeholder pour la démonstration interactive
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-
-
-            </div>
-
-        </section>
-
-        <!-- Team Section — matches the reference design (Tailwind v3) -->
-        <section id="team" class="py-20 max-w-screen-xl mx-auto  px-2 md:px-4 text-center md:text-left">
-            <!-- Header -->
-            <header class="mb-10 sm:mb-12">
-                <h2 class="">Notre équipe</h2>
-            </header>
-
-            <!-- Grid of members -->
-            <div
-                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 auto-rows-auto justify-items-center md:justify-items-start">
-
-                <!-- Card: Justin -->
-                <article
-                    class="flex w-full h-full flex-col max-w-[450px] items-stretch rounded-[2rem] bg-[#f8f8f8] p-3 sm:p-4">
-                    <!-- Image -->
-                    <div class="">
-                        <div class="overflow-hidden rounded-[20px]   rounded-b-none">
-                            <img class="aspect-square w-full h-full object-cover" alt="Portrait de Justin"
-                                loading="lazy" sizes="(max-width: 2000px) 100vw, 2000px" srcset="
-                https://cdn.prod.website-files.com/688cd4e822ff5df34f6a7db3/68922a5f740745ee512403f1_professional_headshot_justin_31122024_small-p-500.png 500w,
-                https://cdn.prod.website-files.com/688cd4e822ff5df34f6a7db3/68922a5f740745ee512403f1_professional_headshot_justin_31122024_small-p-800.png 800w,
-                https://cdn.prod.website-files.com/688cd4e822ff5df34f6a7db3/68922a5f740745ee512403f1_professional_headshot_justin_31122024_small-p-1080.png 1080w,
-                https://cdn.prod.website-files.com/688cd4e822ff5df34f6a7db3/68922a5f740745ee512403f1_professional_headshot_justin_31122024_small-p-1600.png 1600w,
-                https://cdn.prod.website-files.com/688cd4e822ff5df34f6a7db3/68922a5f740745ee512403f1_professional_headshot_justin_31122024_small.png 2000w
-              " src="https://cdn.prod.website-files.com/688cd4e822ff5df34f6a7db3/68922a5f740745ee512403f1_professional_headshot_justin_31122024_small.png" />
-                        </div>
-                    </div>
-
-                    <!-- Body -->
-                    <div
-                        class="flex h-full w-full flex-col items-start justify-between rounded-[1.25rem] rounded-t-none bg-white p-3 sm:p-4 gap-3 sm:gap-4">
-                        <div class="mb-1 sm:mb-2 w-full">
-                            <h3 class="text-xl font-medium ">Justin</h3>
-                            <p class="text-xl text-gray-600">IA et Développement</p>
-                        </div>
-
-                        <p class=" text-gray-700 leading-relaxed">
-                            Fort de son double parcours pro. technique et business, Justin est votre partenaire
-                            technique avec une vraie compréhension des enjeux de votre activité.
-                        </p>
-
-                        <!-- Socials -->
-                        <div class="mt-3 sm:mt-4 w-full scale-150 md:scale-100 ">
-                            <a href="https://www.linkedin.com/in/justin-warambourg/" target="_blank" rel="noopener"
-                                class="inline-flex items-center bg-primary px-[7px] py-[2px] rounded-[4px]"
-                                aria-label="Justin sur LinkedIn">
-                                <i class="fa-brands text-white fa-linkedin-in text-sm sm:text-base"></i>
-                            </a>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Card: Victor -->
-                <article
-                    class="flex w-full h-full flex-col max-w-[450px] items-stretch rounded-[2rem] bg-[#f8f8f8] p-3 sm:p-4">
-                    <!-- Image -->
-                    <div class="">
-                        <div class="overflow-hidden rounded-[20px]  rounded-b-none">
-                            <img class="aspect-square w-full h-full object-cover " alt="Portrait de Victor"
-                                loading="lazy" sizes="(max-width: 800px) 100vw, 800px" srcset="
-                https://cdn.prod.website-files.com/688cd4e822ff5df34f6a7db3/68922bfc484fa3507d4ad668_victor_bey_smith_headshot-p-500.jpeg 500w,
-                https://cdn.prod.website-files.com/688cd4e822ff5df34f6a7db3/68922bfc484fa3507d4ad668_victor_bey_smith_headshot.jpeg 800w
-              " src="https://cdn.prod.website-files.com/688cd4e822ff5df34f6a7db3/68922bfc484fa3507d4ad668_victor_bey_smith_headshot.jpeg" />
-                        </div>
-                    </div>
-
-                    <!-- Body -->
-                    <div
-                        class="flex h-full w-full flex-col items-start justify-between rounded-[1.25rem]  rounded-t-none bg-white p-3 sm:p-4 gap-3 sm:gap-4">
-                        <div class="mb-1 sm:mb-2 w-full">
-                            <h3 class="text-xl sm:text-2xl font-medium">Victor</h3>
-                            <p class="text-xl text-gray-600">Business</p>
-                        </div>
-
-                        <p class=" text-gray-700 leading-relaxed">
-                            Skilled in translating data into actionable insights for strategic online marketing
-                            campaigns.
-                        </p>
-
-                        <!-- Socials -->
-                        <div class="mt-3 sm:mt-4 w-full scale-150 md:scale-100 ">
-                            <a href="https://www.linkedin.com/feed/" target="_blank" rel="noopener"
-                                class="inline-flex items-center bg-primary px-[7px] py-[2px] rounded-[4px]"
-                                aria-label="Victor sur LinkedIn">
-                                <i class="fa-brands text-white fa-linkedin-in text-sm sm:text-base"></i>
-                            </a>
-                        </div>
-                    </div>
-                </article>
-            </div>
-        </section>
-
-        <section id="contact">
-            <div class="max-w-screen-xl mx-auto  md:px-4 text-center md:text-left ">
-                <div class="grid grid-cols-1 lg:space-x-10 md:space-x-2 md:grid-cols-2   md:rounded-[20px] bg-cover bg-center bg-no-repeat lg:px-20 lg:py-24  md:px-5 px-2 py-10 relative"
-                    style="background-image: url('./assets/abstract_bg1.jpg');">
-                    <div class="absolute inset-0 bg-white/35 rounded-[20px]"></div>
-                    <div class="relative z-10 flex flex-col h-[92%]">
-                        <div class="mb-6 ">
-                            <h2 class="">Optimisez votre activité avec l'IA.</h2>
-                        </div>
-                        <div class="mb-10 text-lg">
-                            <p>
-                                Réservez une consultation de 30 minutes pour en savoir plus sur comment les nouveaux
-                                outils
-                                d'IA&nbsp;peuvent aider votre activité.</p>
-                        </div>
-                        <div class="mt-auto">
-                            <a class="btn-primary text-lg py-4"
-                                href="https://calendly.com/justin-warambourg/consultation-ingenia" target="_blank">
-                                Réserver une consultation gratuite
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class=" md:hidden flex flex-row items-center justify-center mt-16 mb-7 space-x-2 z-10 mx-1">
-                        <hr class="flex-1 border-gray-600">
-                        <p class="whitespace-nowrap text-gray-600">Ou remplissez le formulaire ci-dessous</p>
-                        <hr class="flex-1 border-gray-600">
-                    </div>
-                    <div class="h-[380px] overflow-hidden z-10 md:mt-[-30px]">
-                        <iframe id="JotFormIFrame-252401697918364" title="Appointment Request Form"
-                            onload="window.parent.scrollTo(0,0)" allowtransparency="true"
-                            allow="geolocation; microphone; camera; fullscreen; payment"
-                            src="https://form.jotform.com/252401697918364" frameborder="0"
-                            style="min-width:100%;max-width:100%;border:none;" scrolling="no"> </iframe>
-                        <script src='https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js'></script>
-                        <script>window.jotformEmbedHandler("iframe[id='JotFormIFrame-252401697918364']", "https://form.jotform.com/")</script>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="mt-10 border-t border-slate-200 bg-white">
-        <div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8 py-10">
-            <!-- Mobile: stacked with collapsible sections; Desktop: 3 columns -->
-            <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
-                <!-- Brand -->
-                <div>
-                    <div class="flex items-center gap-3">
-                        <img src="./assets/ingenia_logo_base.png" alt="Logo" class="w-7 h-auto">
-                        <p class="text-lg font-semibold tracking-wide">INGENIA</p>
-                    </div>
-                    <p class="mt-3 text-slate-600">
-                        Moderniser son activité avec l'IA est à la portée de tous.
-                    </p>
-                </div>
-
-                <!-- Menu (mobile: collapsible, desktop: static) -->
-                <div class="lg:ml-40">
-                    <!-- mobile -->
-                    <details class="group md:hidden border-t first:border-0 border-slate-200 pt-4 ">
-                        <summary
-                            class="flex cursor-pointer items-center justify-between py-2 text-base font-semibold text-slate-900">
-                            Menu
-                            <svg class="h-5 w-5 transition-transform group-open:rotate-180" viewBox="0 0 20 20"
-                                fill="currentColor">
-                                <path fill-rule="evenodd"
-                                    d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.21 8.29a.75.75 0 01.02-1.08z"
-                                    clip-rule="evenodd" />
-                            </svg>
-                        </summary>
-                        <ul class="mt-2 space-y-3">
-                            <li><a href="/" aria-current="page"
-                                    class="inline-block rounded-md text-slate-900 hover:opacity-75 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-400">Accueil</a>
-                            </li>
-                            <li><a href="#"
-                                    class="inline-block rounded-md text-slate-900 hover:opacity-75 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-400">Nos
-                                    solutions</a></li>
-                            <li><a href="#Feature"
-                                    class="inline-block rounded-md text-slate-900 hover:opacity-75 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-400">Qui
-                                    sommes-nous</a></li>
-                        </ul>
-                    </details>
-                    <!-- desktop -->
-                    <nav aria-label="Pied de page – Menu" class="hidden md:block">
-                        <p class="text-lg font-semibold">Menu</p>
-                        <ul class="mt-4 space-y-3">
-                            <li><a href="/" aria-current="page"
-                                    class="inline-block rounded-md text-slate-900 transition hover:opacity-75 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-400">Accueil</a>
-                            </li>
-                            <li><a href="#"
-                                    class="inline-block rounded-md text-slate-900 transition hover:opacity-75 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-400">Nos
-                                    solutions</a></li>
-                            <li><a href="#Feature"
-                                    class="inline-block rounded-md text-slate-900 transition hover:opacity-75 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-400">Qui
-                                    sommes-nous</a></li>
-                        </ul>
-                    </nav>
-                </div>
-
-                <!-- Contact (mobile: collapsible, desktop: static) -->
-                <div>
-                    <!-- mobile -->
-                    <details class="group md:hidden border-t border-slate-200 pt-4">
-                        <summary
-                            class="flex cursor-pointer items-center justify-between py-2 text-base font-semibold text-slate-900">
-                            Contact
-                            <svg class="h-5 w-5 transition-transform group-open:rotate-180" viewBox="0 0 20 20"
-                                fill="currentColor">
-                                <path fill-rule="evenodd"
-                                    d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.21 8.29a.75.75 0 01.02-1.08z"
-                                    clip-rule="evenodd" />
-                            </svg>
-                        </summary>
-                        <ul class="mt-2 space-y-3">
-                            <li><a href="tel:+33686442172"
-                                    class="inline-block rounded-md text-slate-900 hover:opacity-75 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-400">+33
-                                    6 86 44 21 72</a></li>
-                            <li><a href="mailto:justin.warambourg@gmail.com"
-                                    class="inline-block break-all rounded-md text-slate-900 hover:opacity-75 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-400">justin.warambourg@gmail.com</a>
-                            </li>
-                        </ul>
-                        <address class="mt-3 not-italic leading-relaxed text-slate-600">
-                            73, rue du bois<br>59940 Estaires
-                        </address>
-                    </details>
-                    <!-- desktop -->
-                    <div class="hidden md:block">
-                        <p class="text-lg font-semibold">Contact</p>
-                        <ul class="mt-4 space-y-3">
-                            <li><a href="tel:+33686442172"
-                                    class="inline-block rounded-md text-slate-900 transition hover:opacity-75 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-400">+33
-                                    6 86 44 21 72</a></li>
-                            <li><a href="mailto:justin.warambourg@gmail.com"
-                                    class="inline-block break-all rounded-md text-slate-900 transition hover:opacity-75 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-400">justin.warambourg@gmail.com</a>
-                            </li>
-                        </ul>
-                        <address class="mt-4 not-italic leading-relaxed text-slate-600">
-                            73, rue du bois<br>59940 Estaires
-                        </address>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-
     <script>
-        // Mobile Menu Toggle Functionality
-        document.addEventListener('DOMContentLoaded', function () {
+                // Mobile Menu Toggle Functionality
+                document.addEventListener('DOMContentLoaded', function () {
             const mobileMenuButton = document.getElementById('mobile-menu-button');
             const mobileMenu = document.getElementById('mobile-menu');
             const mobileMenuClose = document.getElementById('mobile-menu-close');
@@ -1328,307 +286,1337 @@
         });
 
 
-
-        function scrollToAnchor(id, offset = 0) {
-            const el = document.getElementById(id);
-            if (!el) return;
-
-            const y = el.getBoundingClientRect().top + window.scrollY - offset;
-            window.scrollTo({ top: y, behavior: 'smooth' });
-        }
-
-        // Interactive Question Slideshow System with Separate Slide Lists
-        let currentSlide1 = 0;  // Current slide for section 1
-        let currentSlide2 = 0;  // Current slide for section 2
-        let currentActiveList = 1; // Start with list 1 active
-        let slideInterval;
-
-        // Separate slide collections for each section
-        const slides1 = document.querySelectorAll('.slideshow-slide-1');
-        const slides2 = document.querySelectorAll('.slideshow-slide-2');
-        const totalSlides1 = slides1.length;
-        const totalSlides2 = slides2.length;
-
-        // Slideshow containers
-        const container1 = document.getElementById('slideshow-container-1');
-        const container2 = document.getElementById('slideshow-container-2');
-
-        function showSlide(slideIndex, sectionNumber) {
-
-
-            if (sectionNumber === 1) {
-                // Handle Section 1 slides
-                if (slideIndex >= 0 && slideIndex < totalSlides1) {
-
-
-                    // Remove active class and set opacity to 0 for all slides, pause videos
-                    slides1.forEach(slide => {
-                        slide.classList.remove('active');
-                        slide.classList.remove('opacity-100');
-                        slide.classList.add('opacity-0');
-                        // Pause all videos in this slide
-                        const video = slide.querySelector('video');
-                        if (video) {
-                            video.pause();
-                        }
-                    });
-
-                    // Set the target slide as active and visible
-                    slides1[slideIndex].classList.add('active');
-                    slides1[slideIndex].classList.remove('opacity-0');
-                    slides1[slideIndex].classList.add('opacity-100');
-
-                    // Start the video in the active slide from the beginning
-                    const activeVideo = slides1[slideIndex].querySelector('video');
-                    if (activeVideo) {
-                        activeVideo.currentTime = 0; // Reset to beginning
-                        activeVideo.play().catch(e => console.log('Video play failed:', e));
-                    }
-
-                    currentSlide1 = slideIndex;
-
-                    // Show section 1 container, hide section 2
-                    container1.classList.remove('hidden');
-                    container2.classList.add('hidden');
-                }
-
-            } else if (sectionNumber === 2) {
-                // Handle Section 2 slides
-                if (slideIndex >= 0 && slideIndex < totalSlides2) {
-                    console.log(`Showing section 2 slide ${slideIndex}`);
-
-                    // Remove active class and set opacity to 0 for all slides, pause videos
-                    slides2.forEach(slide => {
-                        slide.classList.remove('active');
-                        slide.classList.remove('opacity-100');
-                        slide.classList.add('opacity-0');
-                        // Pause all videos in this slide
-                        const video = slide.querySelector('video');
-                        if (video) {
-                            video.pause();
-                        }
-                    });
-
-                    // Set the target slide as active and visible
-                    slides2[slideIndex].classList.add('active');
-                    slides2[slideIndex].classList.remove('opacity-0');
-                    slides2[slideIndex].classList.add('opacity-100');
-
-                    // Start the video in the active slide from the beginning
-                    const activeVideo = slides2[slideIndex].querySelector('video');
-                    if (activeVideo) {
-                        activeVideo.currentTime = 0; // Reset to beginning
-                        activeVideo.play().catch(e => console.log('Video play failed:', e));
-                    }
-
-                    currentSlide2 = slideIndex;
-
-                    // Show section 2 container, hide section 1
-                    container2.classList.remove('hidden');
-                    container1.classList.add('hidden');
-                }
-            }
-
-            // Update highlighted question in the active list
-            updateQuestionHighlight(slideIndex, sectionNumber);
-        }
-
-        function updateQuestionHighlight(slideIndex, listNumber) {
-            const questionList = document.getElementById(`question-list-${listNumber}`);
-            if (!questionList) return;
-
-            const questions = questionList.querySelectorAll('.question-item');
-            questions.forEach((question, index) => {
-                if (index === slideIndex) {
-                    question.setAttribute('data-state', 'active');
-                } else {
-                    question.setAttribute('data-state', 'inactive');
-                }
-            });
-        }
-
-        function nextSlide() {
-            if (currentActiveList === 1) {
-                const nextIndex = (currentSlide1 + 1) % totalSlides1;
-                currentSlide1 = nextIndex;
-                showSlide(nextIndex, 1);
-                updateQuestionStates(1, nextIndex); // Update visual feedback
-            } else if (currentActiveList === 2) {
-                const nextIndex = (currentSlide2 + 1) % totalSlides2;
-                currentSlide2 = nextIndex;
-                showSlide(nextIndex, 2);
-                updateQuestionStates(2, nextIndex); // Update visual feedback
-            }
-        }
-
-        function startSlideshow() {
-            slideInterval = setInterval(nextSlide, 15000); // 5 seconds
-        }
-
-        function stopSlideshow() {
-            if (slideInterval) {
-                clearInterval(slideInterval);
-            }
-        }
-
-        function toggleFeatureList(featureNumber) {
-            const list1 = document.getElementById('question-list-1');
-            const list2 = document.getElementById('question-list-2');
-            const feature1 = document.getElementById('feature-1');
-            const feature2 = document.getElementById('feature-2');
-
-            if (featureNumber === 1) {
-                // Toggle list 1 visibility
-                const isCurrentlyVisible = list1.classList.contains('open');
-
-                if (isCurrentlyVisible) {
-                    // Close list 1
-                    list1.classList.remove('open');
-                    updateFeatureInactiveState(feature1);
-                    stopSlideshow();
-                    currentActiveList = null;
-                } else {
-                    // Open list 1, close list 2
-                    list1.classList.add('open');
-                    list2.classList.remove('open');
-
-                    // Update feature styling
-                    updateFeatureActiveState(feature1);
-                    updateFeatureInactiveState(feature2);
-
-                    currentActiveList = 1;
-                    currentSlide1 = 0; // Reset to first slide when switching
-                    showSlide(0, 1); // Start from slide 0
-                    updateQuestionStates(1, 0); // Update visual feedback
-                    stopSlideshow();
-                    startSlideshow(); // Reset timer
-                }
-            } else {
-                // Toggle list 2 visibility
-                const isCurrentlyVisible = list2.classList.contains('open');
-
-                if (isCurrentlyVisible) {
-                    // Close list 2
-                    list2.classList.remove('open');
-                    updateFeatureInactiveState(feature2);
-                    stopSlideshow();
-                    currentActiveList = null;
-                } else {
-                    // Open list 2, close list 1
-                    list2.classList.add('open');
-                    list1.classList.remove('open');
-
-                    // Update feature styling
-                    updateFeatureActiveState(feature2);
-                    updateFeatureInactiveState(feature1);
-
-                    currentActiveList = 2;
-                    currentSlide2 = 0; // Reset to first slide when switching
-                    showSlide(0, 2); // Start from slide 0
-                    updateQuestionStates(2, 0); // Update visual feedback
-                    stopSlideshow();
-                    startSlideshow(); // Reset timer
-                }
-            }
-        }
-
-        function updateFeatureActiveState(feature) {
-            // Simply set the data-state attribute - CSS handles the styling
-            feature.setAttribute('data-state', 'active');
-        }
-
-        function updateFeatureInactiveState(feature) {
-            // Simply set the data-state attribute - CSS handles the styling
-            feature.setAttribute('data-state', 'inactive');
-        }
-
-        function updateQuestionStates(listNumber, activeSlideIndex) {
-            // Update visual feedback for question items based on active slide
-            const questions = document.querySelectorAll(`[data-list="${listNumber}"]`);
-            questions.forEach((question) => {
-                const slideIndex = parseInt(question.getAttribute('data-slide'));
-
-                if (slideIndex === activeSlideIndex) {
-                    question.setAttribute('data-state', 'active');
-                } else {
-                    question.setAttribute('data-state', 'inactive');
-                }
-            });
-        }
-
-        // Initialize system when DOM is loaded
-        document.addEventListener('DOMContentLoaded', function () {
-            // Add click event listeners to feature toggles
-            const feature1 = document.getElementById('feature-1');
-            const feature2 = document.getElementById('feature-2');
-
-            // Add click event listeners to the entire feature toggle divs
-            feature1.addEventListener('click', () => toggleFeatureList(1));
-            feature2.addEventListener('click', () => toggleFeatureList(2));
-
-            // Prevent dropdown containers from closing when clicked
-            const questionList1 = document.getElementById('question-list-1');
-            const questionList2 = document.getElementById('question-list-2');
-
-            questionList1.addEventListener('click', (event) => {
-                event.stopPropagation();
-            });
-
-            questionList2.addEventListener('click', (event) => {
-                event.stopPropagation();
-            });
-
-            // Add click event listeners to questions
-            const allQuestions = document.querySelectorAll('.question-item');
-            allQuestions.forEach((question, index) => {
-                question.addEventListener('click', (event) => {
-                    event.stopPropagation(); // Prevent event bubbling to prevent dropdown from closing
-
-                    const slideIndex = parseInt(question.getAttribute('data-slide'));
-                    const listNumber = parseInt(question.getAttribute('data-list'));
-
-                    console.log(`Clicked question: slideIndex=${slideIndex}, listNumber=${listNumber}, currentActiveList=${currentActiveList}`);
-
-                    // Only proceed if this list is currently active
-                    if (currentActiveList === listNumber) {
-                        stopSlideshow(); // Stop current slideshow
-
-                        // Update the current slide index for the active section
-                        if (listNumber === 1) {
-                            currentSlide1 = slideIndex;
-                        } else if (listNumber === 2) {
-                            currentSlide2 = slideIndex;
-                        }
-
-                        showSlide(slideIndex, listNumber);
-                        updateQuestionStates(listNumber, slideIndex); // Update visual feedback
-                        startSlideshow(); // Restart auto-slideshow with reset timer
-                    }
-                });
-            });
-
-            // Initialize with feature 1 active (contextual responses) - it's already styled as active in HTML
-            currentActiveList = 1;
-            questionList1.classList.add('open'); // Start with first list open
-            showSlide(0, 1); // Start from first slide
-            updateQuestionStates(1, 0); // Set initial visual feedback
-            startSlideshow();
-
-            // Pause slideshow on hover, resume on mouse leave for both containers
-            if (container1) {
-                container1.addEventListener('mouseenter', stopSlideshow);
-                container1.addEventListener('mouseleave', startSlideshow);
-            }
-            if (container2) {
-                container2.addEventListener('mouseenter', stopSlideshow);
-                container2.addEventListener('mouseleave', startSlideshow);
-            }
-        });
-
-
     </script>
+    <main>
+      <section id="home">
+        <div class="relative overflow-hidden">
+    <!-- Gradient Blobs Background -->
+    <div class="absolute inset-0 z-0 ">
+        <!-- Rose blob -->
+        <div
+            class="absolute top-20 right-44 w-72 h-72 bg-rose-400 rounded-full opacity-40 blur-[90px] mix-blend-multiply">
+        </div>
+        <!-- Orange blob -->
+        <div
+            class="absolute bottom-1/2 right-10 w-80 h-80 bg-orange-400 rounded-full opacity-30 md:opacity-30 blur-[110px] mix-blend-multiply">
+        </div>
+        <!-- Pink blob -->
+        <div
+            class="absolute top-1/3 xl:right-[28%] right-[20%] w-72 h-72 bg-pink-400 rounded-full opacity-30 md:opacity-60 blur-[90px] mix-blend-multiply">
+        </div>
+    </div>
 
-</body>
+
+    <!-- Abstract Geometric Patterns -->
+    <div class=" hidden md:block absolute h-full w-full z-0 opacity-100 top-0 left-[20%]">
+        <svg class="absolute inset-0 w-full h-full" viewBox="0 0 1200 800" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <pattern id="hexPattern" x="0" y="0" width="60" height="52" patternUnits="userSpaceOnUse">
+                    <path d="M30,4 L52,17 L52,35 L30,48 L8,35 L8,17 Z" stroke="#F3F4F6" stroke-width="2" fill="none"
+                        opacity="0.7" />
+                </pattern>
+            </defs>
+            <rect x="0" y="0" width="100%" height="100%" fill="url(#hexPattern)" />
+            <rect x="0" y="0" width="100%" height="100%" fill="url(#dotsPattern)" />
+            <rect x="20" y="20" width="100%" height="100%" fill="url(#diagonalPattern)" />
+        </svg>
+        <div
+            class=" hidden md:block absolute inset-0 w-full h-full bg-gradient-to-r      from-white via-transparent to-transparent">
+        </div>
+        <div
+            class=" hidden md:block absolute inset-0 w-full h-full bg-gradient-to-b      from-transparent via-transparent to-white/60">
+        </div>
+
+    </div>
 
 
+    <div
+        class=" relative z-10 max-w-screen-xl mx-auto px-4 my-24 grid md:grid-cols-[1.5fr_1fr] grid-cols-1 grid-rows-auto  items-center">
+
+        <!-- Content -->
+        <div class="text-center md:text-left rounded-full ">
+            <h1 class="mb-6">L'IA n'est pas réservée qu'aux grandes entreprises</h1>
+            <p class="text-lg mb-6">Nous aidons les PME à moderniser leur activité avec <span class="font-semibold">
+                    des solutions d'IA <span class="whitespace-nowrap">simples et abordables.</span></span>
+                </span></p>
+            <div class="flex justify-center md:justify-start">
+                <a href="https://calendly.com/justin-warambourg/consultation-ingenia" target="_blank"
+                    class="btn-primary text-lg">Réservez une consultation gratuite</a>
+            </div>
+        </div>
+
+        <!-- Professional Customer Network -->
+        <div
+            class=" hidden md:block  mx-auto  w-80  bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg border border-gray-100/50 lg:scale-125">
+            <!-- Professional grid layout -->
+            <div class="p-6  flex flex-col justify-between ">
+                <!-- Header -->
+                <div class="text-center mb-4">
+                    <h3 class="text-sm font-semibold text-gray-700 uppercase tracking-wide">Des solutions adaptées
+                        <br> à chaque métier
+                    </h3>
+                    <!-- <p class="text-xs text-gray-500 mt-1">Powered by AI</p> -->
+                </div>
+
+
+                <!-- Customer grid -->
+                <div class="grid grid-cols-2 gap-4 flex-1  ">
+                    <!-- Customer Support -->
+                    <div class="flex flex-col items-center group">
+                        <div class="relative mb-2">
+                            <img src="./assets/customers_pictures/landing_customer_support.png"
+                                alt="Customer Support"
+                                class="w-16 h-16 rounded-lg object-cover shadow-sm group-hover:shadow-md transition-shadow duration-200">
+                            <!-- Professional indicator -->
+                            <div
+                                class="absolute -top-1 -right-1 w-4 h-4 bg-blue-500 rounded-full flex items-center justify-center">
+                                <div class="w-2 h-2 bg-white rounded-full"></div>
+                            </div>
+                        </div>
+                        <span class="text-xs font-medium text-gray-600 text-center">Support Client</span>
+                    </div>
+
+                    <!-- Field Workers -->
+                    <div class="flex flex-col items-center group">
+                        <div class="relative mb-2">
+                            <img src="./assets/customers_pictures/landing_field_workers.png" alt="Field Workers"
+                                class="w-16 h-16 rounded-lg object-cover shadow-sm group-hover:shadow-md transition-shadow duration-200">
+                            <div
+                                class="absolute -top-1 -right-1 w-4 h-4 bg-orange-500 rounded-full flex items-center justify-center">
+                                <div class="w-2 h-2 bg-white rounded-full"></div>
+                            </div>
+                        </div>
+                        <span class="text-xs font-medium text-gray-600 text-center">Terrain</span>
+                    </div>
+
+                    <!-- Office Professional -->
+                    <div class="flex flex-col items-center group">
+                        <div class="relative mb-2">
+                            <img src="./assets/customers_pictures/landing_office_lady.png" alt="Office Professional"
+                                class="w-16 h-16 rounded-lg object-cover shadow-sm group-hover:shadow-md transition-shadow duration-200">
+                            <div
+                                class="absolute -top-1 -right-1 w-4 h-4 bg-indigo-500 rounded-full flex items-center justify-center">
+                                <div class="w-2 h-2 bg-white rounded-full"></div>
+                            </div>
+                        </div>
+                        <span class="text-xs font-medium text-gray-600 text-center">Bureau</span>
+                    </div>
+
+
+                    <!-- Production Workers -->
+                    <div class="flex flex-col items-center group">
+                        <div class="relative mb-2">
+                            <img src="./assets/customers_pictures/landing_production_workers.png"
+                                alt="Production Workers"
+                                class="w-16 h-16 rounded-lg object-cover shadow-sm group-hover:shadow-md transition-shadow duration-200">
+                            <div
+                                class="absolute -top-1 -right-1 w-4 h-4 bg-emerald-500 rounded-full flex items-center justify-center">
+                                <div class="w-2 h-2 bg-white rounded-full"></div>
+                            </div>
+                        </div>
+                        <span class="text-xs font-medium text-gray-600 text-center">Production</span>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <!-- Subtle connection lines -->
+            <svg class="absolute inset-0 w-full h-full pointer-events-none opacity-20" viewBox="0 0 320 288"
+                fill="none">
+                <!-- Minimal connecting lines -->
+                <path d="M80 80 L240 80 M80 160 L240 160 M80 240 L240 240" stroke="#3B82F6" stroke-width="1"
+                    stroke-dasharray="2,4" />
+                <path d="M160 40 L160 248" stroke="#3B82F6" stroke-width="1" stroke-dasharray="2,4" />
+            </svg>
+        </div>
+
+    </div>
+
+</div>
+      </section>
+
+      <section id="mission">
+        <div class="py-16  relative overflow-hidden bg-white">
+    <!-- Top-left slate gradient -->
+    <div class="absolute inset-0 bg-gradient-to-br from-slate-100/50 via-transparent to-transparent"></div>
+    <!-- Bottom-right slate gradient -->
+    <div class="absolute inset-0 bg-gradient-to-tl from-slate-100/50 via-transparent to-transparent"></div>
+
+    <div class="max-w-6xl mx-auto px-6 relative z-10">
+        <!-- Mission Block -->
+        <div class="text-center space-y-8">
+            <!-- Eyebrow -->
+            <div class="text-sm uppercase tracking-wider text-primary font-semibold">
+                Notre mission
+            </div>
+
+            <!-- Mission Statement -->
+            <div class=" mx-auto">
+                <p class="text-xl lg:text-2xl text-gray-800 leading-relaxed font-light">
+                    Vous aider à mettre l'intelligence artificielle au service de votre entreprise et décupler
+                    votre
+                    activité<span class="whitespace-nowrap"></span>
+                </p>
+                <p class=" text-gray-600 mt-4 font-medium">Il y a 20 ans, beaucoup ont raté le virage
+                    d'Internet… Ne ratez pas celui de l'IA.</p>
+            </div>
+
+        </div>
+    </div>
+      </section>
+      <!-- genai -->
+      <section id="genai">
+         <!-- AI Flow Diagram Section -->
+ <div class="bg-gradient-to-br from-blue-50/30 via-white to-indigo-50/20 relative overflow-hidden py-16">
+    <!-- Enhanced background with subtle patterns -->
+    <div class="absolute inset-0 opacity-20">
+        <svg class="absolute inset-0 w-full h-full" aria-hidden="true">
+            <defs>
+                <!-- each cell = 40×40 px -->
+                <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+                    <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#9da1cf" stroke-width="2"
+                        vector-effect="non-scaling-stroke" />
+                </pattern>
+            </defs>
+            <rect x="0" y="0" width="100%" height="100%" fill="url(#grid)" />
+        </svg>
+    </div>
+    <div class="absolute inset-0 bg-gradient-to-r from-white via-transparent to-white"></div>
+
+    <div class=" relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-5">
+        <!-- Section Header - Left Aligned -->
+        <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between space-y-8 lg:space-y-0">
+            <div class="">
+                <!-- Eyebrow -->
+                <div class="mb-6">
+                    <div
+                        class="inline-flex items-center px-4 py-2 border border-blue-200/50 bg-gradient-to-r from-blue-100/40 to-indigo-100/40 rounded-full text-sm uppercase tracking-wider text-primary font-semibold ">
+                        <svg class="w-4 h-4 mr-2 text-primary" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z" />
+                        </svg>
+                        L'IA à votre service
+                    </div>
+                </div>
+
+                <!-- Main Title -->
+                <div>
+                    <h3 class="mb-6 text-left">
+                        Comment l'IA générative peut aider votre entreprise
+                    </h3>
+                    <p class="text-lg lg:text-xl text-gray-600 leading-relaxed">
+                    </p>
+                </div>
+            </div>
+
+            <!-- asset -->
+
+        </div>
+
+        <!-- Visual Flowchart -->
+        <div class="relative">
+            <!-- Horizontal Flow Layout -->
+            <div
+                class="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12 max-w-7xl mx-auto px-4">
+                <!-- Main AI Node (Left) -->
+                <div class="group relative flex-shrink-0">
+                    <!-- Background glow effect -->
+                    <div
+                        class="absolute -inset-4 bg-gradient-to-br from-blue-500/10 via-indigo-500/10 to-violet-500/10 rounded-3xl blur-xl opacity-40 group-hover:opacity-60 transition-opacity duration-300">
+                    </div>
+
+                    <div
+                        class="relative bg-gradient-to-br from-white via-blue-50/30 to-indigo-50/50 rounded-2xl px-6 py-8 shadow-lg border border-blue-200/30 backdrop-blur-sm ">
+                        <div
+                            class="flex flex-col items-center text-center space-y-4 w-full max-w-xs lg:max-w-sm">
+                            <!-- Enhanced AI Icon with Multiple Layers -->
+                            <div class="relative">
+
+
+                                <div
+                                    class="relative w-12 h-12 bg-gradient-to-br from-blue-600 via-indigo-600 to-violet-600 rounded-xl flex items-center justify-center  transition-transform duration-200 shadow-lg">
+                                    <!-- Animated sparkle effect -->
+                                    <div
+                                        class="absolute inset-0 rounded-xl bg-gradient-to-br from-white/10 to-transparent opacity-0 ">
+                                    </div>
+
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                            d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z" />
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                            d="M18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456z" />
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <div class="space-y-2">
+                                <h4 class="font-semibold text-gray-900 leading-tight">
+                                    Confiez des tâches à un agent IA spécialisé
+                                </h4>
+                                <p class=" text-gray-600 leading-relaxed">
+                                    L'IA générative sait accomplir des tâches spécifiques en pleine autonomie.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Horizontal Arrow -->
+                <div class="flex-shrink-0 hidden lg:block">
+                    <svg class="w-16 h-8" viewBox="0 0 64 32" fill="none">
+                        <!-- Horizontal arrow -->
+                        <path d="M8 16 L48 16" stroke="url(#arrowGradient)" stroke-width="3"
+                            stroke-linecap="round" />
+                        <path d="M42 10 L48 16 L42 22" stroke="url(#arrowGradient)" stroke-width="3"
+                            stroke-linecap="round" fill="none" />
+
+                        <!-- Gradient definition -->
+                        <defs>
+                            <linearGradient id="arrowGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#3B82F6;stop-opacity:0.8" />
+                                <stop offset="50%" style="stop-color:#6366F1;stop-opacity:0.9" />
+                                <stop offset="100%" style="stop-color:#8B5CF6;stop-opacity:0.8" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+
+                <!-- Outcome Nodes (Right Side) -->
+                <div class="flex flex-col gap-6 lg:gap-8 w-full lg:w-auto">
+
+                    <!-- Productivity Node -->
+                    <div class="group relative">
+                        <!-- Enhanced background glow -->
+                        <div
+                            class="absolute -inset-2 bg-gradient-to-br from-emerald-200/20 via-green-200/20 to-teal-200/20 rounded-3xl blur-lg opacity-30  ">
+                        </div>
+
+                        <div
+                            class="relative bg-gradient-to-br from-white via-emerald-50/30 to-green-50/50 rounded-2xl px-6 py-6 shadow-lg border border-emerald-200/30 backdrop-blur-sm ">
+                            <div
+                                class="flex flex-col lg:flex-row items-center text-center lg:text-left space-y-4 lg:space-y-0 lg:space-x-6 w-full max-w-md lg:max-w-2xl">
+                                <!-- Enhanced Productivity Icon -->
+                                <div class="relative flex-shrink-0">
+                                    <!-- Outer glow -->
+                                    <div
+                                        class="absolute -inset-4 bg-gradient-to-br from-emerald-400 to-green-500 rounded-full blur-xl opacity-10">
+                                    </div>
+
+                                    <!-- Icon container -->
+                                    <div
+                                        class="relative w-14 h-14 lg:w-16 lg:h-16 bg-gradient-to-br from-emerald-500 to-green-600 rounded-xl flex items-center justify-center transition-transform duration-200 shadow-md">
+                                        <div
+                                            class="absolute inset-0 rounded-xl bg-gradient-to-br from-white/10 to-transparent opacity-0 ">
+                                        </div>
+
+                                        <svg class="w-6 h-6 lg:w-7 lg:h-7 text-white" fill="none"
+                                            stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                        </svg>
+                                    </div>
+                                </div>
+
+                                <div class="space-y-2 flex-1">
+                                    <h4 class=" font-semibold text-gray-900 leading-tight">
+                                        Gagnez en productivité
+                                    </h4>
+                                    <p class=" text-gray-600 leading-relaxed">
+                                        Automatisez vos tâches répétitives et libérez du temps pour les
+                                        activités à
+                                        forte valeur ajoutée
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Client Relations Node -->
+                    <div class="group relative">
+                        <!-- Enhanced background glow -->
+                        <div
+                            class="absolute -inset-2 bg-gradient-to-br from-blue-200/20 via-indigo-200/20 to-purple-200/20 rounded-3xl blur-lg opacity-30 ">
+                        </div>
+
+                        <div
+                            class="relative bg-gradient-to-br from-white via-blue-50/30 to-indigo-50/50 rounded-2xl px-6 py-6 shadow-lg border border-blue-200/30 backdrop-blur-sm ">
+                            <div
+                                class="flex flex-col lg:flex-row items-center text-center lg:text-left space-y-4 lg:space-y-0 lg:space-x-6 w-full max-w-md lg:max-w-2xl">
+                                <!-- Enhanced Client Relations Icon -->
+                                <div class="relative flex-shrink-0">
+                                    <!-- Outer glow -->
+                                    <div
+                                        class="absolute -inset-4 bg-gradient-to-br from-blue-400 to-indigo-500 rounded-full blur-xl opacity-10 ">
+                                    </div>
+
+                                    <!-- Icon container -->
+                                    <div
+                                        class="relative w-14 h-14 lg:w-16 lg:h-16 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center  transition-transform duration-200 shadow-md">
+                                        <div
+                                            class="absolute inset-0 rounded-xl bg-gradient-to-br from-white/10 to-transparent opacity-0 ">
+                                        </div>
+
+                                        <svg class="w-6 h-6 lg:w-7 lg:h-7 text-white" fill="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <!-- Face outline -->
+                                            <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor"
+                                                stroke-width="2" />
+                                            <!-- Smile -->
+                                            <path d="M8 14s1.5 2 4 2 4-2 4-2" fill="none" stroke="currentColor"
+                                                stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+                                </div>
+
+                                <div class="space-y-2 flex-1">
+                                    <h4 class=" font-semibold text-gray-900 leading-tight">
+                                        Améliorez votre relation client
+                                    </h4>
+                                    <p class=" text-gray-600 leading-relaxed">
+                                        Offrez un service client personnalisé et disponible 24/7 grâce à
+                                        l'intelligence
+                                        artificielle
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Show Use Cases Button -->
+            <div class="flex justify-center mt-12">
+                <button onclick="scrollToAnchor('use-cases', 50)"
+                    class="group relative inline-flex items-center justify-center">
+                    <!-- Background glow -->
+                    <div
+                        class="absolute -inset-2 bg-gradient-to-r from-primary/20 via-emerald-500/20 to-green-500/20 rounded-2xl blur-lg opacity-70 group-hover:opacity-100 transition-opacity duration-500">
+                    </div>
+
+                    <!-- Button container -->
+                    <div
+                        class="relative btn-primary rounded-xl px-8 py-4 shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
+                        <!-- Shine effect -->
+                        <div
+                            class="absolute inset-0 rounded-xl bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        </div>
+
+                        <div class="relative flex items-center space-x-3">
+                            <span class="text-white font-semibold text-lg">Voir les cas d'usage</span>
+
+                            <!-- Animated arrow -->
+                            <svg class="w-5 h-5 text-white transform group-hover:translate-x-1 transition-transform duration-300"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                            </svg>
+                        </div>
+                    </div>
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+      </section>
+      <section id="method">
+        <div class="py-16 bg-gray-50">
+    <div class="max-w-screen-xl mx-auto px-4">
+        <div class="text-center mb-16">
+            <h3 class="text-2xl lg:text-3xl font-semibold mb-4" style="font-family: 'Epilogue', sans-serif;">
+                Notre approche</h3>
+            <p class="text-lg text-blackPrimary">Un processus en 3 étapes pour des résultats concrets</p>
+        </div>
+
+        <!-- Method Steps - Horizontal Flow -->
+        <div class="flex flex-col lg:flex-row items-center justify-center space-y-8 lg:space-y-0 lg:space-x-8">
+            <!-- Step 1 -->
+            <div class="flex-1 max-w-sm">
+                <div
+                    class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 group text-center">
+                    <div
+                        class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center font-bold text-xl mx-auto mb-6 group-hover:scale-110 transition-transform duration-200">
+                        1
+                    </div>
+                    <h4 class="font-bold text-blackPrimary text-xl mb-4">Diagnostic ciblé</h4>
+                    <p class="text-blackPrimary leading-relaxed">Analyse approfondie de vos enjeux et
+                        identification
+                        des opportunités d'amélioration</p>
+                </div>
+            </div>
+
+            <!-- Arrow 1 -->
+            <div class="flex-shrink-0 hidden lg:block">
+                <svg class="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd"
+                        d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                        clip-rule="evenodd"></path>
+                </svg>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="flex-1 max-w-sm">
+                <div
+                    class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 group text-center">
+                    <div
+                        class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center font-bold text-xl mx-auto mb-6 group-hover:scale-110 transition-transform duration-200">
+                        2
+                    </div>
+                    <h4 class="font-bold text-blackPrimary text-xl mb-4">Définition du cadre</h4>
+                    <p class="text-blackPrimary leading-relaxed">Définition du cadre du projet et fixation des
+                        objectifs de performance</p>
+                </div>
+            </div>
+
+            <!-- Arrow 2 -->
+            <div class="flex-shrink-0 hidden lg:block">
+                <svg class="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd"
+                        d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                        clip-rule="evenodd"></path>
+                </svg>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="flex-1 max-w-sm">
+                <div
+                    class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 group text-center">
+                    <div
+                        class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center font-bold text-xl mx-auto mb-6 group-hover:scale-110 transition-transform duration-200">
+                        3
+                    </div>
+                    <h4 class="font-bold text-blackPrimary text-xl mb-4">Implémentation</h4>
+                    <p class="text-blackPrimary leading-relaxed">Mise en œuvre de la solution adaptée à vos
+                        besoins
+                        spécifiques</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+      </section>
+
+      <section id="use-cases">
+        <div>
+    <div class="py-16 max-w-screen-xl mx-auto px-2 md:px-4 bg-white">
+        <div class=" space-y-20">
+            <!-- Section Header -->
+            <div class="text-center mb-16">
+                <h2 class="mb-4">Cas d'usage les plus fréquents</h2>
+
+            </div>
+
+            <!-- Use Case 1: Digital Assistant -->
+            <div class="flex flex-col md:flex-row gap-10 ">
+                <div class=" md:col-span-6  flex-1 min-h-[650px] ">
+                    <span
+                        class="inline-flex items-center rounded-full border border-blue-200/50 bg-gradient-to-r from-blue-100/30 to-indigo-100/30 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-primary">
+                        Agent autonome
+                    </span>
+                    <!-- Header (H1) -->
+                    <h3 class="mt-4">Votre bras droit numérique pour faire plus en moins de temps</h3>
+
+                    <!-- Subheader (H2) -->
+                    <p class="mt-3">Gérez votre entreprise depuis une interface de chat connectée à vos outils et
+                        logiciels métiers.</p>
+
+                    <!-- Feature Selection (Toggle) -->
+                    <div class="mt-8 space-y-2">
+                        <!-- Feature 1 - Contextual Responses -->
+                        <div id="feature-1"
+                            class="feature-toggle bg-white border border-gray-200  rounded-lg md:rounded-xl p-4 transition-all duration-200 cursor-pointer"
+                            data-state="active">
+                            <div class="flex items-center space-x-3">
+                                <div
+                                    class="feature-number w-8 h-8 text-white bg-gradient-to-r from-red-400 to-orange-500 rounded-lg flex items-center justify-center font-medium text-sm transition-colors duration-200">
+                                    <i class="fa-solid fa-message"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <p class=" font-medium leading-snug">
+                                        Recevez des réponses contextuelles en temps réel à vos questions
+                                        opérationnelles.
+                                    </p>
+                                </div>
+                                <div class="flex-shrink-0">
+                                    <svg class="feature-icon w-5 h-5 transition-all duration-200" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Dropdown Questions for Feature 1 -->
+                        <div id="question-list-1"  class=" dropdown-container mt-1 md:mt-3">
+                            <div class="dropdown-content bg-white rounded-lg border border-gray-200 shadow-sm mb-4">
+                                <div class="p-3 border-b border-gray-100">
+                                    <h4 class="text-sm font-medium text-gray-700">Exemples de questions</h4>
+                                </div>
+                                <div class="md:p-3 md:space-y-2 overflow-hidden">
+                                    <button
+                                        class="question-item w-full text-left p-3 md:rounded-md md:border border-t border-gray-200  transition-all duration-100 text-sm text-gray-700"
+                                        data-slide="0" data-list="1" data-state="active">
+                                        "Le client Dupont SARL indique un retard sur son remboursement, quel est son statut ?"
+                                    </button>
+                                    <button
+                                        class="question-item w-full text-left p-3 md:rounded-md md:border border-t border-gray-200  transition-all duration-100 text-sm text-gray-700"
+                                        data-slide="1" data-list="1" data-state="inactive">
+                                        "Le service logistique a-t-il planifié les livraisons pour la semaine prochaine ?" 
+                                    </button>
+                                    <button
+                                        class="question-item w-full text-left p-3 md:rounded-md md:border border-t border-gray-200  transition-all duration-100 text-sm text-gray-700"
+                                        data-slide="2" data-list="1" data-state="inactive">
+                                        "Liste les incidents de chaîne de production des trois derniers mois et
+                                        précise la cause de chacun."
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Feature 2 - Task Delegation -->
+                    <div id="feature-2"
+                        class="feature-toggle bg-white border border-gray-200 rounded-lg md:rounded-xl p-4  shadow-sm  transition-all duration-200 cursor-pointer"
+                        data-state="inactive">
+                        <div class="flex items-center space-x-3">
+                            <div
+                                class="feature-number w-8 h-8 text-white bg-gradient-to-br from-blue-800/70 to-indigo-700/80 rounded-lg flex items-center justify-center font-medium text-sm transition-colors duration-200">
+                                <i class="fa-solid fa-tasks"></i>
+                            </div>
+                            <div class="flex-1">
+                                <p class=" font-medium leading-snug">
+                                    Déléguez l'exécution des tâches à un agent avec une simple prompt
+                                </p>
+                            </div>
+                            <div class="flex-shrink-0">
+                                <svg class="feature-icon w-5 h-5 transition-all duration-200" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dropdown Questions for Feature 2 -->
+                    <div id="question-list-2" class="dropdown-container mt-1 md:mt-3">
+                        <div class="dropdown-content bg-white rounded-lg border border-gray-200 shadow-sm">
+                            <div class="p-3 border-b border-gray-100">
+                                <h4 class="text-sm font-medium text-gray-700">Exemples de tâches</h4>
+                            </div>
+                            <div class="md:p-3 md:space-y-2 overflow-hidden">
+                                <button
+                                    class="question-item w-full text-left p-3 md:rounded-md md:border border-t border-gray-200  transition-all duration-100 text-sm text-gray-700"
+                                    data-slide="0" data-list="2" data-state="active">
+                                    "Analyse les retours clients du mois dernier et extrait cinq points principaux."
+                                </button>
+
+                                <button
+                                    class="question-item w-full text-left p-3 md:rounded-md md:border border-t border-gray-200  transition-all duration-100 text-sm text-gray-700"
+                                    data-slide="1" data-list="2" data-state="inactive">
+                                    "Prépare un résumé du dossier de M. Dupont pour la réunion de demain."
+                                </button>
+                                <button
+                                    class="question-item w-full text-left p-3 md:rounded-md md:border border-t border-gray-200  transition-all duration-100 text-sm text-gray-700"
+                                    data-slide="2" data-list="2" data-state="inactive">
+                                    "Relance le fournisseur ABC au sujet de la commande en attente."
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class=" flex-1">
+                    <!-- Section 1 Slideshow Container -->
+                    <div id="slideshow-container-1" class="group relative h-full overflow-hidden rounded-2xl shadow-md">
+                        <!-- Section 1 Video Slides -->
+                        <div
+                            class="slideshow-slide-1 active opacity-100  w-full h-full transition-opacity duration-1000 ease-in-out">
+                            <video class="w-full h-full object-cover" muted loop playsinline>
+                                <source src="assets/ai_assistant_feature/ingenia_question_example1.mov" type="video/mp4">
+                                <source src="assets/ai_assistant_feature/ingenia_question_example1.mov"
+                                    type="video/quicktime">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div
+                            class="slideshow-slide-1 opacity-0 absolute top-0 left-0 w-full h-full transition-opacity duration-1000 ease-in-out">
+                            <video class="w-full h-full object-cover" muted loop playsinline>
+                                <source src="assets/ai_assistant_feature/ingenia_question_example2.mov" type="video/mp4">
+                                <source src="assets/ai_assistant_feature/ingenia_question_example2.mov"
+                                    type="video/quicktime">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div
+                            class="slideshow-slide-1 opacity-0 absolute top-0 left-0 w-full h-full transition-opacity duration-1000 ease-in-out">
+                            <video class="w-full h-full object-cover" muted loop playsinline>
+                                <source src="assets/ai_assistant_feature/ingenia_question_example3.mov" type="video/mp4">
+                                <source src="assets/ai_assistant_feature/ingenia_question_example3.mov"
+                                    type="video/quicktime">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+
+                    </div>
+
+                    <!-- Section 2 Slideshow Container -->
+                    <div id="slideshow-container-2" class="group relative h-full overflow-hidden rounded-2xl shadow-md">
+                        <!-- Section 2 Video Slides -->
+                        <div
+                            class="slideshow-slide-2 active opacity-100  w-full h-full transition-opacity duration-1000 ease-in-out">
+                            <video class="w-full h-full object-cover" muted loop playsinline>
+                                <source src="assets/ai_assistant_feature/ingenia_agent_example1.mov" type="video/mp4">
+                                <source src="assets/ai_assistant_feature/ingenia_agent_example1.mov"
+                                    type="video/quicktime">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div
+                            class="slideshow-slide-2 active opacity-100  w-full h-full transition-opacity duration-1000 ease-in-out">
+                            <video class="w-full h-full object-cover" muted loop playsinline>
+                                <source src="assets/ai_assistant_feature/ingenia_agent_example2.mov" type="video/mp4">
+                                <source src="assets/ai_assistant_feature/ingenia_agent_example2.mov"
+                                    type="video/quicktime">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div
+                            class="slideshow-slide-2 active opacity-100  w-full h-full transition-opacity duration-1000 ease-in-out">
+                            <video class="w-full h-full object-cover" muted loop playsinline>
+                                <source src="assets/ai_assistant_feature/ingenia_agent_example3.mov" type="video/mp4">
+                                <source src="assets/ai_assistant_feature/ingenia_agent_example3.mov"
+                                    type="video/quicktime">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+
+
+            <!-- Use Case — Convert More Visitors (Tailwind v3) -->
+            <div class="grid gap-10 md:gap-6 lg:gap-12 md:grid-cols-12">
+                <!-- Text column -->
+                <div class="md:order-2  order-1 md:col-span-6 ">
+                    <span
+                        class="inline-flex items-center rounded-full border border-blue-200/50 bg-gradient-to-r from-blue-100/30 to-indigo-100/30 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-primary">
+                        Conseiller Client
+                    </span>
+
+                    <h3 class="mt-4 ">
+                        Convertissez
+                        <span
+                            class="bg-gradient-to-r from-emerald-500 to-teal-500 bg-clip-text text-transparent">3×</span>
+                        plus de visiteurs en clients
+                    </h3>
+
+                    <p class="mt-3 text-base leading-relaxed text-gray-600 dark:text-gray-300">
+                        Offrez des réponses personnalisées et instantanées, 24/7, directement sur votre
+                        site.
+                    </p>
+
+                    <ul class="mt-8 space-y-4">
+                        <!-- Feature item -->
+                        <li
+                            class="group relative overflow-hidden rounded-2xl border border-gray-200/70 bg-white/80 p-4 backdrop-blur-sm transition-shadow  dark:border-gray-800/70 dark:bg-gray-900/60">
+                            <div class="flex items-center gap-3 ">
+                                <!-- icon -->
+                                <span
+                                    class="inline-flex size-9 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-blue-500/90 to-indigo-500/90 text-white dark:from-blue-500 dark:to-indigo-500">
+                                    <i class="fa-solid fa-book-open text-sm"></i>
+                                </span>
+                                <p class=" leading-snug text-gray-800 dark:text-gray-100">
+                                    Un conseiller virtuel qui connaît parfaitement vos produits.
+                                </p>
+                            </div>
+                        </li>
+
+                        <li
+                            class="group relative overflow-hidden rounded-2xl border border-gray-200/70 bg-white/80 p-4 backdrop-blur-sm transition-shadow  dark:border-gray-800/70 dark:bg-gray-900/60">
+                            <div class="flex items-center gap-3">
+                                <span
+                                    class="inline-flex size-9 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-emerald-500 to-teal-500 text-white dark:from-emerald-500 dark:to-teal-500">
+                                    <i class="fa-solid fa-bolt text-sm"></i>
+                                </span>
+                                <p class=" leading-snug text-gray-800 dark:text-gray-100">
+                                    Répond instantanément aux questions de vos clients, même à 2h du matin.
+                                </p>
+                            </div>
+                        </li>
+
+                        <li
+                            class="group relative overflow-hidden rounded-2xl border border-gray-200/70 bg-white/80 p-4 backdrop-blur-sm transition-shadow  dark:border-gray-800/70 dark:bg-gray-900/60">
+                            <div class="flex items-center gap-3">
+                                <span
+                                    class="inline-flex size-9 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-fuchsia-500/90 to-pink-500/90 text-white dark:from-fuchsia-500 dark:to-pink-500">
+                                    <i class="fa-solid fa-star text-sm"></i>
+                                </span>
+                                <p class=" leading-snug text-gray-800 dark:text-gray-100">
+                                    S'adapte à votre ton de marque et guide vers l'achat.
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+
+
+                </div>
+
+                <!-- Visual column -->
+                <div class="md:order-1 order-2 md:col-span-6">
+                    <div class="rounded-2xl shadow-md overflow-hidden border border-gray-200 min-h-[500px]">
+                        <video 
+                            autoplay 
+                            loop 
+                            muted 
+                            playsinline
+                            class="w-full h-[500px] object-cover">
+                            <source src="../assets/ai_assistant_feature/ingenia_customer_adviser.mov" type="video/mp4">
+                            Votre navigateur ne supporte pas la lecture de vidéos.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+      // Interactive Question Slideshow System with Separate Slide Lists
+  let currentSlide1 = 0 // Current slide for section 1
+  let currentSlide2 = 0 // Current slide for section 2
+  let currentActiveList = 1 // Start with list 1 active
+  let slideInterval
+  
+  // Separate slide collections for each section
+  const slides1 = document.querySelectorAll('.slideshow-slide-1')
+  const slides2 = document.querySelectorAll('.slideshow-slide-2')
+  const totalSlides1 = slides1.length
+  const totalSlides2 = slides2.length
+  
+  // Slideshow containers
+  const container1 = document.getElementById('slideshow-container-1')
+  const container2 = document.getElementById('slideshow-container-2')
+  
+  function showSlide(slideIndex, sectionNumber) {
+    if (sectionNumber === 1) {
+      // Handle Section 1 slides
+      if (slideIndex >= 0 && slideIndex < totalSlides1) {
+        // Remove active class and set opacity to 0 for all slides, pause videos
+        slides1.forEach((slide) => {
+          slide.classList.remove('active')
+          slide.classList.remove('opacity-100')
+          slide.classList.add('opacity-0')
+          // Pause all videos in this slide
+          const video = slide.querySelector('video')
+          if (video) {
+            video.pause()
+          }
+        })
+  
+        // Set the target slide as active and visible
+        slides1[slideIndex].classList.add('active')
+        slides1[slideIndex].classList.remove('opacity-0')
+        slides1[slideIndex].classList.add('opacity-100')
+  
+        // Start the video in the active slide from the beginning
+        const activeVideo = slides1[slideIndex].querySelector('video')
+        if (activeVideo) {
+          activeVideo.currentTime = 0 // Reset to beginning
+          activeVideo.play().catch((e) => console.log('Video play failed:', e))
+        }
+  
+        currentSlide1 = slideIndex
+  
+        // Show section 1 container, hide section 2
+        container1.classList.remove('hidden')
+        container2.classList.add('hidden')
+      }
+    } else if (sectionNumber === 2) {
+      // Handle Section 2 slides
+      if (slideIndex >= 0 && slideIndex < totalSlides2) {
+        console.log(`Showing section 2 slide ${slideIndex}`)
+  
+        // Remove active class and set opacity to 0 for all slides, pause videos
+        slides2.forEach((slide) => {
+          slide.classList.remove('active')
+          slide.classList.remove('opacity-100')
+          slide.classList.add('opacity-0')
+          // Pause all videos in this slide
+          const video = slide.querySelector('video')
+          if (video) {
+            video.pause()
+          }
+        })
+  
+        // Set the target slide as active and visible
+        slides2[slideIndex].classList.add('active')
+        slides2[slideIndex].classList.remove('opacity-0')
+        slides2[slideIndex].classList.add('opacity-100')
+  
+        // Start the video in the active slide from the beginning
+        const activeVideo = slides2[slideIndex].querySelector('video')
+        if (activeVideo) {
+          activeVideo.currentTime = 0 // Reset to beginning
+          activeVideo.play().catch((e) => console.log('Video play failed:', e))
+        }
+  
+        currentSlide2 = slideIndex
+  
+        // Show section 2 container, hide section 1
+        container2.classList.remove('hidden')
+        container1.classList.add('hidden')
+      }
+    }
+  
+    // Update highlighted question in the active list
+    updateQuestionHighlight(slideIndex, sectionNumber)
+  }
+  
+  function updateQuestionHighlight(slideIndex, listNumber) {
+    const questionList = document.getElementById(`question-list-${listNumber}`)
+    if (!questionList) return
+  
+    const questions = questionList.querySelectorAll('.question-item')
+    questions.forEach((question, index) => {
+      if (index === slideIndex) {
+        question.setAttribute('data-state', 'active')
+      } else {
+        question.setAttribute('data-state', 'inactive')
+      }
+    })
+  }
+  
+  function nextSlide() {
+    if (currentActiveList === 1) {
+      const nextIndex = (currentSlide1 + 1) % totalSlides1
+      currentSlide1 = nextIndex
+      showSlide(nextIndex, 1)
+      updateQuestionStates(1, nextIndex) // Update visual feedback
+    } else if (currentActiveList === 2) {
+      const nextIndex = (currentSlide2 + 1) % totalSlides2
+      currentSlide2 = nextIndex
+      showSlide(nextIndex, 2)
+      updateQuestionStates(2, nextIndex) // Update visual feedback
+    }
+  }
+  
+  function startSlideshow() {
+    slideInterval = setInterval(nextSlide, 15000) // 5 seconds
+  }
+  
+  function stopSlideshow() {
+    if (slideInterval) {
+      clearInterval(slideInterval)
+    }
+  }
+  
+  function toggleFeatureList(featureNumber) {
+    const list1 = document.getElementById('question-list-1')
+    const list2 = document.getElementById('question-list-2')
+    const feature1 = document.getElementById('feature-1')
+    const feature2 = document.getElementById('feature-2')
+  
+    if (featureNumber === 1) {
+      // Toggle list 1 visibility
+      const isCurrentlyVisible = list1.classList.contains('open')
+  
+      if (isCurrentlyVisible) {
+        // Close list 1
+        list1.classList.remove('open')
+        updateFeatureInactiveState(feature1)
+        stopSlideshow()
+        currentActiveList = null
+      } else {
+        // Open list 1, close list 2
+        list1.classList.add('open')
+        list2.classList.remove('open')
+  
+        // Update feature styling
+        updateFeatureActiveState(feature1)
+        updateFeatureInactiveState(feature2)
+  
+        currentActiveList = 1
+        currentSlide1 = 0 // Reset to first slide when switching
+        showSlide(0, 1) // Start from slide 0
+        updateQuestionStates(1, 0) // Update visual feedback
+        stopSlideshow()
+        startSlideshow() // Reset timer
+      }
+    } else {
+      // Toggle list 2 visibility
+      const isCurrentlyVisible = list2.classList.contains('open')
+  
+      if (isCurrentlyVisible) {
+        // Close list 2
+        list2.classList.remove('open')
+        updateFeatureInactiveState(feature2)
+        stopSlideshow()
+        currentActiveList = null
+      } else {
+        // Open list 2, close list 1
+        list2.classList.add('open')
+        list1.classList.remove('open')
+  
+        // Update feature styling
+        updateFeatureActiveState(feature2)
+        updateFeatureInactiveState(feature1)
+  
+        currentActiveList = 2
+        currentSlide2 = 0 // Reset to first slide when switching
+        showSlide(0, 2) // Start from slide 0
+        updateQuestionStates(2, 0) // Update visual feedback
+        stopSlideshow()
+        startSlideshow() // Reset timer
+      }
+    }
+  }
+  
+  function updateFeatureActiveState(feature) {
+    // Simply set the data-state attribute - CSS handles the styling
+    feature.setAttribute('data-state', 'active')
+  }
+  
+  function updateFeatureInactiveState(feature) {
+    // Simply set the data-state attribute - CSS handles the styling
+    feature.setAttribute('data-state', 'inactive')
+  }
+  
+  function updateQuestionStates(listNumber, activeSlideIndex) {
+    // Update visual feedback for question items based on active slide
+    const questions = document.querySelectorAll(`[data-list="${listNumber}"]`)
+    questions.forEach((question) => {
+      const slideIndex = parseInt(question.getAttribute('data-slide'))
+  
+      if (slideIndex === activeSlideIndex) {
+        question.setAttribute('data-state', 'active')
+      } else {
+        question.setAttribute('data-state', 'inactive')
+      }
+    })
+  }
+  
+  // Initialize system when DOM is loaded
+  document.addEventListener('DOMContentLoaded', function () {
+    // Add click event listeners to feature toggles
+    const feature1 = document.getElementById('feature-1')
+    const feature2 = document.getElementById('feature-2')
+  
+    // Add click event listeners to the entire feature toggle divs
+    feature1.addEventListener('click', () => toggleFeatureList(1))
+    feature2.addEventListener('click', () => toggleFeatureList(2))
+  
+    // Prevent dropdown containers from closing when clicked
+    const questionList1 = document.getElementById('question-list-1')
+    const questionList2 = document.getElementById('question-list-2')
+  
+    questionList1.addEventListener('click', (event) => {
+      event.stopPropagation()
+    })
+  
+    questionList2.addEventListener('click', (event) => {
+      event.stopPropagation()
+    })
+  
+    // Add click event listeners to questions
+    const allQuestions = document.querySelectorAll('.question-item')
+    allQuestions.forEach((question, index) => {
+      question.addEventListener('click', (event) => {
+        event.stopPropagation() // Prevent event bubbling to prevent dropdown from closing
+  
+        const slideIndex = parseInt(question.getAttribute('data-slide'))
+        const listNumber = parseInt(question.getAttribute('data-list'))
+  
+        console.log(`Clicked question: slideIndex=${slideIndex}, listNumber=${listNumber}, currentActiveList=${currentActiveList}`)
+  
+        // Only proceed if this list is currently active
+        if (currentActiveList === listNumber) {
+          stopSlideshow() // Stop current slideshow
+  
+          // Update the current slide index for the active section
+          if (listNumber === 1) {
+            currentSlide1 = slideIndex
+          } else if (listNumber === 2) {
+            currentSlide2 = slideIndex
+          }
+  
+          showSlide(slideIndex, listNumber)
+          updateQuestionStates(listNumber, slideIndex) // Update visual feedback
+          startSlideshow() // Restart auto-slideshow with reset timer
+        }
+      })
+    })
+  
+    // Initialize with feature 1 active (contextual responses) - it's already styled as active in HTML
+    currentActiveList = 1
+    questionList1.classList.add('open') // Start with first list open
+    showSlide(0, 1) // Start from first slide
+    updateQuestionStates(1, 0) // Set initial visual feedback
+    startSlideshow()
+  
+    // Pause slideshow on hover, resume on mouse leave for both containers
+    if (container1) {
+      container1.addEventListener('mouseenter', stopSlideshow)
+      container1.addEventListener('mouseleave', startSlideshow)
+    }
+    if (container2) {
+      container2.addEventListener('mouseenter', stopSlideshow)
+      container2.addEventListener('mouseleave', startSlideshow)
+    }
+  })
+</script>
+      </section>
+
+      <section id="team">
+        <div  class="py-20 max-w-screen-xl mx-auto  px-2 md:px-4 text-center md:text-left">
+    <!-- Header -->
+    <header class="mb-10 sm:mb-12">
+        <h2 class="">Notre équipe</h2>
+    </header>
+
+    <!-- Grid of members -->
+    <div
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 auto-rows-auto justify-items-center md:justify-items-start">
+
+        <!-- Card: Justin -->
+        <article
+            class="flex w-full h-full flex-col max-w-[450px] items-stretch rounded-[2rem] bg-[#f8f8f8] p-3 sm:p-4">
+            <!-- Image -->
+            <div class="">
+                <div class="overflow-hidden rounded-[20px]   rounded-b-none">
+                    <img class="aspect-square w-full h-full object-cover" alt="Portrait de Justin"
+                        loading="lazy" sizes="(max-width: 2000px) 100vw, 2000px" srcset="
+        https://cdn.prod.website-files.com/688cd4e822ff5df34f6a7db3/68922a5f740745ee512403f1_professional_headshot_justin_31122024_small-p-500.png 500w,
+        https://cdn.prod.website-files.com/688cd4e822ff5df34f6a7db3/68922a5f740745ee512403f1_professional_headshot_justin_31122024_small-p-800.png 800w,
+        https://cdn.prod.website-files.com/688cd4e822ff5df34f6a7db3/68922a5f740745ee512403f1_professional_headshot_justin_31122024_small-p-1080.png 1080w,
+        https://cdn.prod.website-files.com/688cd4e822ff5df34f6a7db3/68922a5f740745ee512403f1_professional_headshot_justin_31122024_small-p-1600.png 1600w,
+        https://cdn.prod.website-files.com/688cd4e822ff5df34f6a7db3/68922a5f740745ee512403f1_professional_headshot_justin_31122024_small.png 2000w
+      " src="https://cdn.prod.website-files.com/688cd4e822ff5df34f6a7db3/68922a5f740745ee512403f1_professional_headshot_justin_31122024_small.png" />
+                </div>
+            </div>
+
+            <!-- Body -->
+            <div
+                class="flex h-full w-full flex-col items-start justify-between rounded-[1.25rem] rounded-t-none bg-white p-3 sm:p-4 gap-3 sm:gap-4">
+                <div class="mb-1 sm:mb-2 w-full">
+                    <h3 class="text-xl font-medium ">Justin</h3>
+                    <p class="text-xl text-gray-600">IA et Développement</p>
+                </div>
+
+                <p class=" text-gray-700 leading-relaxed">
+                    Fort de son double parcours pro. technique et business, Justin est votre partenaire
+                    technique avec une vraie compréhension des enjeux de votre activité.
+                </p>
+
+                <!-- Socials -->
+                <div class="mt-3 sm:mt-4 w-full scale-150 md:scale-100 ">
+                    <a href="https://www.linkedin.com/in/justin-warambourg/" target="_blank" rel="noopener"
+                        class="inline-flex items-center bg-primary px-[7px] py-[2px] rounded-[4px]"
+                        aria-label="Justin sur LinkedIn">
+                        <i class="fa-brands text-white fa-linkedin-in text-sm sm:text-base"></i>
+                    </a>
+                </div>
+            </div>
+        </article>
+
+        <!-- Card: Victor -->
+        <article
+            class="flex w-full h-full flex-col max-w-[450px] items-stretch rounded-[2rem] bg-[#f8f8f8] p-3 sm:p-4">
+            <!-- Image -->
+            <div class="">
+                <div class="overflow-hidden rounded-[20px]  rounded-b-none">
+                    <img class="aspect-square w-full h-full object-cover " alt="Portrait de Victor"
+                        loading="lazy" sizes="(max-width: 800px) 100vw, 800px" srcset="
+        https://cdn.prod.website-files.com/688cd4e822ff5df34f6a7db3/68922bfc484fa3507d4ad668_victor_bey_smith_headshot-p-500.jpeg 500w,
+        https://cdn.prod.website-files.com/688cd4e822ff5df34f6a7db3/68922bfc484fa3507d4ad668_victor_bey_smith_headshot.jpeg 800w
+      " src="https://cdn.prod.website-files.com/688cd4e822ff5df34f6a7db3/68922bfc484fa3507d4ad668_victor_bey_smith_headshot.jpeg" />
+                </div>
+            </div>
+
+            <!-- Body -->
+            <div
+                class="flex h-full w-full flex-col items-start justify-between rounded-[1.25rem]  rounded-t-none bg-white p-3 sm:p-4 gap-3 sm:gap-4">
+                <div class="mb-1 sm:mb-2 w-full">
+                    <h3 class="text-xl sm:text-2xl font-medium">Victor</h3>
+                    <p class="text-xl text-gray-600">Business</p>
+                </div>
+
+                <p class=" text-gray-700 leading-relaxed">
+                    Skilled in translating data into actionable insights for strategic online marketing
+                    campaigns.
+                </p>
+
+                <!-- Socials -->
+                <div class="mt-3 sm:mt-4 w-full scale-150 md:scale-100 ">
+                    <a href="https://www.linkedin.com/feed/" target="_blank" rel="noopener"
+                        class="inline-flex items-center bg-primary px-[7px] py-[2px] rounded-[4px]"
+                        aria-label="Victor sur LinkedIn">
+                        <i class="fa-brands text-white fa-linkedin-in text-sm sm:text-base"></i>
+                    </a>
+                </div>
+            </div>
+        </article>
+    </div>
+</div>
+        <!-- Team Section — matches the reference design (Tailwind v3) -->
+      </section>
+
+      <section id="contact">
+        <div class="max-w-screen-xl mx-auto  md:px-4 text-center md:text-left ">
+    <div class="grid grid-cols-1 lg:space-x-10 md:space-x-2 md:grid-cols-2   md:rounded-[20px] bg-cover bg-center bg-no-repeat lg:px-20 lg:py-24  md:px-5 px-2 py-10 relative"
+        style="background-image: url('./assets/abstract_bg1.jpg');">
+        <div class="absolute inset-0 bg-white/35 rounded-[20px]"></div>
+        <div class="relative z-10 flex flex-col h-[92%]">
+            <div class="mb-6 ">
+                <h2 class="">Optimisez votre activité avec l'IA.</h2>
+            </div>
+            <div class="mb-10 text-lg">
+                <p>
+                    Réservez une consultation de 30 minutes pour en savoir plus sur comment les nouveaux
+                    outils
+                    d'IA&nbsp;peuvent aider votre activité.</p>
+            </div>
+            <div class="mt-auto">
+                <a class="btn-primary text-lg py-4"
+                    href="https://calendly.com/justin-warambourg/consultation-ingenia" target="_blank">
+                    Réserver une consultation gratuite
+                </a>
+            </div>
+        </div>
+
+        <div class=" md:hidden flex flex-row items-center justify-center mt-16 mb-7 space-x-2 z-10 mx-1">
+            <hr class="flex-1 border-gray-600">
+            <p class="whitespace-nowrap text-gray-600">Ou remplissez le formulaire ci-dessous</p>
+            <hr class="flex-1 border-gray-600">
+        </div>
+        <div class="h-[380px] overflow-hidden z-10 md:mt-[-30px]">
+            <iframe id="JotFormIFrame-252401697918364" title="Appointment Request Form"
+                onload="window.parent.scrollTo(0,0)" allowtransparency="true"
+                allow="geolocation; microphone; camera; fullscreen; payment"
+                src="https://form.jotform.com/252401697918364" frameborder="0"
+                style="min-width:100%;max-width:100%;border:none;" scrolling="no"> </iframe>
+            <script src='https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js'></script>
+            <script>window.jotformEmbedHandler("iframe[id='JotFormIFrame-252401697918364']", "https://form.jotform.com/")</script>
+        </div>
+    </div>
+</div>
+      </section>
+    </main>
+
+    <footer class="mt-10 border-t border-slate-200 bg-white">
+    <div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8 py-10">
+        <!-- Mobile: stacked with collapsible sections; Desktop: 3 columns -->
+        <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
+            <!-- Brand -->
+            <div>
+                <div class="flex items-center gap-3">
+                    <img src="./assets/ingenia_logo_base.png" alt="Logo" class="w-7 h-auto">
+                    <p class="text-lg font-semibold tracking-wide">INGENIA</p>
+                </div>
+                <p class="mt-3 text-slate-600">
+                    Moderniser son activité avec l'IA est à la portée de tous.
+                </p>
+            </div>
+
+            <!-- Menu (mobile: collapsible, desktop: static) -->
+            <div class="lg:ml-40">
+                <!-- mobile -->
+                <details class="group md:hidden border-t first:border-0 border-slate-200 pt-4 ">
+                    <summary
+                        class="flex cursor-pointer items-center justify-between py-2 text-base font-semibold text-slate-900">
+                        Menu
+                        <svg class="h-5 w-5 transition-transform group-open:rotate-180" viewBox="0 0 20 20"
+                            fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.21 8.29a.75.75 0 01.02-1.08z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </summary>
+                    <ul class="mt-2 space-y-3">
+                        <li><a href="/" aria-current="page"
+                                class="inline-block rounded-md text-slate-900 hover:opacity-75 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-400">Accueil</a>
+                        </li>
+                        <li><a href="#"
+                                class="inline-block rounded-md text-slate-900 hover:opacity-75 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-400">Nos
+                                solutions</a></li>
+                        <li><a href="#Feature"
+                                class="inline-block rounded-md text-slate-900 hover:opacity-75 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-400">Qui
+                                sommes-nous</a></li>
+                    </ul>
+                </details>
+                <!-- desktop -->
+                <nav aria-label="Pied de page – Menu" class="hidden md:block">
+                    <p class="text-lg font-semibold">Menu</p>
+                    <ul class="mt-4 space-y-3">
+                        <li><a href="/" aria-current="page"
+                                class="inline-block rounded-md text-slate-900 transition hover:opacity-75 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-400">Accueil</a>
+                        </li>
+                        <li><a href="#"
+                                class="inline-block rounded-md text-slate-900 transition hover:opacity-75 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-400">Nos
+                                solutions</a></li>
+                        <li><a href="#Feature"
+                                class="inline-block rounded-md text-slate-900 transition hover:opacity-75 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-400">Qui
+                                sommes-nous</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <!-- Contact (mobile: collapsible, desktop: static) -->
+            <div>
+                <!-- mobile -->
+                <details class="group md:hidden border-t border-slate-200 pt-4">
+                    <summary
+                        class="flex cursor-pointer items-center justify-between py-2 text-base font-semibold text-slate-900">
+                        Contact
+                        <svg class="h-5 w-5 transition-transform group-open:rotate-180" viewBox="0 0 20 20"
+                            fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.21 8.29a.75.75 0 01.02-1.08z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </summary>
+                    <ul class="mt-2 space-y-3">
+                        <li><a href="tel:+33686442172"
+                                class="inline-block rounded-md text-slate-900 hover:opacity-75 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-400">+33
+                                6 86 44 21 72</a></li>
+                        <li><a href="mailto:justin.warambourg@gmail.com"
+                                class="inline-block break-all rounded-md text-slate-900 hover:opacity-75 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-400">justin.warambourg@gmail.com</a>
+                        </li>
+                    </ul>
+                    <address class="mt-3 not-italic leading-relaxed text-slate-600">
+                        73, rue du bois<br>59940 Estaires
+                    </address>
+                </details>
+                <!-- desktop -->
+                <div class="hidden md:block">
+                    <p class="text-lg font-semibold">Contact</p>
+                    <ul class="mt-4 space-y-3">
+                        <li><a href="tel:+33686442172"
+                                class="inline-block rounded-md text-slate-900 transition hover:opacity-75 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-400">+33
+                                6 86 44 21 72</a></li>
+                        <li><a href="mailto:justin.warambourg@gmail.com"
+                                class="inline-block break-all rounded-md text-slate-900 transition hover:opacity-75 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-400">justin.warambourg@gmail.com</a>
+                        </li>
+                    </ul>
+                    <address class="mt-4 not-italic leading-relaxed text-slate-600">
+                        73, rue du bois<br>59940 Estaires
+                    </address>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <script src="src/utils.js"></script>
+  </body>
 </html>

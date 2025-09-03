@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+  {% include 'partials/head.html' %}
+
+  <body>
+    <!-- header -->
+    {% include 'partials/header.html' %}
+    <main>
+      <section id="home">
+        {% include 'partials/section_home.html' %}
+      </section>
+
+      <section id="mission">
+        {% include 'partials/section_mission.html' %}
+      </section>
+      <!-- genai -->
+      <section id="genai">
+        {% include 'partials/section_genai.html' %}
+      </section>
+      <section id="method">
+        {% include 'partials/method.html' %}
+      </section>
+
+      <section id="use-cases">
+        {% include 'partials/section_use_cases.html' %}
+      </section>
+
+      <section id="team">
+        {% include 'partials/section_team.html' %}
+        <!-- Team Section — matches the reference design (Tailwind v3) -->
+      </section>
+
+      <section id="contact">
+        {% include 'partials/section_contact.html' %}
+      </section>
+    </main>
+
+    {% include 'partials/footer.html' %}
+
+    <script src="src/utils.js"></script>
+  </body>
+</html>
