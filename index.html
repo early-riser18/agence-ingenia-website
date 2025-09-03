@@ -521,9 +521,9 @@
         <div class="relative">
             <!-- Horizontal Flow Layout -->
             <div
-                class="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12 max-w-7xl mx-auto px-4">
+                class="flex flex-col md:flex-row items-center justify-center gap-2 md:gap-0 lg:gap-12 max-w-7xl mx-auto px-4">
                 <!-- Main AI Node (Left) -->
-                <div class="group relative flex-shrink-0">
+                <div class="group relative lg:min-w-[320px]">
                     <!-- Background glow effect -->
                     <div
                         class="absolute -inset-4 bg-gradient-to-br from-blue-500/10 via-indigo-500/10 to-violet-500/10 rounded-3xl blur-xl opacity-40 group-hover:opacity-60 transition-opacity duration-300">
@@ -566,18 +566,37 @@
                     </div>
                 </div>
 
-                <!-- Horizontal Arrow -->
-                <div class="flex-shrink-0 hidden lg:block">
-                    <svg class="w-16 h-8" viewBox="0 0 64 32" fill="none">
-                        <!-- Horizontal arrow -->
-                        <path d="M8 16 L48 16" stroke="url(#arrowGradient)" stroke-width="3"
+                <!-- Arrow -->
+                <div class="flex-shrink-0">
+                    <!-- Vertical arrow (down) for mobile -->
+                    <svg class="w-8 h-16 md:hidden" viewBox="0 0 32 64" fill="none">
+                        <!-- Vertical arrow pointing down -->
+                        <path d="M16 8 L16 48" stroke="url(#arrowGradientVertical)" stroke-width="3"
                             stroke-linecap="round" />
-                        <path d="M42 10 L48 16 L42 22" stroke="url(#arrowGradient)" stroke-width="3"
+                        <path d="M10 42 L16 48 L22 42" stroke="url(#arrowGradientVertical)" stroke-width="3"
                             stroke-linecap="round" fill="none" />
 
                         <!-- Gradient definition -->
                         <defs>
-                            <linearGradient id="arrowGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <linearGradient id="arrowGradientVertical" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#3B82F6;stop-opacity:0.8" />
+                                <stop offset="50%" style="stop-color:#6366F1;stop-opacity:0.9" />
+                                <stop offset="100%" style="stop-color:#8B5CF6;stop-opacity:0.8" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+
+                    <!-- Horizontal arrow (right) for medium screens and up -->
+                    <svg class="w-16 h-8 hidden md:block" viewBox="0 0 64 32" fill="none">
+                        <!-- Horizontal arrow pointing right -->
+                        <path d="M8 16 L48 16" stroke="url(#arrowGradientHorizontal)" stroke-width="3"
+                            stroke-linecap="round" />
+                        <path d="M42 10 L48 16 L42 22" stroke="url(#arrowGradientHorizontal)" stroke-width="3"
+                            stroke-linecap="round" fill="none" />
+
+                        <!-- Gradient definition -->
+                        <defs>
+                            <linearGradient id="arrowGradientHorizontal" x1="0%" y1="0%" x2="100%" y2="100%">
                                 <stop offset="0%" style="stop-color:#3B82F6;stop-opacity:0.8" />
                                 <stop offset="50%" style="stop-color:#6366F1;stop-opacity:0.9" />
                                 <stop offset="100%" style="stop-color:#8B5CF6;stop-opacity:0.8" />
@@ -587,7 +606,7 @@
                 </div>
 
                 <!-- Outcome Nodes (Right Side) -->
-                <div class="flex flex-col gap-6 lg:gap-8 w-full lg:w-auto">
+                <div class="flex flex-col gap-6 lg:gap-8">
 
                     <!-- Productivity Node -->
                     <div class="group relative">
@@ -809,8 +828,8 @@
     <div class="py-16 max-w-screen-xl mx-auto px-2 md:px-6 bg-white">
         <div class=" space-y-20">
             <!-- Section Header -->
-            <div class="text-center mb-16">
-                <h2 class="mb-4">Cas d'usage les plus fréquents</h2>
+            <div class="text-center mb-10 sm:mb-12">
+                <h2 class="">Cas d'usage les plus fréquents</h2>
 
             </div>
 
