@@ -1,5 +1,5 @@
 <div>
-    <div class="py-16 max-w-screen-xl mx-auto px-2 md:px-4 bg-white">
+    <div class="py-16 max-w-screen-xl mx-auto px-2 md:px-6 bg-white">
         <div class=" space-y-20">
             <!-- Section Header -->
             <div class="text-center mb-16">
@@ -8,8 +8,8 @@
             </div>
 
             <!-- Use Case 1: Digital Assistant -->
-            <div class="flex flex-col md:flex-row gap-10 ">
-                <div class=" md:col-span-6  flex-1 min-h-[650px] ">
+            <div class="flex flex-col md:flex-row gap-6 lg:gap-10 ">
+                <div class=" md:col-span-6  flex-1 md:h-[750px]  lg:h-[650px] ">
                     <span
                         class="inline-flex items-center rounded-full border border-blue-200/50 bg-gradient-to-r from-blue-100/30 to-indigo-100/30 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-primary">
                         Agent autonome
@@ -56,21 +56,25 @@
                                 </div>
                                 <div class="md:p-3 md:space-y-2 overflow-hidden">
                                     <button
-                                        class="question-item w-full text-left p-3 md:rounded-md md:border border-t border-gray-200  transition-all duration-100 text-sm text-gray-700"
-                                        data-slide="0" data-list="1" data-state="active">
-                                        "Le client Dupont SARL indique un retard sur son remboursement, quel est son statut ?"
-                                    </button>
+                                    class="question-item w-full text-left p-3 md:rounded-md md:border border-t border-gray-200  transition-all duration-100 text-sm text-gray-700"
+                                    data-slide="0" data-list="1" data-state="active">
+                                    « Liste les incidents de chaîne de production des trois derniers mois et
+                                    précise la cause de chacun. »
+
+                                </button>
                                     <button
                                         class="question-item w-full text-left p-3 md:rounded-md md:border border-t border-gray-200  transition-all duration-100 text-sm text-gray-700"
                                         data-slide="1" data-list="1" data-state="inactive">
-                                        "Le service logistique a-t-il planifié les livraisons pour la semaine prochaine ?" 
+                                        « Le client Dupont SARL indique un retard sur son remboursement, quel est son statut ? »
+
                                     </button>
                                     <button
                                         class="question-item w-full text-left p-3 md:rounded-md md:border border-t border-gray-200  transition-all duration-100 text-sm text-gray-700"
                                         data-slide="2" data-list="1" data-state="inactive">
-                                        "Liste les incidents de chaîne de production des trois derniers mois et
-                                        précise la cause de chacun."
+                                        « Le service logistique a-t-il planifié les livraisons pour la semaine prochaine ? »
+
                                     </button>
+                                  
                                 </div>
                             </div>
                         </div>
@@ -110,27 +114,39 @@
                                 <button
                                     class="question-item w-full text-left p-3 md:rounded-md md:border border-t border-gray-200  transition-all duration-100 text-sm text-gray-700"
                                     data-slide="0" data-list="2" data-state="active">
-                                    "Analyse les retours clients du mois dernier et extrait cinq points principaux."
+                                    « Analyse les retours clients du mois dernier et extrait cinq points principaux. »
+
                                 </button>
 
                                 <button
                                     class="question-item w-full text-left p-3 md:rounded-md md:border border-t border-gray-200  transition-all duration-100 text-sm text-gray-700"
                                     data-slide="1" data-list="2" data-state="inactive">
-                                    "Prépare un résumé du dossier de M. Dupont pour la réunion de demain."
+                                    « Prépare un résumé du dossier de M. Dupont pour la réunion de demain. »
+
                                 </button>
                                 <button
                                     class="question-item w-full text-left p-3 md:rounded-md md:border border-t border-gray-200  transition-all duration-100 text-sm text-gray-700"
                                     data-slide="2" data-list="2" data-state="inactive">
-                                    "Relance le fournisseur ABC au sujet de la commande en attente."
+                                    « Relance le fournisseur ABC au sujet de la commande en attente. »
+
                                 </button>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class=" flex-1">
+                <div class=" flex-1  max-h-[560px] md:mt-52 lg:mt-0 lg:max-h-full overflow-hidden">
                     <!-- Section 1 Slideshow Container -->
                     <div id="slideshow-container-1" class="group relative h-full overflow-hidden rounded-2xl shadow-md">
                         <!-- Section 1 Video Slides -->
+                        <div
+                            class="slideshow-slide-1 opacity-0 absolute top-0 left-0 w-full h-full transition-opacity duration-1000 ease-in-out">
+                            <video class="w-full h-full object-cover" muted loop playsinline>
+                                <source src="assets/ai_assistant_feature/ingenia_question_example3.mov" type="video/mp4">
+                                <source src="assets/ai_assistant_feature/ingenia_question_example3.mov"
+                                    type="video/quicktime">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
                         <div
                             class="slideshow-slide-1 active opacity-100  w-full h-full transition-opacity duration-1000 ease-in-out">
                             <video class="w-full h-full object-cover" muted loop playsinline>
@@ -149,15 +165,7 @@
                                 Your browser does not support the video tag.
                             </video>
                         </div>
-                        <div
-                            class="slideshow-slide-1 opacity-0 absolute top-0 left-0 w-full h-full transition-opacity duration-1000 ease-in-out">
-                            <video class="w-full h-full object-cover" muted loop playsinline>
-                                <source src="assets/ai_assistant_feature/ingenia_question_example3.mov" type="video/mp4">
-                                <source src="assets/ai_assistant_feature/ingenia_question_example3.mov"
-                                    type="video/quicktime">
-                                Your browser does not support the video tag.
-                            </video>
-                        </div>
+                        
 
                     </div>
 
@@ -174,7 +182,7 @@
                             </video>
                         </div>
                         <div
-                            class="slideshow-slide-2 active opacity-100  w-full h-full transition-opacity duration-1000 ease-in-out">
+                            class="slideshow-slide-2 opacity-0 absolute top-0 left-0 w-full h-full transition-opacity duration-1000 ease-in-out">
                             <video class="w-full h-full object-cover" muted loop playsinline>
                                 <source src="assets/ai_assistant_feature/ingenia_agent_example2.mov" type="video/mp4">
                                 <source src="assets/ai_assistant_feature/ingenia_agent_example2.mov"
@@ -183,7 +191,7 @@
                             </video>
                         </div>
                         <div
-                            class="slideshow-slide-2 active opacity-100  w-full h-full transition-opacity duration-1000 ease-in-out">
+                            class="slideshow-slide-2 opacity-0 absolute top-0 left-0 w-full h-full transition-opacity duration-1000 ease-in-out">
                             <video class="w-full h-full object-cover" muted loop playsinline>
                                 <source src="assets/ai_assistant_feature/ingenia_agent_example3.mov" type="video/mp4">
                                 <source src="assets/ai_assistant_feature/ingenia_agent_example3.mov"
@@ -286,286 +294,71 @@
     </div>
 </div>
 <script>
-      // Interactive Question Slideshow System with Separate Slide Lists
-  let currentSlide1 = 0 // Current slide for section 1
-  let currentSlide2 = 0 // Current slide for section 2
-  let currentActiveList = 1 // Start with list 1 active
-  let slideInterval
-  
-  // Separate slide collections for each section
-  const slides1 = document.querySelectorAll('.slideshow-slide-1')
-  const slides2 = document.querySelectorAll('.slideshow-slide-2')
-  const totalSlides1 = slides1.length
-  const totalSlides2 = slides2.length
-  
-  // Slideshow containers
-  const container1 = document.getElementById('slideshow-container-1')
-  const container2 = document.getElementById('slideshow-container-2')
-  
-  function showSlide(slideIndex, sectionNumber) {
-    if (sectionNumber === 1) {
-      // Handle Section 1 slides
-      if (slideIndex >= 0 && slideIndex < totalSlides1) {
-        // Remove active class and set opacity to 0 for all slides, pause videos
-        slides1.forEach((slide) => {
-          slide.classList.remove('active')
-          slide.classList.remove('opacity-100')
-          slide.classList.add('opacity-0')
-          // Pause all videos in this slide
-          const video = slide.querySelector('video')
-          if (video) {
-            video.pause()
-          }
-        })
-  
-        // Set the target slide as active and visible
-        slides1[slideIndex].classList.add('active')
-        slides1[slideIndex].classList.remove('opacity-0')
-        slides1[slideIndex].classList.add('opacity-100')
-  
-        // Start the video in the active slide from the beginning
-        const activeVideo = slides1[slideIndex].querySelector('video')
-        if (activeVideo) {
-          activeVideo.currentTime = 0 // Reset to beginning
-          activeVideo.play().catch((e) => console.log('Video play failed:', e))
-        }
-  
-        currentSlide1 = slideIndex
-  
-        // Show section 1 container, hide section 2
+  document.addEventListener('DOMContentLoaded', () => {
+    const feature1 = document.getElementById('feature-1')
+    const feature2 = document.getElementById('feature-2')
+    const list1 = document.getElementById('question-list-1')
+    const list2 = document.getElementById('question-list-2')
+    const container1 = document.getElementById('slideshow-container-1')
+    const container2 = document.getElementById('slideshow-container-2')
+
+    const slides1 = Array.from(container1.querySelectorAll('.slideshow-slide-1'))
+    const slides2 = Array.from(container2.querySelectorAll('.slideshow-slide-2'))
+    const allSlides = [...slides1, ...slides2]
+
+    function highlight(listNumber, index) {
+      const list = document.getElementById(`question-list-${listNumber}`)
+      if (!list) return
+      list.querySelectorAll('.question-item').forEach((btn, i) => {
+        btn.setAttribute('data-state', i === index ? 'active' : 'inactive')
+      })
+    }
+
+    function show(listNumber, index) {
+      allSlides.forEach(s => {
+        s.classList.add('opacity-0')
+        s.classList.remove('opacity-100', 'active')
+        const v = s.querySelector('video'); if (v) v.pause()
+      })
+      const slide = listNumber === 1 ? slides1[index] : slides2[index]
+      if (!slide) return
+      if (listNumber === 1) {
         container1.classList.remove('hidden')
         container2.classList.add('hidden')
-      }
-    } else if (sectionNumber === 2) {
-      // Handle Section 2 slides
-      if (slideIndex >= 0 && slideIndex < totalSlides2) {
-        console.log(`Showing section 2 slide ${slideIndex}`)
-  
-        // Remove active class and set opacity to 0 for all slides, pause videos
-        slides2.forEach((slide) => {
-          slide.classList.remove('active')
-          slide.classList.remove('opacity-100')
-          slide.classList.add('opacity-0')
-          // Pause all videos in this slide
-          const video = slide.querySelector('video')
-          if (video) {
-            video.pause()
-          }
-        })
-  
-        // Set the target slide as active and visible
-        slides2[slideIndex].classList.add('active')
-        slides2[slideIndex].classList.remove('opacity-0')
-        slides2[slideIndex].classList.add('opacity-100')
-  
-        // Start the video in the active slide from the beginning
-        const activeVideo = slides2[slideIndex].querySelector('video')
-        if (activeVideo) {
-          activeVideo.currentTime = 0 // Reset to beginning
-          activeVideo.play().catch((e) => console.log('Video play failed:', e))
-        }
-  
-        currentSlide2 = slideIndex
-  
-        // Show section 2 container, hide section 1
+      } else {
         container2.classList.remove('hidden')
         container1.classList.add('hidden')
       }
+      slide.classList.remove('opacity-0')
+      slide.classList.add('opacity-100', 'active')
+      const v = slide.querySelector('video'); if (v) { v.currentTime = 0; v.play().catch(() => {}) }
+      highlight(listNumber, index)
     }
-  
-    // Update highlighted question in the active list
-    updateQuestionHighlight(slideIndex, sectionNumber)
-  }
-  
-  function updateQuestionHighlight(slideIndex, listNumber) {
-    const questionList = document.getElementById(`question-list-${listNumber}`)
-    if (!questionList) return
-  
-    const questions = questionList.querySelectorAll('.question-item')
-    questions.forEach((question, index) => {
-      if (index === slideIndex) {
-        question.setAttribute('data-state', 'active')
+
+    function openList(listNumber) {
+      if (listNumber === 1) {
+        list1.classList.add('open'); list2.classList.remove('open')
+        feature1.setAttribute('data-state', 'active'); feature2.setAttribute('data-state', 'inactive')
       } else {
-        question.setAttribute('data-state', 'inactive')
+        list2.classList.add('open'); list1.classList.remove('open')
+        feature2.setAttribute('data-state', 'active'); feature1.setAttribute('data-state', 'inactive')
       }
-    })
-  }
-  
-  function nextSlide() {
-    if (currentActiveList === 1) {
-      const nextIndex = (currentSlide1 + 1) % totalSlides1
-      currentSlide1 = nextIndex
-      showSlide(nextIndex, 1)
-      updateQuestionStates(1, nextIndex) // Update visual feedback
-    } else if (currentActiveList === 2) {
-      const nextIndex = (currentSlide2 + 1) % totalSlides2
-      currentSlide2 = nextIndex
-      showSlide(nextIndex, 2)
-      updateQuestionStates(2, nextIndex) // Update visual feedback
+      show(listNumber, 0)
     }
-  }
-  
-  function startSlideshow() {
-    slideInterval = setInterval(nextSlide, 15000) // 5 seconds
-  }
-  
-  function stopSlideshow() {
-    if (slideInterval) {
-      clearInterval(slideInterval)
-    }
-  }
-  
-  function toggleFeatureList(featureNumber) {
-    const list1 = document.getElementById('question-list-1')
-    const list2 = document.getElementById('question-list-2')
-    const feature1 = document.getElementById('feature-1')
-    const feature2 = document.getElementById('feature-2')
-  
-    if (featureNumber === 1) {
-      // Toggle list 1 visibility
-      const isCurrentlyVisible = list1.classList.contains('open')
-  
-      if (isCurrentlyVisible) {
-        // Close list 1
-        list1.classList.remove('open')
-        updateFeatureInactiveState(feature1)
-        stopSlideshow()
-        currentActiveList = null
-      } else {
-        // Open list 1, close list 2
-        list1.classList.add('open')
-        list2.classList.remove('open')
-  
-        // Update feature styling
-        updateFeatureActiveState(feature1)
-        updateFeatureInactiveState(feature2)
-  
-        currentActiveList = 1
-        currentSlide1 = 0 // Reset to first slide when switching
-        showSlide(0, 1) // Start from slide 0
-        updateQuestionStates(1, 0) // Update visual feedback
-        stopSlideshow()
-        startSlideshow() // Reset timer
-      }
-    } else {
-      // Toggle list 2 visibility
-      const isCurrentlyVisible = list2.classList.contains('open')
-  
-      if (isCurrentlyVisible) {
-        // Close list 2
-        list2.classList.remove('open')
-        updateFeatureInactiveState(feature2)
-        stopSlideshow()
-        currentActiveList = null
-      } else {
-        // Open list 2, close list 1
-        list2.classList.add('open')
-        list1.classList.remove('open')
-  
-        // Update feature styling
-        updateFeatureActiveState(feature2)
-        updateFeatureInactiveState(feature1)
-  
-        currentActiveList = 2
-        currentSlide2 = 0 // Reset to first slide when switching
-        showSlide(0, 2) // Start from slide 0
-        updateQuestionStates(2, 0) // Update visual feedback
-        stopSlideshow()
-        startSlideshow() // Reset timer
-      }
-    }
-  }
-  
-  function updateFeatureActiveState(feature) {
-    // Simply set the data-state attribute - CSS handles the styling
-    feature.setAttribute('data-state', 'active')
-  }
-  
-  function updateFeatureInactiveState(feature) {
-    // Simply set the data-state attribute - CSS handles the styling
-    feature.setAttribute('data-state', 'inactive')
-  }
-  
-  function updateQuestionStates(listNumber, activeSlideIndex) {
-    // Update visual feedback for question items based on active slide
-    const questions = document.querySelectorAll(`[data-list="${listNumber}"]`)
-    questions.forEach((question) => {
-      const slideIndex = parseInt(question.getAttribute('data-slide'))
-  
-      if (slideIndex === activeSlideIndex) {
-        question.setAttribute('data-state', 'active')
-      } else {
-        question.setAttribute('data-state', 'inactive')
-      }
-    })
-  }
-  
-  // Initialize system when DOM is loaded
-  document.addEventListener('DOMContentLoaded', function () {
-    // Add click event listeners to feature toggles
-    const feature1 = document.getElementById('feature-1')
-    const feature2 = document.getElementById('feature-2')
-  
-    // Add click event listeners to the entire feature toggle divs
-    feature1.addEventListener('click', () => toggleFeatureList(1))
-    feature2.addEventListener('click', () => toggleFeatureList(2))
-  
-    // Prevent dropdown containers from closing when clicked
-    const questionList1 = document.getElementById('question-list-1')
-    const questionList2 = document.getElementById('question-list-2')
-  
-    questionList1.addEventListener('click', (event) => {
-      event.stopPropagation()
-    })
-  
-    questionList2.addEventListener('click', (event) => {
-      event.stopPropagation()
-    })
-  
-    // Add click event listeners to questions
-    const allQuestions = document.querySelectorAll('.question-item')
-    allQuestions.forEach((question, index) => {
-      question.addEventListener('click', (event) => {
-        event.stopPropagation() // Prevent event bubbling to prevent dropdown from closing
-  
-        const slideIndex = parseInt(question.getAttribute('data-slide'))
-        const listNumber = parseInt(question.getAttribute('data-list'))
-  
-        console.log(`Clicked question: slideIndex=${slideIndex}, listNumber=${listNumber}, currentActiveList=${currentActiveList}`)
-  
-        // Only proceed if this list is currently active
-        if (currentActiveList === listNumber) {
-          stopSlideshow() // Stop current slideshow
-  
-          // Update the current slide index for the active section
-          if (listNumber === 1) {
-            currentSlide1 = slideIndex
-          } else if (listNumber === 2) {
-            currentSlide2 = slideIndex
-          }
-  
-          showSlide(slideIndex, listNumber)
-          updateQuestionStates(listNumber, slideIndex) // Update visual feedback
-          startSlideshow() // Restart auto-slideshow with reset timer
-        }
+
+    feature1.addEventListener('click', () => openList(1))
+    feature2.addEventListener('click', () => openList(2))
+
+    document.querySelectorAll('.question-item').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const listNumber = parseInt(btn.getAttribute('data-list'))
+        const index = parseInt(btn.getAttribute('data-slide'))
+        if (listNumber === 1 && !list1.classList.contains('open')) openList(1)
+        else if (listNumber === 2 && !list2.classList.contains('open')) openList(2)
+        show(listNumber, index)
       })
     })
-  
-    // Initialize with feature 1 active (contextual responses) - it's already styled as active in HTML
-    currentActiveList = 1
-    questionList1.classList.add('open') // Start with first list open
-    showSlide(0, 1) // Start from first slide
-    updateQuestionStates(1, 0) // Set initial visual feedback
-    startSlideshow()
-  
-    // Pause slideshow on hover, resume on mouse leave for both containers
-    if (container1) {
-      container1.addEventListener('mouseenter', stopSlideshow)
-      container1.addEventListener('mouseleave', startSlideshow)
-    }
-    if (container2) {
-      container2.addEventListener('mouseenter', stopSlideshow)
-      container2.addEventListener('mouseleave', startSlideshow)
-    }
+
+    openList(1)
   })
 </script>
