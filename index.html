@@ -1202,6 +1202,27 @@
     const slides2 = Array.from(container2.querySelectorAll('.slideshow-slide-2'))
     const allSlides = [...slides1, ...slides2]
 
+    // Timer variables
+    let currentTimer = null
+    let currentListNumber = 1
+    let currentSlideIndex = 0
+
+    function clearTimer() {
+      if (currentTimer) {
+        clearInterval(currentTimer)
+        currentTimer = null
+      }
+    }
+
+    function startTimer() {
+      clearTimer()
+      currentTimer = setInterval(() => {
+        const slides = currentListNumber === 1 ? slides1 : slides2
+        currentSlideIndex = (currentSlideIndex + 1) % slides.length
+        show(currentListNumber, currentSlideIndex, false) // false = not user-initiated
+      }, 15000) // 15 seconds
+    }
+
     function highlight(listNumber, index) {
       const list = document.getElementById(`question-list-${listNumber}`)
       if (!list) return
@@ -1210,10 +1231,10 @@
       })
     }
 
-    function show(listNumber, index) {
+    function show(listNumber, index, isUserInitiated = true) {
       allSlides.forEach(s => {
         s.classList.add('opacity-0')
-        s.classList.remove('opacity-100', 'active')
+        s.classList.remove('opacity-100', 'active') 
         const v = s.querySelector('video'); if (v) v.pause()
       })
       const slide = listNumber === 1 ? slides1[index] : slides2[index]
@@ -1229,9 +1250,18 @@
       slide.classList.add('opacity-100', 'active')
       const v = slide.querySelector('video'); if (v) { v.currentTime = 0; v.play().catch(() => {}) }
       highlight(listNumber, index)
+      
+      // Update current state
+      currentListNumber = listNumber
+      currentSlideIndex = index
+      
+      // Restart timer if user initiated the change
+      if (isUserInitiated) {
+        startTimer()
+      }
     }
 
-    function openList(listNumber) {
+    function openList(listNumber, isUserInitiated = true) {
       if (listNumber === 1) {
         list1.classList.add('open'); list2.classList.remove('open')
         feature1.setAttribute('data-state', 'active'); feature2.setAttribute('data-state', 'inactive')
@@ -1239,7 +1269,7 @@
         list2.classList.add('open'); list1.classList.remove('open')
         feature2.setAttribute('data-state', 'active'); feature1.setAttribute('data-state', 'inactive')
       }
-      show(listNumber, 0)
+      show(listNumber, 0, isUserInitiated)
     }
 
     feature1.addEventListener('click', () => openList(1))
@@ -1251,10 +1281,11 @@
         const index = parseInt(btn.getAttribute('data-slide'))
         if (listNumber === 1 && !list1.classList.contains('open')) openList(1)
         else if (listNumber === 2 && !list2.classList.contains('open')) openList(2)
-        show(listNumber, index)
+        show(listNumber, index, true) // true = user-initiated
       })
     })
 
+    // Initialize the slideshow
     openList(1)
   })
 </script>
