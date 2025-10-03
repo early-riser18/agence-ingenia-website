@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include 'partials/en/head.html' %}
+
+
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5ZD2G4BS"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <!-- header -->  
+    {% include 'partials/en/header.html' %}
+    <main>
+      <section id="home">
+         {% include 'partials/en/section_home.html' %} 
+      </section>
+
+      <section id="mission">
+ {% include 'partials/en/section_mission.html' %} 
+      </section>
+      <!-- genai -->
+      <section id="genai">
+         {% include 'partials/en/section_genai.html' %} 
+      </section>    
+      <section id="method">
+         {% include 'partials/en/method.html' %} 
+      </section>
+
+      <section id="use-cases">
+        {% include 'partials/en/section_use_cases.html' %}
+      </section>
+
+      <section id="team">
+        {% include 'partials/en/section_team.html' %}
+        <!-- Team Section — matches the reference design (Tailwind v3) -->
+      </section>
+
+      <section id="contact">
+        {% include 'partials/en/section_contact.html' %}
+      </section>
+    </main>
+
+    {% include 'partials/en/footer.html' %}
+
+    <script src="/src/utils.js"></script> 
+
+  </body>
+</html>
