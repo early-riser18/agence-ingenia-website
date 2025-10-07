@@ -3,10 +3,23 @@
 <html lang="en">
     <head>
         <script>
-            window.location.href = "/en/";
+            fetch('https://ipapi.co/json/')
+                .then(response => response.json())
+                .then(data => {
+
+                    if (data.country_code === 'FR') {
+                        window.location.href = '/fr/';
+                    } else {
+                        window.location.href = '/en/';
+                    }
+                })
+                .catch(() => {
+                    // Fallback to English if geolocation fails
+                    window.location.href = '/en/';
+                });
         </script>
     </head>
     <body>
-        <h1>Redirecting to English version...</h1>
+        <p>Redirecting...</p>
     </body>
 </html>
