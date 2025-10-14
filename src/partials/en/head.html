@@ -65,17 +65,10 @@
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://agence-ingenia.com/">
-    <script>
-        fetch('https://ipapi.co/json/')
-            .then(response => response.json())
-            .then(data => {
+    <link rel="alternate" hreflang="en" href="https://agence-ingenia.com/" />
+    <link rel="alternate" hreflang="fr" href="https://agence-ingenia.com/fr/" />
+    <link rel="alternate" hreflang="x-default" href="https://agence-ingenia.com/" />
 
-                if (data.country_code === 'FR') {
-                    window.location.href = '/fr/';
-                }
-            })
-      
-    </script>
     <!-- Structured Data -->
     <script type="application/ld+json">
     {
