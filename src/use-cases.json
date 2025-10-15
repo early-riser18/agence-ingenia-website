@@ -1,0 +1,95 @@
+{
+    "document-parser": {
+        "title": "Document Processing Assistant",
+        "subtitle": "Extract key information from documents in seconds. No more copy & paste.",
+        "description": "Eliminate tedious data entry. Your AI Assistant automatically extracts key details from customer forms, PDFs, invoices, and reports — then instantly updates your CRM with complete, accurate information.",
+        "image": "/assets/customers_pictures/landing_customer_support.png",
+        "pain-points": ["Manual document processing", "Data entry errors"],
+        "time_saving_opportunity": "tbd",
+        "category": "back-office"
+    },
+    "voice-of-customer-intel" : {
+        "title": "Customer Insights Assistant",
+        "subtitle": "Know everything customers are saying about your company",
+        "description": "Scan customer reviews, support tickets, sales calls and social media to understand what customers are saying about your company. Get a report with the top 5 positive and negative comments.",
+        "image": "/assets/customers_pictures/landing_field_workers.png",
+        "pain-points": ["Manual browsing", "Information overload", "Siloed data"],
+        "time_saving_opportunity": "tbd",
+        "category": "marketing"
+    },
+    
+    "sales-calls-mining": {
+        "title": "Sales Calls Insights Assistant",
+        "subtitle": "All your team's sales calls, distilled into key insights",
+        "description": "Stay informed about what your leads are saying about your company and products. Your AI Assistant reads all sales calls transcript and summarizes it for you.",
+        "image": "/assets/customers_pictures/landing_customer_support.png",
+        "pain-points": ["No direct visibility", "information overload"],
+        "time_saving_opportunity": "tbd",
+        "category": "marketing"
+
+    },
+    "competitor-monitoring": {
+        "title": "Competitor Monitoring Assistant",
+        "subtitle": "Track your competitors' every move & react before anyone else",
+        "description": "Monitor your competitors' websites, product releases and social media posts and get a report with the most important information.",
+        "image": "/assets/customers_pictures/landing_customer_support.png",
+        "pain-points": ["Slow reaction to competitors", "information overload"],
+        "time_saving_opportunity": "tbd",
+        "category": "marketing"
+    },
+    "internal-knowledge-assistant": {
+        "title": "Your Company's Internal ChatGPT",
+        "subtitle": "ChatGPT but for your company's internal knowledge base",
+        "description": "Empower your team to work more efficiently with instant access to internal docs, projects, and knowledge — no more wasted time searching or waiting for answers.",
+        "image": "/assets/customers_pictures/landing_customer_support.png",
+        "pain-points": ["Manual searching", "Slow response time"],
+        "time_saving_opportunity": "tbd",
+        "category": "collaboration"
+    },
+    "supplier-rfq-assistant": {
+        "title": "Supplier Sourcing Assistant",
+        "subtitle": "Automate suppliers' catalog analysis and RFQ outreach",
+        "description": "Speed up your sourcing process — your AI Assistant scans the web for new suppliers, extracts catalog data into Excel, and prepares RFQ drafts in minutes, saving hours of manual research and outreach.",
+        "image": "/assets/customers_pictures/landing_customer_support.png",
+        "pain-points": ["Repetitive tasks", "Manual data entry"],
+        "time_saving_opportunity": "tbd",
+        "category": "procurement"
+    },
+    "supplier-offer-comparison": {
+        "title": "Supplier Quotes Comparison Assistant",
+        "subtitle": "Automatically extract supplier offers from various formats and compare them in a single view",
+        "description": "Automate your supplier offer management — your AI Assistant reads supplier emails and attachments (PDF, Excel, CSV), extracts key offer details like price, quantity, and delivery terms, and generates ready-to-use comparison tables for faster, more consistent decisions.",
+        "image": "/assets/customers_pictures/landing_customer_support.png",
+        "pain-points": ["Repetitive copy & paste", "Slow document processing", "Data entry errors"],
+        "time_saving_opportunity": "tbd",
+        "category": "procurement"
+    },
+    "invoice-processing": {
+        "title": "Invoice Processing Assistant",
+        "subtitle": "Automate invoice processing and PO validation",
+        "description": "Automate your entire invoice-to-PO workflow — your AI Assistant reads vendor invoices, extracts key accounting data, validates them against purchase orders, and instantly alerts you to any mismatches.",
+        "image": "/assets/customers_pictures/landing_customer_support.png",
+        "pain-points": ["Manual data entry", "Error-prone"],
+        "time_saving_opportunity": "tbd",
+        "category": "procurement"
+    },
+    "customer-support-rep-assistant": {
+        "title": "Customer Support Assistant",
+        "subtitle": "Reduce your time to resolution with smart workflows",
+        "description": "Boost your customer support team's efficiency — your AI Assistant reads incoming emails, pulls the right policies or SOPs, and drafts compliant, personalized responses, cutting time to resolution and improving customer satisfaction.",
+        "image": "/assets/customers_pictures/landing_customer_support.png",
+        "pain-points": ["Slow response time"],
+        "time_saving_opportunity": "tbd",
+        "category": "customer-support"
+    },
+    "website-chatbot": {
+        "title": "Website Chatbot Assistant",
+        "subtitle": "Your dedicated 24/7 Website Front-Desk Agent.",
+        "description": "Turn visitors into customers with instant answers — your AI Assistant engages prospects on your website 24/7, delivering accurate, up-to-date responses about your products and services, boosting conversions and reducing support requests.",
+        "image": "/assets/customers_pictures/landing_customer_support.png",
+        "pain-points": ["Lost opportunity", "Dissatisfied customers"],
+        "time_saving_opportunity": "tbd",
+        "category": "customer-support"
+    }
+
+}
