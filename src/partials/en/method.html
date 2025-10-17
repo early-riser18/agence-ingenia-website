@@ -1,73 +1,395 @@
-<div class="py-16 bg-gray-50">
-    <div class="max-w-screen-xl mx-auto px-4">
+<style>
+    /* Minimal custom CSS for complex animations */
+    .content-card {
+        display: none;
+        animation: fadeSlideIn 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .content-card.active {
+        display: block;
+    }
+
+    @keyframes fadeSlideIn {
+        from {
+            opacity: 0;
+            transform: translateX(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    /* Mobile timeline line */
+    @media (max-width: 640px) {
+        .mobile-step-indicator {
+            position: relative;
+        }
+        
+
+    }
+</style>
+
+<div id="method" class="py-20 relative overflow-hidden">
+    <!-- Top-left slate gradient -->
+    <div class="absolute inset-0 bg-gradient-to-br from-slate-100/50 via-transparent to-transparent"></div>
+    <!-- Bottom-right slate gradient -->
+    <div class="absolute inset-0 bg-gradient-to-tl from-slate-100/50 via-transparent to-transparent"></div>
+
+    <!-- Light gradient backgrounds -->
+    <div class="absolute inset-0 bg-gradient-to-br from-slate-100/40 via-transparent to-transparent"></div>
+    <div class="absolute inset-0 bg-gradient-to-tl from-slate-100/40 via-transparent to-transparent"></div>
+    
+    <!-- Abstract geometric patterns -->
+    <div class="hidden md:block absolute h-full w-full z-0 opacity-100 top-0 left-[20%]">
+        <svg class="absolute inset-0 w-full h-full" viewBox="0 0 1200 800" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <pattern id="hexPatternMethod" x="0" y="0" width="60" height="52" patternUnits="userSpaceOnUse">
+                    <path d="M30,4 L52,17 L52,35 L30,48 L8,35 L8,17 Z" stroke="#F3F4F6" stroke-width="2" fill="none"
+                        opacity="0.4" />
+                </pattern>
+            </defs>
+            <rect x="0" y="0" width="100%" height="100%" fill="url(#hexPatternMethod)" />
+        </svg>
+    </div>
+    
+    <div class="max-w-screen-lg mx-auto px-4 relative z-10">
+        <!-- Section Header -->
         <div class="text-center mb-16">
-            <h3 class="text-2xl lg:text-3xl font-semibold mb-4" style="font-family: 'Epilogue', sans-serif;">
-                Our approach</h3>
-            <p class="text-lg text-blackPrimary">A 3-step process for concrete results</p>
+            <h3 class="text-3xl lg:text-4xl font-semibold mb-4" style="font-family: 'Epilogue', sans-serif; color: #111827;">
+                How we make our AI Assistants deliver value fast
+            </h3>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto">Clear KPIs for measurable outcomes</p>
         </div>
 
-        <!-- Method Steps - Horizontal Flow -->
-        <div class="flex flex-col lg:flex-row items-center justify-center space-y-8 lg:space-y-0 lg:space-x-8">
+        <!-- Two Column Layout -->
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1  md:grid-cols-12 lg:gap-8">
+                
+                <!-- Left Panel - Step Navigator -->
+                <div class="md:col-span-6 lg:col-span-5">
+                    <div class="flex flex-col gap-4 lg:sticky lg:top-24" role="tablist" aria-label="Methodology steps">
+                        
             <!-- Step 1 -->
-            <div class="flex-1 max-w-sm">
-                <div
-                    class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 group text-center">
-                    <div
-                        class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center font-bold text-xl mx-auto mb-6 group-hover:scale-110 transition-transform duration-200">
-                        1
+                        <div class="step-item mobile-step-indicator flex items-center bg-primary/5 gap-4 p-4 rounded-xl cursor-pointer transition-all duration-200 border-2 border-primary shadow-sm hover:shadow-md hover:scale-[1.02] focus:ring-2 focus:ring-primary focus:outline-none" onclick="switchStep(1)" data-step="1" role="tab" aria-selected="true" aria-controls="panel-1" tabindex="0">
+                            <div class="relative flex-shrink-0">
+                                <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary text-xl">
+                                    <i class="fas fa-search-dollar"></i>
+                                </div>
+                                <div class="absolute -top-1 -right-1 w-5 h-5 bg-primary border-2 border-white rounded-full flex items-center justify-center font-bold text-white text-[10px] shadow-sm">
+                                    1
+                                </div>
+                            </div>
+                            <div class="flex-1 min-w-0">
+                                <h4 class="font-semibold text-gray-900 text-base leading-tight mb-1" style="font-family: 'Epilogue', sans-serif;">
+                                    Workflow Audit & AI Solution Design
+                                </h4>
+                                <p class="text-xs text-gray-600">We start by understanding how your business works</p>
+                            </div>
+                        </div>
+
+                        <!-- Step 2 -->
+                        <div class="step-item mobile-step-indicator flex items-center bg-white gap-4 p-4 rounded-xl cursor-pointer transition-all duration-200  hover:bg-primary/5 hover:shadow-sm hover:scale-[1.02] border border-gray-200 hover:border-gray-300 focus:ring-2 focus:ring-primary focus:outline-none" onclick="switchStep(2)" data-step="2" role="tab" aria-selected="false" aria-controls="panel-2" tabindex="-1">
+                            <div class="relative flex-shrink-0">
+                                <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary text-xl">
+                                    <i class="fas fa-rocket"></i>
+                                </div>
+                                <div class="absolute -top-1 -right-1 w-5 h-5 bg-primary border-2 border-white rounded-full flex items-center justify-center font-bold text-white text-[10px] shadow-sm">
+                                    2
+                                </div>
+                            </div>
+                            <div class="flex-1 min-w-0">
+                                <h4 class="font-semibold text-gray-700 text-base leading-tight mb-1" style="font-family: 'Epilogue', sans-serif;">
+                                    Progressive Implementation
+                                </h4>
+                                <p class="text-xs text-gray-600">Gradual rollout, you remain in control</p>
+                            </div>
+                        </div>
+
+                        <!-- Step 3 -->
+                        <div class="step-item mobile-step-indicator flex items-center bg-white gap-4 p-4 rounded-xl cursor-pointer transition-all duration-200  hover:bg-primary/5 hover:shadow-sm hover:scale-[1.02] border border-gray-200 hover:border-gray-300 focus:ring-2 focus:ring-primary focus:outline-none" onclick="switchStep(3)" data-step="3" role="tab" aria-selected="false" aria-controls="panel-3" tabindex="-1">
+                            <div class="relative flex-shrink-0">
+                                <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary text-xl">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <div class="absolute -top-1 -right-1 w-5 h-5 bg-primary border-2 border-white rounded-full flex items-center justify-center font-bold text-white text-[10px] shadow-sm">
+                                    3
+                                </div>
+                            </div>
+                            <div class="flex-1 min-w-0">
+                                <h4 class="font-semibold text-gray-700 text-base leading-tight mb-1" style="font-family: 'Epilogue', sans-serif;">
+                                    Monitoring Dashboard
+                                </h4>
+                                <p class="text-xs text-gray-600">You always know what's happening</p>
+                            </div>
+                        </div>
+
+                        <!-- Step 4 -->
+                        <div class="step-item mobile-step-indicator flex items-center bg-white gap-4 p-4 rounded-xl cursor-pointer transition-all duration-200  hover:bg-primary/5 hover:shadow-sm hover:scale-[1.02] border border-gray-200 hover:border-gray-300 focus:ring-2 focus:ring-primary focus:outline-none" 
+                        onclick="switchStep(4)" data-step="4" role="tab" aria-selected="false" aria-controls="panel-4" tabindex="-1">
+                            <div class="relative flex-shrink-0">
+                                <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary text-xl">
+                                    <i class="fas fa-book"></i>
+                                </div>
+                                <div class="absolute -top-1 -right-1 w-5 h-5 bg-primary border-2 border-white rounded-full flex items-center justify-center font-bold text-white text-[10px] shadow-sm">
+                                    4
+                                </div>
+                            </div>
+                            <div class="flex-1 min-w-0">
+                                <h4 class="font-semibold text-gray-700 text-base leading-tight mb-1" style="font-family: 'Epilogue', sans-serif;">
+                                    Documentation
+                                </h4>
+                                <p class="text-xs text-gray-600">We make you independent</p>
+                            </div>
+                        </div>
+
+                        <!-- Step 5 -->
+                        <div class="step-item mobile-step-indicator flex items-center bg-white gap-4 p-4 rounded-xl cursor-pointer transition-all duration-200  hover:bg-primary/5 hover:shadow-sm hover:scale-[1.02] border border-gray-200 hover:border-gray-300 focus:ring-2 focus:ring-primary focus:outline-none" 
+                        onclick="switchStep(5)" data-step="5" role="tab" aria-selected="false" aria-controls="panel-5" tabindex="-1">
+                            <div class="relative flex-shrink-0">
+                                <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary text-xl">
+                                    <i class="fas fa-headset"></i>
+                                </div>
+                                <div class="absolute -top-1 -right-1 w-5 h-5 bg-primary border-2 border-white rounded-full flex items-center justify-center font-bold text-white text-[10px] shadow-sm">
+                                    5
+                                </div>
+                            </div>
+                            <div class="flex-1 min-w-0">
+                                <h4 class="font-semibold text-gray-700 text-base leading-tight mb-1" style="font-family: 'Epilogue', sans-serif;">
+                                    Support
+                                </h4>
+                                <p class="text-xs text-gray-600">Free support, 7 days a week</p>
+                            </div>
+                        </div>
+
                     </div>
-                    <h4 class="font-bold text-blackPrimary text-xl mb-4">Targeted Diagnostic</h4>
-                    <p class="text-blackPrimary leading-relaxed">
-                        In-depth analysis of your challenges and identification of improvement opportunities</p>
+                </div>
+
+                <!-- Right Panel - Dynamic Content -->
+                <div class="md:col-span-6 lg:col-span-7 bg-gray-50/30 rounded-2xl p-4">
+                    <div class="content-panel min-h-[500px]" aria-live="polite">
+                        
+                        <!-- Content 1: Audit & Definition -->
+                        <div class="content-card active bg-white rounded-2xl p-8 lg:p-10 shadow-md border border-gray-200/80" data-content="1" id="panel-1" role="tabpanel" aria-labelledby="step-1">
+                            <div class="mb-6">
+                                <h3 class="text-xl lg:text-2xl font-semibold text-gray-900" style="font-family: 'Epilogue', sans-serif;">
+                                    What it includes
+                                </h3>
+                            </div>
+                            
+                            <ul class="space-y-3.5 text-sm text-gray-700 leading-relaxed">
+                                <li class="flex items-start gap-3">
+                                    <i class="fas fa-check text-primary text-base mt-0.5 flex-shrink-0"></i>
+                                    <span>Mapping of your workflows and tools</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i class="fas fa-check text-primary text-base mt-0.5 flex-shrink-0"></i>
+                                    <span>We pinpoint where the Assistant can take work off your hands</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i class="fas fa-check text-primary text-base mt-0.5 flex-shrink-0"></i>
+                                    <span>We define precisely how the Assistant will fit into your processes and cooperate with your team</span>
+                                </li>
+                            </ul>
+            </div>
+
+                        <!-- Content 2: Progressive Implementation -->
+                        <div class="content-card bg-white rounded-2xl p-8 lg:p-10 shadow-md border border-gray-200/80" data-content="2">
+                            <div class="mb-6">
+                                <h3 class="text-xl lg:text-2xl font-semibold text-gray-900" style="font-family: 'Epilogue', sans-serif;">
+                                    What it includes
+                                </h3>
+                            </div>
+                            
+                            <!-- Timeline Visualization -->
+                            <div class="mb-6 p-6 bg-primary/5 rounded-xl border border-primary/20">
+                                <h5 class="font-semibold text-gray-900 text-center mb-5 text-base">Progressive Deployment Path</h5>
+                                <div class="relative flex items-center justify-between gap-4">
+                                    <div class="absolute top-5 left-0 right-0 h-0.5 bg-primary/30 "></div>
+                                    
+                                    <div class="flex flex-col items-center flex-1 z-10">
+                                        <div class="w-10 h-10 bg-white border-3 border-primary rounded-full flex items-center justify-center mb-2 font-bold text-primary text-sm shadow-sm">1</div>
+                                        <span class="text-xs font-medium text-gray-700 text-center">Sandbox Testing</span>
+                                    </div>
+                                    
+                                    <div class="flex flex-col items-center flex-1 z-10">
+                                        <div class="w-10 h-10 bg-white border-3 border-primary rounded-full flex items-center justify-center mb-2 font-bold text-primary text-sm shadow-sm">2</div>
+                                        <span class="text-xs font-medium text-gray-700 text-center">Human Validation</span>
+                                    </div>
+                                    
+                                    <div class="flex flex-col items-center flex-1 z-10">
+                                        <div class="w-10 h-10 bg-white border-3 border-primary rounded-full flex items-center justify-center mb-2 font-bold text-primary text-sm shadow-sm">3</div>
+                                        <span class="text-xs font-medium text-gray-700 text-center">Full Autonomy</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <ul class="space-y-4 text-base text-gray-700">
+                                <li class="flex items-start gap-3">
+                                    <i class="fas fa-check text-primary text-base mt-0.5 flex-shrink-0"></i>
+                                    <span>Test the Assistant in a sandbox environment to validate performance</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i class="fas fa-check text-primary text-base mt-0.5 flex-shrink-0"></i>
+                                    <span>The Assistant runs in a real world environment with human validating key actions</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i class="fas fa-check text-primary text-base mt-0.5 flex-shrink-0"></i>
+                                    <span>When you feel ready, give it more autonomy — at your pace</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Content 3: Monitoring Dashboard -->
+                        <div class="content-card bg-white rounded-2xl p-8 lg:p-10 shadow-md border border-gray-200/80" data-content="3">
+                            <div class="mb-6">
+                                <h3 class="text-xl lg:text-2xl font-semibold text-gray-900" style="font-family: 'Epilogue', sans-serif;">
+                                    What it includes
+                                </h3>
+                            </div>
+                            
+                            <ul class="space-y-4 text-base text-gray-700">
+                                <li class="flex items-start gap-3">
+                                    <i class="fas fa-check text-primary text-base mt-0.5 flex-shrink-0"></i>
+                                    <span>See every Assistant run, its actions, and results</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i class="fas fa-check text-primary text-base mt-0.5 flex-shrink-0"></i>
+                                    <span>Track API costs</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i class="fas fa-check text-primary text-base mt-0.5 flex-shrink-0"></i>
+                                    <span>Get instant alerts if something goes off</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Content 4: Documentation -->
+                        <div class="content-card bg-white rounded-2xl p-8 lg:p-10 shadow-md border border-gray-200/80" data-content="4">
+                            <div class="mb-6">
+                                <h3 class="text-xl lg:text-2xl font-semibold text-gray-900" style="font-family: 'Epilogue', sans-serif;">
+                                    What it includes
+                                </h3>
+                            </div>
+                            
+                            <ul class="space-y-4 text-base text-gray-700">
+                                <li class="flex items-start gap-3">
+                                    <i class="fas fa-check text-primary text-base mt-0.5 flex-shrink-0"></i>
+                                    <span>Clear technical documentation</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i class="fas fa-check text-primary text-base mt-0.5 flex-shrink-0"></i>
+                                    <span>Full control to tweak the system</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i class="fas fa-check text-primary text-base mt-0.5 flex-shrink-0"></i>
+                                    <span>Personalized training with your team</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Content 5: Support -->
+                        <div class="content-card bg-white rounded-2xl p-8 lg:p-10 shadow-md border border-gray-200/80" data-content="5">
+                            <div class="mb-6">
+                                <h3 class="text-xl lg:text-2xl font-semibold text-gray-900" style="font-family: 'Epilogue', sans-serif;">
+                                    What it includes
+                                </h3>
+                            </div>
+                            
+                            <ul class="space-y-4 text-base text-gray-700">
+                                <li class="flex items-start gap-3">
+                                    <i class="fas fa-check text-primary text-base mt-0.5 flex-shrink-0"></i>
+                                    <span>30 days of free post-delivery support</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i class="fas fa-check text-primary text-base mt-0.5 flex-shrink-0"></i>
+                                    <span>Direct access to our team — no ticket queues</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i class="fas fa-check text-primary text-base mt-0.5 flex-shrink-0"></i>
+                                    <span>With your consent, we can connect to your system and fix issues instantly when they pop up</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
                 </div>
             </div>
 
-            <!-- Arrow 1 -->
-            <div class="flex-shrink-0 hidden lg:block">
-                <svg class="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd"
-                        d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
-                        clip-rule="evenodd"></path>
-                </svg>
-            </div>
-
-            <!-- Step 2 -->
-            <div class="flex-1 max-w-sm">
-                <div
-                    class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 group text-center">
-                    <div
-                        class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center font-bold text-xl mx-auto mb-6 group-hover:scale-110 transition-transform duration-200">
-                        2
-                    </div>
-                    <h4 class="font-bold text-blackPrimary text-xl mb-4">Scoping</h4>
-                    <p class="text-blackPrimary leading-relaxed">Definition of project scope and setting
-                        performance objectives</p>
+            <!-- Guarantees Box -->
+            <div class="relative bg-gradient-to-br from-green-50 to-emerald-50 border-2 border-primary rounded-2xl p-10 mt-16 shadow-sm">
+                <!-- Badge -->
+                <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-primary text-white px-6 py-2 rounded-full font-semibold text-sm shadow-lg" style="font-family: 'Epilogue', sans-serif;">
+                    <i class="fas fa-shield-alt mr-2"></i>Our Guarantees
                 </div>
+                
+                <!-- Content -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mt-2">
+                    <!-- Guarantee 1 -->
+                    <div class="flex items-start gap-3 bg-white/70 backdrop-blur-sm p-5 rounded-xl border border-primary/20">
+                        <div class="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center flex-shrink-0 text-sm shadow-sm">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <div class="flex-1 text-gray-700 text-sm leading-relaxed">
+                            <strong class="text-gray-900">30 days to test</strong> — Full trial period to ensure the solution meets your expectations
+                        </div>
             </div>
 
-            <!-- Arrow 2 -->
-            <div class="flex-shrink-0 hidden lg:block">
-                <svg class="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd"
-                        d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
-                        clip-rule="evenodd"></path>
-                </svg>
-            </div>
-
-            <!-- Step 3 -->
-            <div class="flex-1 max-w-sm">
-                <div
-                    class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 group text-center">
-                    <div
-                        class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center font-bold text-xl mx-auto mb-6 group-hover:scale-110 transition-transform duration-200">
-                        3
+                    <!-- Guarantee 2 -->
+                    <div class="flex items-start gap-3 bg-white/70 backdrop-blur-sm p-5 rounded-xl border border-primary/20">
+                        <div class="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center flex-shrink-0 text-sm shadow-sm">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <div class="flex-1 text-gray-700 text-sm leading-relaxed">
+                            <strong class="text-gray-900">Free adjustments</strong> — If something does not work as expected, we adjust for free
+                        </div>
                     </div>
-                    <h4 class="font-bold text-blackPrimary text-xl mb-4">Implementation</h4>
-                    <p class="text-blackPrimary leading-relaxed">Implementation of a solution tailored to your
-                        specific
-                        needs</p>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+<script>
+    function switchStep(stepNumber) {
+        // Remove active class from all steps
+        const allSteps = document.querySelectorAll('.step-item');
+        allSteps.forEach(step => {
+            step.classList.remove('bg-primary/5', 'border-primary', 'shadow-sm', 'hover:shadow-md', 'hover:scale-[1.02]');
+            step.classList.add('bg-white', 'border-gray-200', 'hover:bg-primary/5', 'hover:border-gray-300', 'hover:shadow-sm', 'hover:scale-[1.02]');
+            const title = step.querySelector('h4');
+            title.classList.remove('text-gray-900');
+            title.classList.add('text-gray-700');
+        });
+        
+        // Add active class to clicked step
+        const activeStep = document.querySelector(`.step-item[data-step="${stepNumber}"]`);
+        activeStep.classList.remove('bg-white', 'border-gray-200', 'hover:bg-primary/5', 'hover:border-gray-300');
+        activeStep.classList.add('bg-primary/5', 'border-primary', 'shadow-sm', 'hover:shadow-md');
+        const activeTitle = activeStep.querySelector('h4');
+        activeTitle.classList.remove('text-gray-700');
+        activeTitle.classList.add('text-gray-900');
+        
+        // Hide all content cards
+        const allCards = document.querySelectorAll('.content-card');
+        allCards.forEach(card => {
+            card.classList.remove('active');
+        });
+        
+        // Show selected content card
+        const activeCard = document.querySelector(`.content-card[data-content="${stepNumber}"]`);
+        activeCard.classList.add('active');
+        
+        // Smooth scroll on mobile
+        if (window.innerWidth < 1024) {
+            // Scroll to the method section with offset
+            const methodSection = document.querySelector('#method');
+            if (methodSection) {
+                const offset = window.innerWidth >= 768 ? 50 : -200; // md:270, mobile:100
+                const targetPosition = methodSection.offsetTop - offset;
+                window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+            }
+        }
+    }
+</script>
