@@ -2765,6 +2765,26 @@ video {
   padding-bottom: 0.625rem;
 }
 
+.px-\[10\[x\]\] {
+  padding-left: 10[x];
+  padding-right: 10[x];
+}
+
+.px-\[8px\] {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.px-\[6px\] {
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+.px-\[1px\] {
+  padding-left: 1px;
+  padding-right: 1px;
+}
+
 .pb-2 {
   padding-bottom: 0.5rem;
 }
