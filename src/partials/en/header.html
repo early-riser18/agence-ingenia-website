@@ -3,12 +3,12 @@
 <header class="sticky top-0 md:top-2 z-50 md:px-4 ">
     <div
         class="max-w-screen-xl mx-auto p-3 bg-[#ffffff8f] md:rounded-lg border-b md:border-none border-gray-300 md:shadow-[0_2px_5px_#0003] backdrop-blur-xl">
-        <div class="flex items-center justify-between ">
+        <div class="flex items-center justify-between md:justify-between">
             <!-- Logo -->
-            <div class="flex items-center">
+            <div class="flex items-center md:flex-none">
                 <a href="/" class="flex items-center space-x-2" aria-label="home">
                     <img src="/assets/ingenia_logo_base.png" alt="Logo" class="h-auto w-7">
-                    <span class="  tracking-wider font-semibold  font-dm-sans">INGENIA</span>
+                    <span class="hidden sm:inline tracking-wider font-semibold  font-dm-sans">INGENIA</span>
                 </a>
             </div>
 
@@ -26,8 +26,8 @@
 
                 <!-- CTA Button & Mobile Menu -->
                 <div class="flex items-center space-x-4">
-                    <button onclick="scrollToAnchor('contact', 50)" class="btn-primary px-4 ">
-                        Contact us
+                    <button onclick="scrollToAnchor('contact', 50)" class="btn-primary px-4 md:static absolute left-1/2 -translate-x-1/2 md:translate-x-0">
+                        Get your Free Audit Now
                     </button>
 
                     <!-- Mobile menu button -->
