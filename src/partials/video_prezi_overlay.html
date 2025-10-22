@@ -1,16 +1,24 @@
-<div class=" hidden md:block fixed right-4 bottom-4 z-50 transition-all duration-300" style="width: 180px; height: 180px;">
-    <div class="relative w-full h-full overflow-hidden rounded-full shadow-lg">
+<div id="videoOverlay" class="block fixed right-2 bottom-2 md:right-4 md:bottom-4 z-50 transition-all duration-300 w-[150px] h-[150px] md:w-[180px] md:h-[180px]">
+    <div class="group relative w-full h-full rounded-full shadow-lg">
         <video id="preziVideo" class="w-full h-full rounded-full" loop muted playsinline preload="metadata" webkit-playsinline="true"
             style="object-fit: cover; width: 100%; height: 100%; display: block; position: absolute; top: 0; left: 0;">
-            <source src="/assets/intro_video_ingenia_en_cropped_720p.mp4" type="video/mp4">
+            <source src="/assets/website_presentation_en_FHD_crop_720.mp4" type="video/mp4">
             Votre navigateur ne supporte pas la lecture vidéo.
         </video>
         
-
+        <!-- Close button (appears on hover) -->
+        <button data-video-control="close"
+            class="absolute top-0 right-0 md:top-2 md:right-2 flex items-center justify-center w-8 h-8 md:w-7 md:h-7 rounded-full bg-black/60 hover:bg-red-600/80 text-white transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-white/50 shadow-lg opacity-100 md:opacity-0 md:group-hover:opacity-100"
+            aria-label="Fermer">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+        </button>
 
         <!-- Restart button (center, lowest) -->
         <button data-video-control="restart"
-            class="absolute bottom-4 right-10   flex items-center justify-center w-7 h-7 rounded-full bg-black/60 hover:bg-black/80 text-white transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-white/50 shadow-lg"
+            class="absolute bottom-3 right-8 md:bottom-4 md:right-10 flex items-center justify-center w-6 h-6 md:w-7 md:h-7 rounded-full bg-black/60 hover:bg-black/80 text-white transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-white/50 shadow-lg"
             aria-label="Recommencer">
             <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path>
@@ -20,7 +28,7 @@
         <!-- Control buttons following circle contour -->
         <!-- Play/Pause button (left, elevated) -->
         <button data-video-control="play-pause" 
-            class="absolute  bottom-2 left-1/2 -translate-x-1/2 flex items-center justify-center w-7 h-7 rounded-full bg-black/60 hover:bg-black/80 text-white transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-white/50 shadow-lg"
+            class="absolute bottom-1 md:bottom-2 left-1/2 -translate-x-1/2 flex items-center justify-center w-6 h-6 md:w-7 md:h-7 rounded-full bg-black/60 hover:bg-black/80 text-white transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-white/50 shadow-lg"
             aria-label="Lecture/Pause">
             <svg data-icon="pause" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                 <rect x="14" y="4" width="4" height="16" rx="1"></rect>
@@ -32,7 +40,7 @@
         </button>
         <!-- Mute button (right, elevated) -->
         <button data-video-control="mute"
-            class="absolute bottom-4 left-10 flex items-center justify-center w-7 h-7 rounded-full bg-black/60 hover:bg-black/80 text-white transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-white/50 shadow-lg"
+            class="absolute bottom-3 left-8 md:bottom-4 md:left-10 flex items-center justify-center w-6 h-6 md:w-7 md:h-7 rounded-full bg-black/60 hover:bg-black/80 text-white transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-white/50 shadow-lg"
             aria-label="Son">
             <svg data-icon="muted" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z"></path>
@@ -56,7 +64,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const controls = {
         playPause: document.querySelector('[data-video-control="play-pause"]'),
         restart: document.querySelector('[data-video-control="restart"]'),
-        mute: document.querySelector('[data-video-control="mute"]')
+        mute: document.querySelector('[data-video-control="mute"]'),
+        close: document.querySelector('[data-video-control="close"]')
     };
 
     const icons = {
@@ -97,9 +106,18 @@ document.addEventListener('DOMContentLoaded', () => {
         );
     };
 
+    const handleClose = () => {
+        const overlay = document.querySelector('#videoOverlay');
+        if (overlay) {
+            overlay.style.opacity = '0';
+            setTimeout(() => overlay.remove(), 300);
+        }
+    };
+
     controls.playPause?.addEventListener('click', handlePlayPause);
     controls.restart?.addEventListener('click', handleRestart);
     controls.mute?.addEventListener('click', handleMuteToggle);
+    controls.close?.addEventListener('click', handleClose);
 
     videoEl.play().catch(() => {});
 });

@@ -861,6 +861,46 @@ video {
   top: 20%;
 }
 
+.right-1 {
+  right: 0.25rem;
+}
+
+.right-6 {
+  right: 1.5rem;
+}
+
+.bottom-1 {
+  bottom: 0.25rem;
+}
+
+.left-6 {
+  left: 1.5rem;
+}
+
+.bottom-3 {
+  bottom: 0.75rem;
+}
+
+.left-5 {
+  left: 1.25rem;
+}
+
+.left-7 {
+  left: 1.75rem;
+}
+
+.right-7 {
+  right: 1.75rem;
+}
+
+.right-8 {
+  right: 2rem;
+}
+
+.left-8 {
+  left: 2rem;
+}
+
 .z-0 {
   z-index: 0;
 }
@@ -1162,6 +1202,14 @@ video {
   height: 100vh;
 }
 
+.h-\[120px\] {
+  height: 120px;
+}
+
+.h-\[150px\] {
+  height: 150px;
+}
+
 .max-h-\[560px\] {
   max-height: 560px;
 }
@@ -1288,6 +1336,14 @@ video {
 
 .w-full {
   width: 100%;
+}
+
+.w-\[120px\] {
+  width: 120px;
+}
+
+.w-\[150px\] {
+  width: 150px;
 }
 
 .min-w-0 {
@@ -3158,6 +3214,10 @@ h4 {
   background-color: rgb(74 182 133 / 0.05);
 }
 
+.hover\:bg-red-600\/80:hover {
+  background-color: rgb(220 38 38 / 0.8);
+}
+
 .hover\:text-blue-600:hover {
   --tw-text-opacity: 1;
   color: rgb(37 99 235 / var(--tw-text-opacity, 1));
@@ -3435,6 +3495,30 @@ h4 {
     top: 0.5rem;
   }
 
+  .md\:bottom-4 {
+    bottom: 1rem;
+  }
+
+  .md\:right-4 {
+    right: 1rem;
+  }
+
+  .md\:right-2 {
+    right: 0.5rem;
+  }
+
+  .md\:right-10 {
+    right: 2.5rem;
+  }
+
+  .md\:bottom-2 {
+    bottom: 0.5rem;
+  }
+
+  .md\:left-10 {
+    left: 2.5rem;
+  }
+
   .md\:order-1 {
     order: 1;
   }
@@ -3507,6 +3591,14 @@ h4 {
     height: auto;
   }
 
+  .md\:h-\[180px\] {
+    height: 180px;
+  }
+
+  .md\:h-7 {
+    height: 1.75rem;
+  }
+
   .md\:w-10 {
     width: 2.5rem;
   }
@@ -3521,6 +3613,14 @@ h4 {
 
   .md\:w-5 {
     width: 1.25rem;
+  }
+
+  .md\:w-\[180px\] {
+    width: 180px;
+  }
+
+  .md\:w-7 {
+    width: 1.75rem;
   }
 
   .md\:flex-none {
@@ -3753,10 +3853,18 @@ h4 {
     opacity: 0.6;
   }
 
+  .md\:opacity-0 {
+    opacity: 0;
+  }
+
   .md\:shadow-\[0_2px_5px_\#0003\] {
     --tw-shadow: 0 2px 5px #0003;
     --tw-shadow-colored: 0 2px 5px var(--tw-shadow-color);
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
+  .group:hover .md\:group-hover\:opacity-100 {
+    opacity: 1;
   }
 }
 
