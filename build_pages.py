@@ -8,7 +8,7 @@ from watchdog.events import LoggingEventHandler, FileSystemEventHandler
 
 # Run from base dir.
 env = Environment(loader=FileSystemLoader("src"))
-pages = ["templates/index.html"]
+pages = ["templates/index_fr.html"]
 
 output_dir = "."
 os.makedirs(output_dir, exist_ok=True)
@@ -60,31 +60,31 @@ class BuildEventHandler(FileSystemEventHandler):
 
 
 if __name__ == "__main__":
-    # logging.basicConfig(
-    #     level=logging.INFO,
-    #     format="%(asctime)s - %(message)s",
-    #     datefmt="%Y-%m-%d %H:%M:%S",
-    # )
-    # # Initial build
-    # print("Building initial page...")
-    # build_page()
+    logging.basicConfig(
+        level=logging.INFO,
+        format="%(asctime)s - %(message)s",
+        datefmt="%Y-%m-%d %H:%M:%S",
+    )
+    # Initial build
+    print("Building initial page...")
+    build_page()
 
-    # path = sys.argv[1] if len(sys.argv) > 1 else "."
-    # event_handler = BuildEventHandler()
-    # observer = Observer()
-    # observer.schedule(event_handler, path, recursive=True)
-    # observer.start()
-    # print(f"Watching for changes in {path}... Press Ctrl+C to stop.")
-    # try:
-    #     while True:
-    #         time.sleep(1)
-    # except KeyboardInterrupt:
-    #     observer.stop()
-    # observer.join()
+    path = sys.argv[1] if len(sys.argv) > 1 else "."
+    event_handler = BuildEventHandler()
+    observer = Observer()
+    observer.schedule(event_handler, path, recursive=True)
+    observer.start()
+    print(f"Watching for changes in {path}... Press Ctrl+C to stop.")
+    try:
+        while True:
+            time.sleep(1)
+    except KeyboardInterrupt:
+        observer.stop()
+    observer.join()
 
-    template = env.get_template("templates/index_en.html")
-    html = template.render()
-    with open("index_fr.html", "w", encoding="utf-8") as f:
-        f.write(html)
+    # template = env.get_template("templates/index_en.html")
+    # html = template.render()
+    # with open("index_fr.html", "w", encoding="utf-8") as f:
+    #     f.write(html)
 
-    print(f"Site built in {output_page}")
+    # print(f"Site built in {output_page}")

@@ -6,14 +6,14 @@ function scrollToAnchor(id, offset = 0) {
     window.scrollTo({ top: y, behavior: 'smooth' })
   }
   
-async function getUseCases() {
-    const response = await fetch('/src/use-cases.json', { cache: 'no-cache' });
+async function getUseCases(lg) {
+    const response = await fetch(`/src/use-cases_${lg}.json`, { cache: 'no-cache' });
     if (!response.ok) return {};
     return await response.json();
 }
 
-async function getUseCaseCategories() {
-    const useCasesRecord = await getUseCases();
+async function getUseCaseCategories(lg) {
+    const useCasesRecord = await getUseCases(lg);
     const categories = Object.values(useCasesRecord)
         .map(item => item && item.category)
         .filter(Boolean);

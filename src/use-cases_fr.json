@@ -1,0 +1,122 @@
+{
+    "internal-knowledge-assistant": {
+      "title": "Un ChatGPT interne de votre entreprise",
+      "subtitle": "Accès instantané aux documents internes et aux connaissances projets",
+      "description": "Permettez à votre équipe de travailler plus efficacement avec un accès immédiat aux documents internes, projets et connaissances — plus de temps perdu à chercher ou attendre des réponses.",
+      "image": "/assets/use_cases/screenshots/internal_rag.png",
+      "pain-points": [
+        "Recherche manuelle",
+        "Temps de réponse lent"
+      ],
+      "time_saving_opportunity": "à définir",
+      "category": "productivity"
+    },
+    "document-parser": {
+      "title": "Assistant de traitement de documents",
+      "subtitle": "Extrayez et mettez en forme les informations clés en quelques secondes. Plus de copier-coller.",
+      "description": "Éliminez la saisie fastidieuse — votre assistant IA extrait automatiquement les informations essentielles des formulaires clients, PDFs, factures et rapports, puis met instantanément à jour votre CRM avec des données complètes et fiables.",
+      "image": "/assets/use_cases/screenshots/doc_parser.png",
+      "pain-points": [
+        "Traitement manuel des documents",
+        "Erreurs de saisie"
+      ],
+      "time_saving_opportunity": "à définir",
+      "category": "productivity"
+    },
+    "voice-of-customer-intel": {
+      "title": "Assistant d’analyse du ressenti client",
+      "subtitle": "Découvrez tout ce que les clients disent de votre entreprise",
+      "description": "Votre assistant IA analyse les avis, tickets support, appels commerciaux et réseaux sociaux pour comprendre ce que les clients disent de votre entreprise. Il génère un rapport avec les 5 points positifs et négatifs principaux.",
+      "image": "/assets/use_cases/screenshots/customer_insights.png",
+      "pain-points": [
+        "Navigation manuelle",
+        "Surcharge d’information",
+        "Données en silos"
+      ],
+      "time_saving_opportunity": "à définir",
+      "category": "marketing"
+    },
+    "sales-calls-mining": {
+      "title": "Assistant d’analyse des appels de vente",
+      "subtitle": "Toutes les conversations commerciales, résumées en insights clés",
+      "description": "Votre assistant IA lit toutes les transcriptions d’appels commerciaux et les résume. Restez informé de ce que vos prospects pensent de votre entreprise et de vos produits.",
+      "image": "/assets/use_cases/screenshots/sale_call_insight.png",
+      "pain-points": [
+        "Manque de visibilité directe",
+        "Surcharge d’information"
+      ],
+      "time_saving_opportunity": "à définir",
+      "category": "marketing"
+    },
+    "competitor-monitoring": {
+      "title": "Assistant de veille concurrentielle",
+      "subtitle": "Suivez les mouvements de vos concurrents et réagissez avant tout le monde",
+      "description": "Votre assistant IA surveille les sites web, sorties produits et publications sociales de vos concurrents, puis génère un rapport avec les informations les plus importantes.",
+      "image": "/assets/use_cases/screenshots/competitor_monitoring.png",
+      "pain-points": [
+        "Réaction lente face aux concurrents",
+        "Surcharge d’information"
+      ],
+      "time_saving_opportunity": "à définir",
+      "category": "marketing"
+    },
+    "supplier-rfq-assistant": {
+      "title": "Assistant de sourcing fournisseurs",
+      "subtitle": "Accélérez le sourcing grâce à l’analyse de catalogues et à l’envoi d’appels d’offres",
+      "description": "Votre assistant IA analyse le web pour identifier de nouveaux fournisseurs, extrait les données de catalogues vers Excel et prépare des brouillons de demandes de devis en quelques minutes.",
+      "image": "/assets/use_cases/screenshots/supplier_sourcing.png",
+      "pain-points": [
+        "Tâches répétitives",
+        "Saisie manuelle"
+      ],
+      "time_saving_opportunity": "à définir",
+      "category": "procurement"
+    },
+    "supplier-offer-comparison": {
+      "title": "Assistant de comparaison d’offres",
+      "subtitle": "Extrayez automatiquement les offres fournisseurs et comparez-les en un seul tableau",
+      "description": "Votre assistant IA lit les emails fournisseurs et leurs pièces jointes (PDF, Excel, CSV), extrait les données clés (prix, quantité, conditions de livraison) et génère des tableaux comparatifs prêts à l’emploi.",
+      "image": "/assets/use_cases/screenshots/supplier_quote_comparison.png",
+      "pain-points": [
+        "Traitement lent des documents",
+        "Erreurs de saisie"
+      ],
+      "time_saving_opportunity": "à définir",
+      "category": "procurement"
+    },
+    "invoice-processing": {
+      "title": "Assistant de traitement des factures",
+      "subtitle": "Automatisez l’ensemble de votre processus facturation",
+      "description": "Votre assistant IA lit les factures fournisseurs, extrait les données comptables clés, les compare aux bons de commande, et vous alerte instantanément en cas d’écart.",
+      "image": "/assets/use_cases/screenshots/invoice_processing.png",
+      "pain-points": [
+        "Saisie manuelle",
+        "Risque d’erreurs"
+      ],
+      "time_saving_opportunity": "à définir",
+      "category": "procurement"
+    },
+    "customer-support-rep-assistant": {
+      "title": "Assistant support client",
+      "subtitle": "Réduisez le temps de résolution grâce à des workflows intelligents",
+      "description": "Boostez l’efficacité du support client — votre assistant IA lit les emails entrants, récupère les bonnes politiques ou procédures, et rédige des réponses personnalisées conformes, réduisant le temps de résolution et améliorant la satisfaction.",
+      "image": "/assets/use_cases/screenshots/cs_assistant.png",
+      "pain-points": [
+        "Temps de réponse lent"
+      ],
+      "time_saving_opportunity": "à définir",
+      "category": "customer-support"
+    },
+    "website-chatbot": {
+      "title": "Assistant chatbot pour site web",
+      "subtitle": "Votre agent d’accueil 24/7.",
+      "description": "Transformez vos visiteurs en clients avec des réponses instantanées — votre assistant IA engage les prospects 24/7, fournit des informations fiables sur vos produits et services, augmente les conversions et réduit les demandes au support.",
+      "image": "/assets/use_cases/screenshots/website_assistant.png",
+      "pain-points": [
+        "Opportunités perdues",
+        "Clients insatisfaits"
+      ],
+      "time_saving_opportunity": "à définir",
+      "category": "customer-support"
+    }
+  }
