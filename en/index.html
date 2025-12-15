@@ -766,8 +766,8 @@
 
 <script>
     document.addEventListener('DOMContentLoaded', async () => {
-        const allCategories = await getUseCaseCategories();
-        const allUseCases = await getUseCases();
+        const allCategories = await getUseCaseCategories('en');
+        const allUseCases = await getUseCases('en');
          const nav = document.getElementById('use-case-category-nav');
          const gridContainer = document.getElementById('use-cases-grid');
          const detailRegion = document.getElementById('detail-region');
