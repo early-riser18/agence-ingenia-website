@@ -8,7 +8,7 @@ from watchdog.events import LoggingEventHandler, FileSystemEventHandler
 
 # Run from base dir.
 env = Environment(loader=FileSystemLoader("src"))
-pages = ["templates/index_fr.html"]
+pages = ["templates/index_en.html"]
 
 output_dir = "."
 os.makedirs(output_dir, exist_ok=True)
